@@ -14,11 +14,13 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   async run(message) {
     const { voice } = message.member
 
-     if(voice_channel != None):
-        vc = await voice_channel.connect()
+    if (!voice.channelID) {
+      message.reply('You must be in a voice channel')
+      return
+    }
 
-        vc.play(discord.FFmpegPCMAudio('http://www.sample-videos.com/audio/mp3/wave.mp3'), after=lambda e: print('done', e))
-    else:
-        await ctx.send("Join a voice channel first.")```
+    voice.channel.join().then((connection) => {
+      connection.play(path.join(__dirname, 'angery.mp3'))
+    })
   }
 }
