@@ -23,10 +23,6 @@ client.on('ready', async () => {
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
 
-	command(client, ['hello'], (message) =>{
-		message.channel.send('Hi friends ' + message.author.toString())
-	})
-
 	command(client, ['ping', 'test'], (message) =>{
 		message.channel.send('Pong')
 	})	
