@@ -20,7 +20,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     voice.channel.join().then((connection) => {
-      connection.play("https://drive.google.com/file/d/18jYVzK-unDcylyAG8lzM9Xnkoqs3_qi0/view?usp=sharing");
+      connection.play("https://www.dropbox.com/h?preview=angery.mp3");
     })
   }
 }
