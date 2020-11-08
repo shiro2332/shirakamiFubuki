@@ -20,8 +20,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     voice.channel.join().then((connection) => {
-      //connection.play(path.join(__dirname, 'angery.mp3'))
-      connection.play("https://download1478.mediafire.com/qms8yzrx453g/177js1r81b7b1i5/fbkIntro.mp3")
+      connection.play(path.join(__dirname, 'intro.mp3'))
     })
   }
 }
