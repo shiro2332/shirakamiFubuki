@@ -23,50 +23,8 @@ client.on('ready', async () => {
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
 
-	command(client, ['ping', 'test'], (message) =>{
-		message.channel.send('Pong')
-	})	
-
-	command(client, ['Who_are_you?'], (message) =>{
-		message.channel.send("I'm Scatman")
-	})	
-
-	command(client, ['Food?'], (message) =>{
-		message.channel.send(":hamburger:")
-	})
-
-	command(client, ['count'], (message) =>{
-		message.channel.send("1 fox, 2 fox, 3 fox, FUBUKI! \n4 fox, 5 fox, 6 fox, FUBUKI! \n7 fox, 8 fox, 9 fox, FUBUKI! \n10 fox kawaii yooo..... \nJANG!")
-	})
-
-	command(client, [''], (message) =>{
-		message.channel.send("Kon Kon")
-	})
-
-	command(client, 'serverList', (message) =>{
-		client.guilds.cache.forEach((guild) => {
-			message.channel.send(`${guild.name} has a total of ${guild.memberCount} people.`)
-		})
-	})
-
-	command(client, ['whereFriend?'], (message) =>{
-		message.channel.send({files: ["./Images/watching.png"]})
-	})
-
-	command(client, 'status', (message) => {
-		const botStatus = message.content.replace('!!status ', '')
-
-		client.user.setActivity(botStatus,{ type: 'WATCHING'})
-	})
-
-	command(client, 'cc', (message) => {
-		if(message.member.hasPermission("Immortal")){
-			message.channel.messages.fetch().then((results) =>{
-				message.channel.bulkDelete(results)
-			})
-		}
-	})
-
+	const botStatus = "フブキCh。白上フブキ"
+	client.user.setActivity(botStatus,{ type: 'WATCHING'})
 })
 
 client.login(config.token)
