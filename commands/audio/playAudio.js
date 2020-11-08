@@ -20,8 +20,14 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     voice.channel.join().then((connection) => {
-      //connection.play("http://www.sample-videos.com/audio/mp3/wave.mp3");
-      const dispatcher = connection.play('http://www.sample-videos.com/audio/mp3/wave.mp3', {volume: 0.5,});
+      const dispatcher = connection.play("http://www.sample-videos.com/audio/mp3/wave.mp3");
+
+      dispatcher.setVolume(1.0); // half the volume
+
+      dispatcher.on('finish', () => {
+        console.log('Finished playing!');
+      });
+
     })
   }
 }
