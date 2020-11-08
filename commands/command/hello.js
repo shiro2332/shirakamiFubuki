@@ -4,7 +4,7 @@ module.exports = class BasicCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'hello',
-			group: 'commamd',
+			group: 'command',
 			memberName: 'hello',
 			description: 'Hi',
 		});
