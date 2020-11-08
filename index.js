@@ -17,7 +17,8 @@ client.on('ready', async () => {
 
 	client.registry
 	.registerGroups([
-		['audio', 'audio command'],
+		['audio', 'Audio command'],
+		['command', 'Basic command'],
 		])
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
