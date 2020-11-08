@@ -20,7 +20,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     voice.channel.join().then((connection) => {
-      connection.play("https://drive.google.com/file/d/18jYVzK-unDcylyAG8lzM9Xnkoqs3_qi0/view");
+      connection.play("http://www.sample-videos.com/audio/mp3/wave.mp3");
       //const dispatcher = connection.play('/home/discord/audio.mp3', {volume: 0.5,});
     })
   }
