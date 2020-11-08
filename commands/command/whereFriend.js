@@ -3,9 +3,9 @@ const { Command } = require('discord.js-commando')
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'whereFriend',
+			name: 'wherefriend',
 			group: 'command',
-			memberName: 'whereFriend',
+			memberName: 'wherefriend',
 			description: 'Where is friends',
 		});
 	}

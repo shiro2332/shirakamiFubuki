@@ -3,9 +3,9 @@ const { Command } = require('discord.js-commando')
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'serverList',
+			name: 'serverlist',
 			group: 'command',
-			memberName: 'serverList',
+			memberName: 'serverlist',
 			description: 'List online player',
 		});
 	}
