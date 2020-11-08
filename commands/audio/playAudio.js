@@ -20,8 +20,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     voice.channel.join().then((connection) => {
-      //connection.play("http://download2282.mediafire.com/nj9brysjmr3g/q05u8i8jze9l77l/angery.mp3");
-      const dispatcher = connection.play('http://download2282.mediafire.com/nj9brysjmr3g/q05u8i8jze9l77l/angery.mp3', {volume: 0.5,});
+      connection.play("https://drive.google.com/file/d/18jYVzK-unDcylyAG8lzM9Xnkoqs3_qi0/view");
+      //const dispatcher = connection.play('/home/discord/audio.mp3', {volume: 0.5,});
     })
   }
 }
