@@ -31,7 +31,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
     } else {
       message.reply('You are not a commander!')
-      connection.play(path.join(__dirname, '../../assets/audio/angery.mp3'))
+      voice.channel.join().then((connection) => {
+        connection.play(path.join(__dirname, '../../assets/audio/angery.mp3'))
+      })
     }
     
   }
