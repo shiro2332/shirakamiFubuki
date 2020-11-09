@@ -15,7 +15,7 @@ module.exports = class BasicCommand extends Command {
 
 	run(message) {
 		if(message.member.hasPermission("Immortal")){
-			client.on("ready", () => {
+			client.on("ready", async () => {
 				var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね")
 				var live = livelist[Math.floor(Math.random() * livelist.length)]
 
