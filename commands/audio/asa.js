@@ -20,7 +20,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     voice.channel.join().then((connection) => {
-      connection.play(path.join(__dirname, '/assets/audio/asa.mp3'))
+      connection.play(path.join(__dirname, '../../assets/audio/asa.mp3'))
       //connection.play("http://download1642.mediafire.com/l5m95wz4yeig/q05u8i8jze9l77l/angery.mp3")
     })
   }
