@@ -13,7 +13,7 @@ module.exports = class BasicCommand extends Command {
 
 	run(message) {
 		message.channel.send(emoji.cha + emoji.ye)
-		return message.channel.send(emoji.shira + ' ' + message.author.toString() + ' ' + 'Hi friends, tea!!' + emoji.cha + emoji.ye)
+		return message.channel.send(emoji.shira + ' ' + message.author.toString() + ' ' + 'Hi friends, tea!!' + ' ' + emoji.cha + ' ' + emoji.ye)
 
 	}
 };
