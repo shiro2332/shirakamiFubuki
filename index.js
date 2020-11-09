@@ -37,7 +37,7 @@ client.on('ready', async () => {
 	        	commandBase(client, option)
 	      	}
     	}
-  }
+  	}
 
   readCommands('commands/command')
 })
