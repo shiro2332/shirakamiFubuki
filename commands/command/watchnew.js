@@ -1,5 +1,5 @@
 const { Command } = require('discord.js-commando')
-const { Client_path } = require('/index.js')
+const { Client_path } = require('../../index.js')
 const { client } = index.client
 
 module.exports = class BasicCommand extends Command {
