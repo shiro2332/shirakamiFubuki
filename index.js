@@ -17,7 +17,7 @@ client.on('ready', async () => {
 	console.log("Client is ready!")
 
 	const baseFile = 'commandBase.js'
-	const commandBase = require(`./${baseFile}`)
+	const commandBase = require(`./commands/command/${baseFile}`)
 
 	const readCommands = dir => {
 		const files = fs.readdirSync(path.join(__dirname, dir))
