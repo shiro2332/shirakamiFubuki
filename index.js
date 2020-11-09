@@ -23,6 +23,25 @@ client.on('ready', async () => {
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
 
+	const baseFile = 'commandBase.js'
+  	const commandBase = require(`./commands/command/${baseFile}`)
+
+  	const readCommands = (dir) => {
+    	const files = fs.readdirSync(path.join(__dirname, dir))
+    	for (const file of files) {
+	      	const stat = fs.lstatSync(path.join(__dirname, dir, file))
+	      	if (stat.isDirectory()) {
+	      	  	readCommands(path.join(dir, file))
+	      	} else if (file !== baseFile) {
+	        	const option = require(path.join(__dirname, dir, file))
+	        	commandBase(client, option)
+	      	}
+    	}
+  }
+
+  readCommands('commands/command')
+})
+
 	setInterval(function() {
 		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね")
 		var live = livelist[Math.floor(Math.random() * livelist.length)]

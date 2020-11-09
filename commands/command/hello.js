@@ -1,16 +1,14 @@
-const { Command } = require('discord.js-commando')
+module.exports = {
+  commands: ['hello'],
+  expectedArgs: '',
+  permissionError: 'You need admin permissions to run this command',
+  minArgs: 0,
+  maxArgs: 0,
+  callback: (message, arguments, text) => {
 
-module.exports = class BasicCommand extends Command {
-	constructor(client) {
-		super(client, {
-			name: 'hello',
-			group: 'command',
-			memberName: 'hello',
-			description: 'Hi',
-		});
-	}
-
-	run(message) {
-		return message.channel.send('Hi friends ' + message.author.toString() + ` <:shira:775194767247409163>`)
-	}
-};
+  	const shira = client.emojis.get("775194767247409163");
+    message.channel.send('Hi friends ' + message.author.toString() + `${shira}`)
+  },
+  permissions: 'ADMINISTRATOR',
+  requiredRoles: [],
+}
