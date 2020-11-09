@@ -1,5 +1,4 @@
 const Commando = require('discord.js-commando')
-const emoji = require('./emoji.json')
 const config = require('./config.json')
 
 const path = require('path')
