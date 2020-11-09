@@ -11,6 +11,6 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	async run(message) {
-		return message.channel.send({files: ["./images/watching.png"]})
+		return message.channel.send({files: ["./../../images/watching.png"]})
 	}
 };
