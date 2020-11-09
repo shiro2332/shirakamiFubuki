@@ -1,10 +1,6 @@
-//const Discord = require('discord.js')
-//const client = new Discord.Client()
-
 const Commando = require('discord.js-commando')
 
 const config = require('./config.json')
-const command = require('./command.js')
 
 const path = require('path')
 const client = new Commando.CommandoClient({
