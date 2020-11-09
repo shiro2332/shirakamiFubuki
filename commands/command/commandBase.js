@@ -49,7 +49,7 @@ const validatePermissions = (permissions) => {
   }
 }
 
-module.exports = (client, commandOptions) => {
+module.export = (client, commandOptions) => {
   let {
     commands,
     expectedArgs = '',
