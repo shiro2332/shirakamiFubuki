@@ -3,10 +3,10 @@ const { Command } = require('discord.js-commando')
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'cc',
+			name: 'watchnew',
 			group: 'command',
-			memberName: 'cc',
-			description: 'Clear Channel',
+			memberName: 'watchnew',
+			description: 'Change livestream (status)',
 		});
 	}
 
