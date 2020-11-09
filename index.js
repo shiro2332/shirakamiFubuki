@@ -1,7 +1,6 @@
 const Commando = require('discord.js-commando')
-
+const emoji = require('./emoji.json')
 const config = require('./config.json')
-const channelList = require('./channelList.json')
 
 const path = require('path')
 const client = new Commando.CommandoClient({
@@ -23,7 +22,7 @@ client.on('ready', async () => {
 
 
 	setInterval(function() {
-		var livelist = channelList.CList;
+		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね", "Aqua Ch. 湊あくあ", "Nakiri Ayame Ch. 百鬼あやめ", "Okayu Ch. 猫又おかゆ", "Mio Channel 大神ミオ", "Pekora Ch. 兎田ぺこら", "Marine Ch. 宝鐘マリン")
 		var live = livelist[Math.floor(Math.random() * livelist.length)]
         
         client.user.setActivity(live,{ type: 'WATCHING'})
