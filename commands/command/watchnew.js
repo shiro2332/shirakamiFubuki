@@ -1,5 +1,5 @@
 const { Command } = require('discord.js-commando')
-const client = new Commando.CommandoClient({
+const client = new Command.CommandoClient({
 	owner: "299176846132641792",
 	commandPrefix: config.prefix
 })
