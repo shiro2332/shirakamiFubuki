@@ -7,7 +7,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       name: 'playskr',
       group: 'audio',
       memberName: 'playskr',
-      description: 'Plays playSkrillex',
+      description: 'Skrillex',
     })
   }
 
