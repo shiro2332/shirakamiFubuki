@@ -1,9 +1,6 @@
 const { Command } = require('discord.js-commando')
 const config = require('../../config.json')
-const client = new Command.CommandoClient({
-	owner: "299176846132641792",
-	commandPrefix: config.prefix
-})
+const client = Command.CommandoClient()
 
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
