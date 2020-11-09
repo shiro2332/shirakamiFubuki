@@ -1,6 +1,6 @@
 const { Command } = require('discord.js-commando')
-const config = require('../../config.json')
-const client = Command.CommandoClient()
+const client = new Discord.Client();
+
 
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
