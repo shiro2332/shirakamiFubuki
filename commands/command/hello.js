@@ -11,7 +11,6 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	run(message) {
-		client
 		return message.channel.send('Hi friends ' + message.author.toString() + `$<:shira:775194767247409163>`)
 	}
 };
