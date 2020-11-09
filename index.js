@@ -23,7 +23,7 @@ client.on('ready', async () => {
 
 
 	setInterval(function() {
-		var livelist = channelList.CList[];
+		var livelist = channelList.CList;
 		var live = livelist[Math.floor(Math.random() * livelist.length)]
         
         client.user.setActivity(live,{ type: 'WATCHING'})
