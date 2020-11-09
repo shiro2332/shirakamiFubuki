@@ -10,7 +10,7 @@ module.exports = class BasicCommand extends Command {
 		});
 	}
 
-	run(message) {
+	async run(message) {
 		message.channel.send({files: ["../images/watching.png"]})
 	}
 };
