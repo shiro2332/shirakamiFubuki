@@ -13,13 +13,16 @@ module.exports = class BasicCommand extends Command {
 
 	run(message) {
 		return message.channel.send(
-			emoji.shira 
+			"<:shira:775231808273907712>" 
 			+ ' ' 
 			+ message.author.toString() 
 			+ ' ' 
 			+ 'Hi friends, tea!!' 
+			+ ' '
 			+ '<:cha:775231692398788618>' 
+			+ ' '
 			+ '<:ye:775231830689447976>'
+			+ ' '
 			)
 
 	}
