@@ -2,7 +2,6 @@
 //const client = new Discord.Client()
 
 const Commando = require('discord.js-commando')
-const fs = require('fs')
 
 const config = require('./config.json')
 const command = require('./command.js')
@@ -16,22 +15,6 @@ const client = new Commando.CommandoClient({
 client.on('ready', async () => {
 	console.log("Client is ready!")
 
-	const baseFile = 'commandBase.js'
-	const commandBase = require(`./commands/command/${baseFile}`)
-
-	const readCommands = dir => {
-		const files = fs.readdirSync(path.join(__dirname, dir))
-		for (const file of files) {
-			const stat = fs.lstatSync(path.join(__dirname, dir, file))
-			if(stat.isDirectory()){
-				readCommands(path.join(dir, file))
-			} else if(file !== baseFile){
-				const option = require(path.join(__dirname, dir, file))
-				console.log(file, option)
-			}
-		}
-	}
-
 	client.registry
 	.registerGroups([
 		['audio', 'Audio command'],
@@ -39,6 +22,7 @@ client.on('ready', async () => {
 		])
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
+
 
 	setInterval(function() {
 		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね")
