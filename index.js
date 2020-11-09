@@ -2,9 +2,10 @@
 //const client = new Discord.Client()
 
 const Commando = require('discord.js-commando')
+const fs = require('fs')
 
 const config = require('./config.json')
-const command = require('./command.js')
+//const command = require('./command.js')
 
 const path = require('path')
 const client = new Commando.CommandoClient({
@@ -47,8 +48,6 @@ client.on('ready', async () => {
         
         client.user.setActivity(live,{ type: 'WATCHING'})
     }, 100000)
-		
-
 		
 })
 
