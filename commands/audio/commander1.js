@@ -15,7 +15,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   async run(message) {
     const { voice } = message.member
 
-    if(message.member.roles.find("name", "Shikikan")){
+    if(message.member.roles.cache.some(role => role.name === 'Shikikan')){
       if (!voice.channelID) {
         message.reply('You must be in a voice channel')
         return
@@ -27,7 +27,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
         connection.play(path.join(__dirname, voiceline))
       })
-      
+
     } else {
       message.reply('You are not a commander!')
     }
