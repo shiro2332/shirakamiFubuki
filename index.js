@@ -28,7 +28,7 @@ client.on('ready', async () => {
 		var live = livelist[Math.floor(Math.random() * livelist.length)]
         
         client.user.setActivity(live,{ type: 'WATCHING'})
-    }, 10000)
+    }, 100000)
 		
 
 		
