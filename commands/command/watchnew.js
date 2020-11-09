@@ -20,6 +20,7 @@ module.exports = class BasicCommand extends Command {
 				var live = livelist[Math.floor(Math.random() * livelist.length)]
 
 				client.user.setActivity(live,{ type: 'WATCHING'})
+				message.channel.send('Changed to WATCHING' + live)
 			});
 			
 		}
