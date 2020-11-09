@@ -1,6 +1,8 @@
 const { Command } = require('discord.js-commando')
-const { Client_path } = require('../../index.js')
-const { client } = index.client
+const client = new Commando.CommandoClient({
+	owner: "299176846132641792",
+	commandPrefix: config.prefix
+})
 
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
