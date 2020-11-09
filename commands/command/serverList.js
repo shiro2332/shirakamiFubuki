@@ -1,8 +1,4 @@
 const { Command } = require('discord.js-commando')
-const client = new Commando.CommandoClient({
-	owner: "299176846132641792",
-	commandPrefix: config.prefix
-})
 
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
@@ -10,7 +6,7 @@ module.exports = class BasicCommand extends Command {
 			name: 'serverlist',
 			group: 'command',
 			memberName: 'serverlist',
-			description: 'List online player',
+			description: 'List online player (DO NOT USE, HAVE PROBLEM)',
 		});
 	}
 
