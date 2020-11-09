@@ -12,7 +12,6 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	run(message) {
-		var emoji = JSON.parse(emoji);
 		return message.channel.send(emoji.shira + ' ' + message.author.toString() + ' ' + 'Hi friends, tea!!' + emoji.cha + emoji.ye)
 
 	}
