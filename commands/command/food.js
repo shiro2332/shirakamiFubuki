@@ -12,6 +12,6 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	run(message) {
-		return message.channel.send(":hamburger:" + emoji.cha)
+		return message.channel.send(":hamburger:" + emoji.shira)
 	}
 };
