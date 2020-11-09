@@ -9,7 +9,7 @@ module.exports = class BasicCommand extends Command {
 			name: 'watchnew',
 			group: 'command',
 			memberName: 'watchnew',
-			description: 'Change livestream (status)',
+			description: 'Change livestream (status) (Have prob)',
 		});
 	}
 

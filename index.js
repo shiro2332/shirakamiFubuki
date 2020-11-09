@@ -23,8 +23,15 @@ client.on('ready', async () => {
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
 
-	const botStatus = "フブキCh。白上フブキ"
-	client.user.setActivity(botStatus,{ type: 'WATCHING'})
+	setInterval(function() {
+		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね")
+		var live = livelist[Math.floor(Math.random() * livelist.length)]
+        
+        client.user.setActivity(live,{ type: 'WATCHING'})
+    }, 10000)
+		
+
+		
 })
 
 client.login(config.token)
