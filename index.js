@@ -39,7 +39,7 @@ client.on('ready', async () => {
     	}
   	}
 
-  readCommands('commands/command')
+  	readCommands('commands/command')
 
 	setInterval(function() {
 		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね")
