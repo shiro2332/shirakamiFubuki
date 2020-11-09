@@ -15,10 +15,10 @@ module.exports = class BasicCommand extends Command {
 
 	run(message) {
 		if(message.member.hasPermission("Immortal")){
-			var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね")
-			var live = livelist[Math.floor(Math.random() * livelist.length)]
-
 			client.on("ready", () => {
+				var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね")
+				var live = livelist[Math.floor(Math.random() * livelist.length)]
+
 				client.user.setActivity(live,{ type: 'WATCHING'})
 			});
 			
