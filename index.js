@@ -26,9 +26,7 @@ client.on('ready', async () => {
         
         client.user.setActivity(live,{ type: 'WATCHING'})
     }, 100000)
-		
-
-		
+	
 })
 
 client.login(config.token)
