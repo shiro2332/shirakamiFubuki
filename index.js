@@ -1,5 +1,6 @@
 const Commando = require('discord.js-commando')
 const config = require('./config.json')
+const memberCount = require('./channelName.js')
 
 const path = require('path')
 const client = new Commando.CommandoClient({
@@ -9,6 +10,7 @@ const client = new Commando.CommandoClient({
 
 client.on('ready', async () => {
 	console.log("Client is ready!")
+	memberCount(client)
 
 	client.registry
 	.registerGroups([
