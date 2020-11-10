@@ -1,4 +1,5 @@
 const { Command } = require('discord.js-commando')
+const emoji = require('./emoji.json')
 
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
@@ -11,6 +12,6 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	run(message) {
-		return message.channel.send(":hamburger:" + "<:shira:775231808273907712>")
+		return message.channel.send(":hamburger:" + emoji.shira)
 	}
 };
