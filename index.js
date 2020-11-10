@@ -1,6 +1,5 @@
 const Commando = require('discord.js-commando')
 const config = require('./config.json')
-const memberCount = require('./channelName.js')
 
 const path = require('path')
 const client = new Commando.CommandoClient({
@@ -10,7 +9,6 @@ const client = new Commando.CommandoClient({
 
 client.on('ready', async () => {
 	console.log("Client is ready!")
-	memberCount(client)
 
 	client.registry
 	.registerGroups([
@@ -21,12 +19,15 @@ client.on('ready', async () => {
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
 
+
 	setInterval(function() {
 		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね", "Aqua Ch. 湊あくあ", "Nakiri Ayame Ch. 百鬼あやめ", "Okayu Ch. 猫又おかゆ", "Mio Channel 大神ミオ", "Pekora Ch. 兎田ぺこら", "Marine Ch. 宝鐘マリン")
 		var live = livelist[Math.floor(Math.random() * livelist.length)]
         
-        client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
+        client.user.setActivity(live,{ type: 'WATCHING'})
     }, 100000)
+		
+
 		
 })
 
