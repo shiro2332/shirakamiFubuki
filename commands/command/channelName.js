@@ -8,8 +8,9 @@ module.exports = (client) => {
   }
 
   const updateMembers2 = (guild, time) => {
+  	time += 1
     const channel = guild.channels.cache.get(channelId)
-    var string = 'Fubuki online since ' + time += 1 + ` min`
+    var string = 'Fubuki online since ' + time + ` min`
     channel.setName(string)
   }
 
