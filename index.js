@@ -1,5 +1,6 @@
 const Commando = require('discord.js-commando')
 const config = require('./config.json')
+const channelName = require('./commands/command/channelName.js')
 
 const path = require('path')
 const client = new Commando.CommandoClient({
@@ -18,6 +19,8 @@ client.on('ready', async () => {
 		])
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
+
+	channelName(client)
 
 
 	setInterval(function() {
