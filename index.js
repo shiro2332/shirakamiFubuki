@@ -21,15 +21,12 @@ client.on('ready', async () => {
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
 
-
 	setInterval(function() {
 		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね", "Aqua Ch. 湊あくあ", "Nakiri Ayame Ch. 百鬼あやめ", "Okayu Ch. 猫又おかゆ", "Mio Channel 大神ミオ", "Pekora Ch. 兎田ぺこら", "Marine Ch. 宝鐘マリン")
 		var live = livelist[Math.floor(Math.random() * livelist.length)]
         
-        client.user.setActivity(live,{ type: 'WATCHING'})
+        client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
     }, 100000)
-		
-
 		
 })
 
