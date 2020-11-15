@@ -1,22 +1,23 @@
 const { Command } = require('discord.js-commando')
+const emoji = require('./emoji.json')
 
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'cc',
+			name: 'announce',
 			group: 'command',
-			memberName: 'cc',
-			description: 'Clear Channel',
+			memberName: 'announce',
+			description: 'announcement',
 		});
 	}
 
 	run(message) {
 		if(message.member.hasPermission("Immortal")){
-			message.channel.messages.fetch().then((results) =>{
-				message.channel.bulkDelete(results)
-			})
+			message.channel.send("__**ANNOUNCEMENT**__ \n \n Testing 1 2 3")
+			
 		} else {
 			message.channel.send("You do not have permission!!!")
 		}
+
 	}
 };
