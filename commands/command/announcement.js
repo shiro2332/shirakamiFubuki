@@ -12,7 +12,7 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	run(message) {
-		if(message.content.startWith("!!announce")){
+		if(message.content.startsWith("!!announce")){
 			if(message.member.hasPermission("Immortal")){
 			message.channel.delete(1000);
 			message.channel.send("__**ANNOUNCEMENT**__ \n \n `Testing 1 2 3`")
