@@ -1,5 +1,5 @@
 const { Command } = require('discord.js-commando')
-
+const client = Commando.CommandoClient()
 
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
@@ -11,7 +11,6 @@ module.exports = class BasicCommand extends Command {
 			description: 'Become fubuki',
 		});
 		var client = null;
-
 	}
 
 	async run(message) {
