@@ -34,12 +34,12 @@ client.on('ready', async () => {
 
 	command(client, ['fbk'], (message) => {
     	client.user.setAvatar('https://cdn.discordapp.com/attachments/778860853835464704/778866435731619860/fbk.jpg')
-		client.user.setUsername("Shirakami Fubuki")
+		client.user.setNickname("Shirakami Fubuki")
   	})
 
   	command(client, ['suisei'], (message) => {
     	client.user.setAvatar('https://media.discordapp.net/attachments/778860853835464704/778911998914068510/unknown.png')
-		client.user.setUsername("Hoshimachi Suisei")
+		client.user.setNickname("Hoshimachi Suisei")
   	})
 })
 
