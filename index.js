@@ -33,6 +33,8 @@ client.on('ready', async () => {
 
 //Commands that does not works with discord commando
 client.on('message', msg => {
+	const { guild } = message
+	
   	if (msg.content.includes("piang")) {
     	msg.reply('Pong!');
   	}
