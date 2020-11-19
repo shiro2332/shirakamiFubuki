@@ -2,6 +2,7 @@ const Commando = require('discord.js-commando')
 const config = require('./config.json')
 
 const path = require('path')
+const command = require('./command')
 const client = new Commando.CommandoClient({
 	owner: "299176846132641792",
 	commandPrefix: config.prefix
@@ -26,7 +27,17 @@ client.on('ready', async () => {
         
         client.user.setActivity(live,{ type: 'WATCHING'})
     }, 100000)
-	
+
+
+	command(client, ['fbk'], (message) => {
+    	client.user.setAvatar('https://cdn.discordapp.com/attachments/778860853835464704/778866435731619860/fbk.jpg')
+		client.user.setUsername("Shirakami Fubuki")
+  	})
+
+  	command(client, ['suisei'], (message) => {
+    	client.user.setAvatar('https://media.discordapp.net/attachments/778860853835464704/778911998914068510/unknown.png')
+		client.user.setUsername("Hoshimachi Suisei")
+  	})
 })
 
 client.login(config.token)
