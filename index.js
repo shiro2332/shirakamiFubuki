@@ -172,7 +172,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply('Fubuki as Senchou!!!');
+       	msg.reply('Fubuki as Haachamachama!!!');
     }
 
     else if (msg.content.startsWith('You are FBK')) {

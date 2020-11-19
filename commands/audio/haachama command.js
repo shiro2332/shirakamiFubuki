@@ -12,7 +12,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   }
 
   async run(message) {
-    if (message.content.includes('!!haachama cook pasta')){
+    if (message.content.includes('!!haachama cookpasta')){
       	const { voice } = message.member
 
       	if (!voice.channelID) {
