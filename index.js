@@ -31,16 +31,19 @@ client.on('ready', async () => {
     }, 100000)
 })
 
-function HENSHIN (id, hrole){
-	const rolename = hrole
-    const { guild } = msg
 
-    const member = guild.members.cache.get(id)
-    member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
-}
 
 //Commands that does not works with discord commando
 client.on('message', msg => {
+	
+	function HENSHIN (id, hrole){
+		const rolename = hrole
+    	const { guild } = msg
+
+    	const member = guild.members.cache.get(id)
+    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
+	}
+
   	if (msg.content.includes("piang")) {
     	msg.reply('Pong!');
   	}
