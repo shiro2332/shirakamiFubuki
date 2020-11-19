@@ -31,38 +31,55 @@ client.on('ready', async () => {
     }, 100000)
 })
 
-
-
 //Commands that does not works with discord commando
 client.on('message', msg => {
-	
-	function HENSHIN (id, hrole){
-		const rolename = hrole
-    	const { guild } = msg
-
-    	const member = guild.members.cache.get(id)
-    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
-	}
-
   	if (msg.content.includes("piang")) {
     	msg.reply('Pong!');
   	}
 
   	else if (msg.content.startsWith('HENSHIN FUBUKI')) {
+  		//Change bot name
        	var newNickname = "Shirakami Fubuki";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
 
-       	HENSHIN("774870728285356083", "Fox Burger King")
+       	const { guild } = msg
+       	//Change bot role (Remove)
+       	var allrole = ["Fox Burger King", "Comet"]
+       	for (i = 0; i < allrole.length(); i++){
+       		const member = guild.members.cache.get("774870728285356083")
+    		member.roles.add(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+       	}
 
+       	//Change bot role (Add)
+       	const rolename = "Fox Burger King"
+
+    	const member = guild.members.cache.get("774870728285356083")
+    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
+
+    	//Complete
        	msg.reply('Fubuki as Scatman!!!');
     }
 
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
+  		//Change bot name
        	var newNickname = "Hoshimachi Suisei";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
 
-       	HENSHIN("774870728285356083", "Comet")
+       	const { guild } = msg
+       	//Change bot role (Remove)
+       	var allrole = ["Fox Burger King", "Comet"]
+       	for (i = 0; i < allrole.length(); i++){
+       		const member = guild.members.cache.get("774870728285356083")
+    		member.roles.add(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+       	}
 
+       	//Change bot role (Add)
+       	const rolename = "Comet"
+
+    	const member = guild.members.cache.get("774870728285356083")
+    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
+
+    	//Complete
        	msg.reply('Fubuki as Suichopath!!!');
     }
 
