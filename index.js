@@ -36,11 +36,11 @@ client.on('message', msg => {
   }
 
   if (msg.content === "!!fbk") {
-    client.user.setNickname("Shirakami Fubuki")
+    message.guild.members.get(bot.user.id).setNickname("Fubuki");
   }
 
   if (msg.content === "!!suisei") {
-    client.user.setNickname("Hoshimachi Suisei")
+    message.guild.members.get(bot.user.id).setNickname("Suisei");
   }
 });
 
