@@ -21,7 +21,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       	}
 
       	voice.channel.join().then((connection) => {
-        	connection.play(path.join(__dirname, '../../assets/song/alice.mp3'))
+        	connection.play(path.join(__dirname, '../../assets/song/suisei/alice.mp3'))
       	})
 
     }else if (message.content.includes('!!suisei saga')){
@@ -33,7 +33,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       	}
 
       	voice.channel.join().then((connection) => {
-        	connection.play(path.join(__dirname, '../../assets/song/saga.mp3'))
+        	connection.play(path.join(__dirname, '../../assets/song/suisei/saga.mp3'))
       	})
     }
   }
