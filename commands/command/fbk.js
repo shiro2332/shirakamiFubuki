@@ -11,7 +11,7 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	run(message) {
-		avatar = "fbk.jng"
+		avatar = "fbk.jpg"
 		client.user.setAvatar(avatar)
 		client.user.setUsername("Shirakami Fubuki")
 	}
