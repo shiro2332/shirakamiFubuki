@@ -40,7 +40,7 @@ client.on('message', msg => {
     msg.guild.members.get(774870728285356083).setNickname("FUBUKI")  }
 
   if (msg.content.startsWith("HENSHIN SUISEI")) {
-    msg.guild.me.setNickname("Suisei");
+    msg.author.setNickname("test")
   }
 });
 
