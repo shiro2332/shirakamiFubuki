@@ -37,11 +37,11 @@ client.on('message', msg => {
   }
 
   if (msg.content.includes("HENSHIN FBK")) {
-    message.guild.members.get(bot.user.id).setNickname("Fubuki");
+    message.guild.members.get(774870728285356083).setNickname("Fubuki");
   }
 
   if (msg.content.includes("HENSHIN SUISEI")) {
-    message.guild.members.get(bot.user.id).setNickname("Suisei");
+    message.guild.members.get(774870728285356083).setNickname("Suisei");
   }
 });
 
