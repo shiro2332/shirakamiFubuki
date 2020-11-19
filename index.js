@@ -26,8 +26,6 @@ client.on('ready', async () => {
         
         client.user.setActivity(live,{ type: 'WATCHING'})
     }, 100000)
-
-    client.user.setAvatar('https://cdn.discordapp.com/attachments/778860853835464704/778866435731619860/fbk.jpg')
 	
 })
 
