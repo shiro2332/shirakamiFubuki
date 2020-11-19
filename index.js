@@ -47,7 +47,7 @@ client.on('message', msg => {
        	var allrole = ["Fox Burger King", "Comet"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
-    		member.roles.add(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+    		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
        	}
 
        	//Change bot role (Add)
@@ -70,7 +70,7 @@ client.on('message', msg => {
        	var allrole = ["Fox Burger King", "Comet"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
-    		member.roles.add(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+    		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
        	}
 
        	//Change bot role (Add)
