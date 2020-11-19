@@ -5,9 +5,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   constructor(client) {
     super(client, {
       name: 'scatman',
-      group: 'audio',
+      group: 'fbk_song',
       memberName: 'scatman',
-      description: 'S C A T M A N',
+      description: 'LEGENDARY S C A T M A N',
     })
   }
 

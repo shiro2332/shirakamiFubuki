@@ -16,6 +16,7 @@ client.on('ready', async () => {
 	client.registry
 	.registerGroups([
 		['audio', 'Audio command'],
+		['fbk_song', 'Fubuki Song command'],
 		['command', 'Basic command'],
 		['commander', 'Commander command'],
 		])
