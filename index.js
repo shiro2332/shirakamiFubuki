@@ -37,11 +37,11 @@ client.on('message', msg => {
   }
 
   if (msg.content.startsWith("HENSHIN FBK")) {
-    message.guild.me.setNickname("Fubuki");
+    msg.guild.me.setNickname("Fubuki");
   }
 
   if (msg.content.startsWith("HENSHIN SUISEI")) {
-    message.guild.me.setNickname("Suisei");
+    msg.guild.me.setNickname("Suisei");
   }
 });
 
