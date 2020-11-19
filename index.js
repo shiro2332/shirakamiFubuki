@@ -49,6 +49,9 @@ client.on('message', msg => {
     		return role.name === rolename
     	})
 
+    	console.log(role)
+    	console.log(target)
+
     	const member = guild.members.cache.get(target)
     	member.roles.add(role)
 
@@ -75,17 +78,19 @@ client.on('message', msg => {
     else if (msg.content.startsWith('HENSHIN PEKO PEKO')) {
        	var newNickname = "Usada Pekora";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
-       	msg.reply('Fubuki as !!!');
+       	msg.reply('Fubuki as Natural Comedian!!!');
     }
 
-    else if (msg.content.startsWith('HENSHIN NEEEEEEEE')) {
+    else if (msg.content.startsWith('HENSHIN PETTAN')) {
        	var newNickname = "Uruha Rushia";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
+       	msg.reply('Fubuki as Pettan!!!');
     }
 
     else if (msg.content.startsWith('HENSHIN AHOY')) {
        	var newNickname = "Houshou Marine";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
+       	msg.reply('Fubuki as Senchou!!!');
     }
 
     else if (msg.content.startsWith('What are you watching, Fubuki?')) {
