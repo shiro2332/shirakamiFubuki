@@ -12,7 +12,7 @@ module.exports = class BasicCommand extends Command {
 
 	async run(client, message) {
 		var avatar = './suisei.png'
-		user.setAvatar(avatar)
-		user.setUsername("Hoshimachi Suisei")
+		client.user.setAvatar(avatar)
+		client.user.setUsername("Hoshimachi Suisei")
 	}
 };
