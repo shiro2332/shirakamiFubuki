@@ -1,16 +1,14 @@
 const { Command } = require('discord.js-commando')
-const client = Commando.CommandoClient()
+const client = Command.CommandoClient()
 
 module.exports = class BasicCommand extends Command {
 	constructor(client) {
-		this.client = client
 		super(client, {
 			name: 'fbk',
 			group: 'command',
 			memberName: 'fbk',
 			description: 'Become fubuki',
 		});
-		var client = null;
 	}
 
 	async run(message) {
