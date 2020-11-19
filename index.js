@@ -28,24 +28,19 @@ client.on('ready', async () => {
         
         client.user.setActivity(live,{ type: 'WATCHING'})
     }, 100000)
-
-	client.user.setAvatar('https://cdn.discordapp.com/attachments/778860853835464704/778866435731619860/fbk.jpg')
-	client.user.setUsername("Shirakami Fubuki")
-
-	command(client, ['fbk'], (message) => {
-    	client.user.setAvatar('https://cdn.discordapp.com/attachments/778860853835464704/778866435731619860/fbk.jpg')
-		client.user.setNickname("Shirakami Fubuki")
-  	})
-
-  	command(client, ['suisei'], (message) => {
-    	client.user.setAvatar('https://media.discordapp.net/attachments/778860853835464704/778911998914068510/unknown.png')
-		client.user.setNickname("Hoshimachi Suisei")
-  	})
 })
 
 client.on('message', msg => {
-  if (msg.content === 'piang') {
+  if (msg.content.includes("piang")) {
     msg.reply('Pong!');
+  }
+
+  if (msg.content === "fbk") {
+    client.user.setNickname("Shirakami Fubuki")
+  }
+
+  if (msg.content === "suisei") {
+    client.user.setNickname("Hoshimachi Suisei")
   }
 });
 
