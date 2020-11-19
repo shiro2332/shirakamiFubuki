@@ -31,7 +31,7 @@ client.on('ready', async () => {
     }, 100000)
 })
 
-//Commands that does not works with discord commando
+//Commands that does not works with discord commando or commands that does not use prefix
 client.on('message', msg => {
   	if (msg.content.includes("piang")) {
     	msg.reply('Pong!');
@@ -152,10 +152,6 @@ client.on('message', msg => {
        	msg.reply('Fubuki as Senchou!!!');
     }
 
-    else if (msg.content.startsWith('What are you watching, Fubuki?')) {
-       	client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
-    }
-
     else if (msg.content.startsWith('You are FBK')) {
        	//Change bot name
        	var newNickname = "Shirakami Fubuki";
@@ -179,6 +175,11 @@ client.on('message', msg => {
        	msg.reply('Kon Kon Kitsune!!!');
     }
 
+    //END OF HENSHIN COMMANDS ==============================================================================================================
+
+    else if (msg.content.startsWith('Fubuki watch?')) {
+       	client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
+    }
 });
 
 client.login(config.token)
