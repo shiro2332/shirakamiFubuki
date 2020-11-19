@@ -36,12 +36,12 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 
-  if (msg.content.includes("HENSHIN FBK")) {
-    message.guild.members.get(774870728285356083).setNickname("Fubuki");
+  if (msg.content.startsWith("HENSHIN FBK")) {
+    message.guild.me.setNickname("Fubuki");
   }
 
-  if (msg.content.includes("HENSHIN SUISEI")) {
-    message.guild.members.get(774870728285356083).setNickname("Suisei");
+  if (msg.content.startsWith("HENSHIN SUISEI")) {
+    message.guild.me.setNickname("Suisei");
   }
 });
 
