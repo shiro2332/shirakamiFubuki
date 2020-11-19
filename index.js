@@ -40,20 +40,33 @@ client.on('message', msg => {
   	else if (msg.content.startsWith('HENSHIN FUBUKI')) {
        	var newNickname = "Shirakami Fubuki";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
+       	const member = guild.members.cache.get(774870728285356083)
+    	member.roles.add(777540708264968202)
+
+       	msg.reply('Fubuki as Scatman!!!');
     }
 
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
        	var newNickname = "Hoshimachi Suisei";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
+       	const member = guild.members.cache.get(774870728285356083)
+    	member.roles.add(777540571173748736)
+       	msg.reply('Fubuki as Suichopath!!!');
     }
 
     else if (msg.content.startsWith('HENSHIN PEKO PEKO')) {
        	var newNickname = "Usada Pekora";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
+       	msg.reply('Fubuki as !!!');
     }
 
     else if (msg.content.startsWith('HENSHIN NEEEEEEEE')) {
        	var newNickname = "Uruha Rushia";
+       	msg.guild.me.setNickname(newNickname).catch(console.error);
+    }
+
+    else if (msg.content.startsWith('HENSHIN AHOY')) {
+       	var newNickname = "Houshou Marine";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
     }
 
