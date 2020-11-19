@@ -57,7 +57,7 @@ client.on('message', msg => {
     }
 
     else if (msg.content.startsWith('What are you watching, Fubuki?')) {
-       	client.user.setActivity("フブキCh。白上フブキ", { type: 'WATCHING'}
+       	client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
     }
 
   	else if (msg.content.startsWith("pong")) {
