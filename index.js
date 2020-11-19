@@ -40,8 +40,17 @@ client.on('message', msg => {
   	else if (msg.content.startsWith('HENSHIN FUBUKI')) {
        	var newNickname = "Shirakami Fubuki";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
+
+       	const target = "774870728285356083"
+       	const rolename = "Fox Burger King"
        	const member = msg.members.cache.get(774870728285356083)
-    	member.roles.add(777540708264968202)
+    	const { guild } = msg
+    	const role = guild.roles.cache.find((role) => {
+    		return role.name === roleName
+    	})
+
+    	const member = guild.members.cache.get(target)
+    	member.roles.add(role)
 
        	msg.reply('Fubuki as Scatman!!!');
     }
@@ -49,8 +58,17 @@ client.on('message', msg => {
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
        	var newNickname = "Hoshimachi Suisei";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
+       	const target = "774870728285356083"
+       	const rolename = "Comet"
        	const member = msg.members.cache.get(774870728285356083)
-    	member.roles.add(777540571173748736)
+    	const { guild } = msg
+    	const role = guild.roles.cache.find((role) => {
+    		return role.name === roleName
+    	})
+
+    	const member = guild.members.cache.get(target)
+    	member.roles.add(role)
+    	
        	msg.reply('Fubuki as Suichopath!!!');
     }
 
