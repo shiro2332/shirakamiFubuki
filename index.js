@@ -43,7 +43,7 @@ client.on('message', msg => {
 
        	const target = "774870728285356083"
        	const rolename = "Fox Burger King"
-       	const member = msg.members.cache.get(774870728285356083)
+
     	const { guild } = msg
     	const role = guild.roles.cache.find((role) => {
     		return role.name === roleName
@@ -60,7 +60,7 @@ client.on('message', msg => {
        	msg.guild.me.setNickname(newNickname).catch(console.error);
        	const target = "774870728285356083"
        	const rolename = "Comet"
-       	const member = msg.members.cache.get(774870728285356083)
+
     	const { guild } = msg
     	const role = guild.roles.cache.find((role) => {
     		return role.name === roleName
@@ -68,7 +68,7 @@ client.on('message', msg => {
 
     	const member = guild.members.cache.get(target)
     	member.roles.add(role)
-    	
+
        	msg.reply('Fubuki as Suichopath!!!');
     }
 
