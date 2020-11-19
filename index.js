@@ -37,13 +37,28 @@ client.on('message', msg => {
   	}
 
   	else if (msg.content.startsWith('HENSHIN FUBUKI')) {
-       	var newNickname = "FUBUKI";
+       	var newNickname = "SHIRAKAMI FUBUKI";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
     }
 
-  	else if (msg.content.startsWith("HENSHIN SUISEI")) {
-    	msg.author.setNickname("test").catch(console.error);
-  	}
+  	else if (msg.content.startsWith('HENSHIN SUISEI')) {
+       	var newNickname = "HOSHIMACHI SUISEI";
+       	msg.guild.me.setNickname(newNickname).catch(console.error);
+    }
+
+    else if (msg.content.startsWith('HENSHIN PEKO PEKO')) {
+       	var newNickname = "USADA PEKORA";
+       	msg.guild.me.setNickname(newNickname).catch(console.error);
+    }
+
+    else if (msg.content.startsWith('HENSHIN NEEEEEEEE')) {
+       	var newNickname = "URUHA RUSHIA";
+       	msg.guild.me.setNickname(newNickname).catch(console.error);
+    }
+
+    else if (msg.content.startsWith('What are you watching, Fubuki?')) {
+       	client.user.setActivity("フブキCh。白上フブキ", { type: 'WATCHING'}
+    }
 
   	else if (msg.content.startsWith("pong")) {
     	msg.reply('PONG PONG PONG');
