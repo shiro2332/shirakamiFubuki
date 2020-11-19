@@ -33,8 +33,6 @@ client.on('ready', async () => {
 
 //Commands that does not works with discord commando
 client.on('message', msg => {
-	const { guild } = message
-	
   	if (msg.content.includes("piang")) {
     	msg.reply('Pong!');
   	}
@@ -42,7 +40,7 @@ client.on('message', msg => {
   	else if (msg.content.startsWith('HENSHIN FUBUKI')) {
        	var newNickname = "Shirakami Fubuki";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
-       	const member = guild.members.cache.get(774870728285356083)
+       	const member = msg.members.cache.get(774870728285356083)
     	member.roles.add(777540708264968202)
 
        	msg.reply('Fubuki as Scatman!!!');
@@ -51,7 +49,7 @@ client.on('message', msg => {
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
        	var newNickname = "Hoshimachi Suisei";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
-       	const member = guild.members.cache.get(774870728285356083)
+       	const member = msg.members.cache.get(774870728285356083)
     	member.roles.add(777540571173748736)
        	msg.reply('Fubuki as Suichopath!!!');
     }
