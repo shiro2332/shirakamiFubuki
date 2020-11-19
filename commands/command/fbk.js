@@ -2,9 +2,7 @@ const { Command } = require('discord.js-commando')
 
 
 module.exports = class BasicCommand extends Command {
-	var client = null;
-	constructor() {
-		this.client = client
+	constructor(client) {
 		super(client, {
 			name: 'fbk',
 			group: 'command',
