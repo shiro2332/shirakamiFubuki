@@ -43,4 +43,10 @@ client.on('ready', async () => {
   	})
 })
 
+client.on('message', msg => {
+  if (msg.content === 'piang') {
+    msg.reply('Pong!');
+  }
+});
+
 client.login(config.token)
