@@ -38,11 +38,11 @@ client.on('message', msg => {
 
   	else if (message.content.startsWith('HENSHIN FUBUKI')) {
        	var newNickname = "FUBUKI";
-       	message.guild.me.setNickname(newNickname).catch(console.error);
+       	msg.guild.me.setNickname(newNickname).catch(console.error);
     }
 
   	else if (msg.content.startsWith("HENSHIN SUISEI")) {
-    	msg.author.setNickname("test").catch(console.error)
+    	msg.author.setNickname("test").catch(console.error);
   	}
 
   	else if (msg.content.startsWith("pong")) {
