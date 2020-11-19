@@ -22,11 +22,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
       		voice.channel.join().then((connection) => {
       			message.channel.send("Haachama cooking in 60s.")
-          		connection.play(path.join(__dirname, '../../assets/audio/haachama.mp3'))
-      		})
-
-      		voice.channel.join().then((connection) => {
-        		connection.play(path.join(__dirname, '../../assets/audio/hpasta1.mp3'))
+          		connection.play(path.join(__dirname, '../../assets/audio/haachama.mp3')).then(connection.play(path.join(__dirname, '../../assets/audio/hpasta1.mp3')))
       		})
     	}
     }
