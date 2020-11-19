@@ -44,12 +44,9 @@ client.on('message', msg => {
        	const rolename = "Fox Burger King"
 
     	const { guild } = msg
-    	const role = guild.roles.cache.find((role) => {
-    		return role.name === rolename
-    	})
 
     	const member = guild.members.cache.get("774870728285356083")
-    	member.roles.add(role)
+    	member.roles.add(member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
        	msg.reply('Fubuki as Scatman!!!');
     }
@@ -61,12 +58,9 @@ client.on('message', msg => {
        	const rolename = "Comet"
 
     	const { guild } = msg
-    	const role = guild.roles.cache.find((role) => {
-    		return role.name === rolename
-    	})
 
     	const member = guild.members.cache.get("774870728285356083")
-    	member.roles.add(role)
+    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename})
 
        	msg.reply('Fubuki as Suichopath!!!');
     }
