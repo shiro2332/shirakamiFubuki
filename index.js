@@ -31,28 +31,29 @@ client.on('ready', async () => {
     }, 100000)
 })
 
+//Commands that does not works with discord commando
 client.on('message', msg => {
   	if (msg.content.includes("piang")) {
     	msg.reply('Pong!');
   	}
 
   	else if (msg.content.startsWith('HENSHIN FUBUKI')) {
-       	var newNickname = "SHIRAKAMI FUBUKI";
+       	var newNickname = "Shirakami Fubuki";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
     }
 
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
-       	var newNickname = "HOSHIMACHI SUISEI";
+       	var newNickname = "Hoshimachi Suisei";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
     }
 
     else if (msg.content.startsWith('HENSHIN PEKO PEKO')) {
-       	var newNickname = "USADA PEKORA";
+       	var newNickname = "Usada Pekora";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
     }
 
     else if (msg.content.startsWith('HENSHIN NEEEEEEEE')) {
-       	var newNickname = "URUHA RUSHIA";
+       	var newNickname = "Uruha Rushia";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
     }
 
@@ -60,9 +61,6 @@ client.on('message', msg => {
        	client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
     }
 
-  	else if (msg.content.startsWith("pong")) {
-    	msg.reply('PONG PONG PONG');
-  	}
 });
 
 client.login(config.token)
