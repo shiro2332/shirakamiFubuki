@@ -46,7 +46,7 @@ client.on('message', msg => {
 
     	const { guild } = msg
     	const role = guild.roles.cache.find((role) => {
-    		return role.name === roleName
+    		return role.name === rolename
     	})
 
     	const member = guild.members.cache.get(target)
@@ -63,7 +63,7 @@ client.on('message', msg => {
 
     	const { guild } = msg
     	const role = guild.roles.cache.find((role) => {
-    		return role.name === roleName
+    		return role.name === rolename
     	})
 
     	const member = guild.members.cache.get(target)
