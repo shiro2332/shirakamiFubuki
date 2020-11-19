@@ -49,8 +49,8 @@ client.on('message', msg => {
     		return role.name === rolename
     	})
 
-    	console.log(role)
-    	console.log(target)
+    	msg.reply(role)
+    	msg.reply(target)
 
     	const member = guild.members.cache.get(target)
     	member.roles.add(role)
