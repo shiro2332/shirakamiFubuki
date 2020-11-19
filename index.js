@@ -31,6 +31,14 @@ client.on('ready', async () => {
     }, 100000)
 })
 
+function HENSHIN (id, hrole){
+	const rolename = hrole
+    const { guild } = msg
+
+    const member = guild.members.cache.get(id)
+    member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
+}
+
 //Commands that does not works with discord commando
 client.on('message', msg => {
   	if (msg.content.includes("piang")) {
@@ -41,12 +49,7 @@ client.on('message', msg => {
        	var newNickname = "Shirakami Fubuki";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
 
-       	const rolename = "Fox Burger King"
-
-    	const { guild } = msg
-
-    	const member = guild.members.cache.get("774870728285356083")
-    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
+       	HENSHIN("774870728285356083", "Fox Burger King")
 
        	msg.reply('Fubuki as Scatman!!!');
     }
@@ -55,12 +58,7 @@ client.on('message', msg => {
        	var newNickname = "Hoshimachi Suisei";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
 
-       	const rolename = "Comet"
-
-    	const { guild } = msg
-
-    	const member = guild.members.cache.get("774870728285356083")
-    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
+       	HENSHIN("774870728285356083", "Comet")
 
        	msg.reply('Fubuki as Suichopath!!!');
     }
