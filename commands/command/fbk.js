@@ -11,7 +11,7 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	async run(client, message) {
-		var avatar = './fbk.jpg'
+		var avatar = 'https://cdn.discordapp.com/attachments/778860853835464704/778866435731619860/fbk.jpg';
 		client.user.setAvatar(avatar)
 		client.user.setUsername("Shirakami Fubuki")
 	}
