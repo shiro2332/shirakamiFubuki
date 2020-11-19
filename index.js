@@ -9,6 +9,7 @@ const client = new Commando.CommandoClient({
 	commandPrefix: config.prefix
 })
 
+//Run this when the bot is startup
 client.on('ready', async () => {
 	console.log("Client is ready!")
 
@@ -35,11 +36,11 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 
-  if (msg.content === "!!fbk") {
+  if (msg.content.includes("HENSHIN FBK")) {
     message.guild.members.get(bot.user.id).setNickname("Fubuki");
   }
 
-  if (msg.content === "!!suisei") {
+  if (msg.content.includes("HENSHIN SUISEI")) {
     message.guild.members.get(bot.user.id).setNickname("Suisei");
   }
 });
