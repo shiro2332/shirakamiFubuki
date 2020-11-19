@@ -26,5 +26,5 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         	connection.play(path.join(__dirname, '../../assets/audio/hpasta1.mp3'))
           voice.channel.leave()
       	})
-  }
+    }
 }
