@@ -35,11 +35,11 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 
-  if (msg.content === "fbk") {
+  if (msg.content === "!!fbk") {
     client.user.setNickname("Shirakami Fubuki")
   }
 
-  if (msg.content === "suisei") {
+  if (msg.content === "!!suisei") {
     client.user.setNickname("Hoshimachi Suisei")
   }
 });
