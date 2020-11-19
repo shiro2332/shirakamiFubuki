@@ -36,11 +36,15 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 
-  if (msg.content.startsWith("HENSHIN FBK")) {
+  else if (msg.content.startsWith("HENSHIN FBK")) {
     msg.guild.members.get(774870728285356083).setNickname("FUBUKI")  }
 
-  if (msg.content.startsWith("HENSHIN SUISEI")) {
+  else if (msg.content.startsWith("HENSHIN SUISEI")) {
     msg.author.setNickname("test")
+  }
+
+  else if (msg.content.startsWith("pong")) {
+    msg.reply('PONG PONG PONG');
   }
 });
 
