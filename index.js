@@ -36,9 +36,10 @@ client.on('message', msg => {
     	msg.reply('Pong!');
   	}
 
-  	else if (msg.content.startsWith("HENSHIN FBK")) {
-    	message.guild.member(client.user).setNickname('FUBUKI')  
-	}
+  	else if (message.content.startsWith('HENSHIN FUBUKI')) {
+       	var newNickname = "FUBUKI";
+       	message.guild.me.setNickname(newNickname);
+    }
 
   	else if (msg.content.startsWith("HENSHIN SUISEI")) {
     	msg.author.setNickname("test")
