@@ -32,20 +32,21 @@ client.on('ready', async () => {
 })
 
 client.on('message', msg => {
-  if (msg.content.includes("piang")) {
-    msg.reply('Pong!');
-  }
+  	if (msg.content.includes("piang")) {
+    	msg.reply('Pong!');
+  	}
 
-  else if (msg.content.startsWith("HENSHIN FBK")) {
-    msg.guild.members.get(774870728285356083).setNickname("FUBUKI")  }
+  	else if (msg.content.startsWith("HENSHIN FBK")) {
+    	message.guild.member(client.user).setNickname('FUBUKI')  
+	}
 
-  else if (msg.content.startsWith("HENSHIN SUISEI")) {
-    msg.author.setNickname("test")
-  }
+  	else if (msg.content.startsWith("HENSHIN SUISEI")) {
+    	msg.author.setNickname("test")
+  	}
 
-  else if (msg.content.startsWith("pong")) {
-    msg.reply('PONG PONG PONG');
-  }
+  	else if (msg.content.startsWith("pong")) {
+    	msg.reply('PONG PONG PONG');
+  	}
 });
 
 client.login(config.token)
