@@ -45,7 +45,7 @@ client.on('message', msg => {
        	const { guild } = msg
        	//Change bot role (Remove)
        	var allrole = ["Fox Burger King", "Comet"]
-       	for (i = 0; i < allrole.length(); i++){
+       	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.add(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
        	}
@@ -68,7 +68,7 @@ client.on('message', msg => {
        	const { guild } = msg
        	//Change bot role (Remove)
        	var allrole = ["Fox Burger King", "Comet"]
-       	for (i = 0; i < allrole.length(); i++){
+       	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.add(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
        	}
@@ -103,6 +103,12 @@ client.on('message', msg => {
 
     else if (msg.content.startsWith('What are you watching, Fubuki?')) {
        	client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
+    }
+
+    else if (msg.content.startsWith('You are FBK')) {
+       	var newNickname = "";
+       	msg.guild.me.setNickname(newNickname).catch(console.error);
+       	msg.reply('Kon Kon Kitsune!!!');
     }
 
 });
