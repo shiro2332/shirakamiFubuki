@@ -38,6 +38,17 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       		voice.channel.join().then((connection) => {
       			connection.play(path.join(__dirname, '../../assets/song/haachama/senbonzakura.mp3'))
       		})
+    	} else if (message.content.includes('!!haachama shapeofyou')){
+      		const { voice } = message.member
+
+      		if (!voice.channelID) {
+        		message.reply('You must be in a voice channel')
+        		return
+      		}
+
+      		voice.channel.join().then((connection) => {
+      			connection.play(path.join(__dirname, '../../assets/song/haachama/shapeofyou.mp3'))
+      		})
     	}
     }
 }	
