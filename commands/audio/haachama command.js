@@ -50,6 +50,18 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       			connection.play(path.join(__dirname, '../../assets/song/haachama/shapeofyou.mp3'))
       		})
 
+    	} else if (message.content.includes('!!haachama natsumatsuri')){
+      		const { voice } = message.member
+
+      		if (!voice.channelID) {
+        		message.reply('You must be in a voice channel')
+        		return
+      		}
+
+      		voice.channel.join().then((connection) => {
+      			connection.play(path.join(__dirname, '../../assets/song/haachama/natsumatsuri.mp3'))
+      		})
+
     	} else {
     		message.reply {message.author.toString() + ", Unknown command. Use !! help or @Shirakami Fubuki#3337 help to view the command list."}
     	}
