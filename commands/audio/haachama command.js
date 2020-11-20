@@ -49,6 +49,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       		voice.channel.join().then((connection) => {
       			connection.play(path.join(__dirname, '../../assets/song/haachama/shapeofyou.mp3'))
       		})
+
+    	} else {
+    		message.reply {message.author.toString() + ", Unknown command. Use !! help or @Shirakami Fubuki#3337 help to view the command list."}
     	}
     }
 }	
