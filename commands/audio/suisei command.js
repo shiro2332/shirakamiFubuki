@@ -34,11 +34,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     else if (message.content.includes('!!suisei help')){
-        message.channel.send("Commands available to Suisei: \n!!suisei help : Show commands available to Suisei\n!!suisei alice : Play Alice in N.Y.\n!!suisei saga : Play Saga Jihen")
+        message.channel.send('<:suisei:779987500927811604> ' + "Commands available to Suisei: \n!!suisei help : Show commands available to Suisei\n!!suisei alice : Play Alice in N.Y.\n!!suisei saga : Play Saga Jihen")
     } 
 
     else {
-        message.channel.send("Commands available to Suisei: \n!!suisei help : Show commands available to Suisei\n!!suisei alice : Play Alice in N.Y.\n!!suisei saga : Play Saga Jihen")
+        message.channel.send('<:suisei:779987500927811604> ' + "Commands available to Suisei: \n!!suisei help : Show commands available to Suisei\n!!suisei alice : Play Alice in N.Y.\n!!suisei saga : Play Saga Jihen")
     }
   }
 }
@@ -46,8 +46,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 //Commands help
 /**
 Commands available to Suisei:
-!!suisei help  = Show commands available to Suisei
-!!suisei alice = Play Alice in N.Y.
-!!suisei saga  = Play Saga Jihen
+!!suisei help : Show commands available to Suisei
+!!suisei alice : Play Alice in N.Y.
+!!suisei saga : Play Saga Jihen
 
 **/

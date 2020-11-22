@@ -39,11 +39,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     else if (message.content.includes('!!aqua help')){
-        message.channel.send("Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Pallete\n!!aqua trackmaker : Play Indoor Track Maker")
+        message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Pallete\n!!aqua trackmaker : Play Indoor Track Maker")
     }
 
     else {
-        message.channel.send("Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Pallete\n!!aqua trackmaker : Play Indoor Track Maker")
+        message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Pallete\n!!aqua trackmaker : Play Indoor Track Maker")
     }
   }
 }
@@ -52,8 +52,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 /**
 Commands available to Aqua:
 !!aqua help : Show commands available to Aqua
-!!aqua forthewin  = Play For the Win
-!!aqua iropalette = Play Iro Pallete
-!!aqua trackmaker = Play Indoor Track Maker
+!!aqua forthewin : Play For the Win
+!!aqua iropalette : Play Iro Pallete
+!!aqua trackmaker : Play Indoor Track Maker
 
 **/

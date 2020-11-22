@@ -46,11 +46,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     	} 
 
     	else if (message.content.includes('!!haachama help')){
-      		message.channel.send("Commands available to Haachama:\n!!haachama help : Show commands available to Haachama\n!!haachama cookpasta : Haachama Cooking Pasta Guide\n!!haachama senbonzakura : Play Senbonzakura\n!!haachama shapeofyou : Play Shape of You\n!!haachama natsumatsuri : Play Natsumatsuri")
+      		message.channel.send('<:haachama:779986363683569695> ' + '<:haachama:779986363683569695> ' + "Commands available to Haachama:\n!!haachama help : Show commands available to Haachama\n!!haachama cookpasta : Haachama Cooking Pasta Guide\n!!haachama senbonzakura : Play Senbonzakura\n!!haachama shapeofyou : Play Shape of You\n!!haachama natsumatsuri : Play Natsumatsuri")
     	}
 
     	else {
-    		message.channel.send("Commands available to Haachama:\n!!haachama help : Show commands available to Haachama\n!!haachama cookpasta : Haachama Cooking Pasta Guide\n!!haachama senbonzakura : Play Senbonzakura\n!!haachama shapeofyou : Play Shape of You\n!!haachama natsumatsuri : Play Natsumatsuri")
+    		message.channel.send('<:haachama:779986363683569695> ' + "Commands available to Haachama:\n!!haachama help : Show commands available to Haachama\n!!haachama cookpasta : Haachama Cooking Pasta Guide\n!!haachama senbonzakura : Play Senbonzakura\n!!haachama shapeofyou : Play Shape of You\n!!haachama natsumatsuri : Play Natsumatsuri")
     	} 
     }
 }	
@@ -58,9 +58,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 //Commands help
 /**
 Commands available to Haachama:
-!!haachama help         = Show commands available to Haachama
-!!haachama cookpasta    = Haachama Cooking Pasta Guide
-!!haachama senbonzakura = Play Senbonzakura
-!!haachama shapeofyou   = Play Shape of You
-!!haachama natsumatsuri = Play Natsumatsuri
+!!haachama help : Show commands available to Haachama
+!!haachama cookpasta : Haachama Cooking Pasta Guide
+!!haachama senbonzakura : Play Senbonzakura
+!!haachama shapeofyou : Play Shape of You
+!!haachama natsumatsuri : Play Natsumatsuri
 **/
