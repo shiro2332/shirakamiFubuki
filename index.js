@@ -35,9 +35,7 @@ client.on('ready', async () => {
 })
 
 //Commands that does not works with discord commando or commands that does not use prefix
-client.on('message', msg => {
-	function Henshin()
-  	
+client.on('message', msg => {  	
   	if (msg.content.startsWith('HENSHIN FUBUKI')) {
   		//Change bot name
        	var newNickname = "Shirakami Fubuki";
