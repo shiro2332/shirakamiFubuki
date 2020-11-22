@@ -36,11 +36,8 @@ client.on('ready', async () => {
 
 //Commands that does not works with discord commando or commands that does not use prefix
 client.on('message', msg => {
-  	if (msg.content.includes("piang")) {
-    	msg.reply('Pong!');
-  	}
-
-  	else if (msg.content.startsWith('HENSHIN FUBUKI')) {
+  	
+  	if (msg.content.startsWith('HENSHIN FUBUKI')) {
   		//Change bot name
        	var newNickname = "Shirakami Fubuki";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
@@ -86,7 +83,7 @@ client.on('message', msg => {
        	msg.reply('Fubuki as Suichopath!!!');
     }
 
-    else if (msg.content.startsWith('HENSHIN PEKO PEKO')) {
+    else if (msg.content.startsWith('HENSHIN PEKORA')) {
        	//Change bot name
        	var newNickname = "Usada Pekora";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
@@ -109,7 +106,7 @@ client.on('message', msg => {
        	msg.reply('Fubuki as Natural Comedian!!!');
     }
 
-    else if (msg.content.startsWith('HENSHIN PETTAN')) {
+    else if (msg.content.startsWith('HENSHIN RUSHIA')) {
        	//Change bot name
        	var newNickname = "Usada Rushia";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
@@ -132,7 +129,7 @@ client.on('message', msg => {
        	msg.reply('Fubuki as Pettan!!!');
     }
 
-    else if (msg.content.startsWith('HENSHIN AHOY')) {
+    else if (msg.content.startsWith('HENSHIN MARINE')) {
        	//Change bot name
        	var newNickname = "Houshou Marine";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
@@ -178,7 +175,7 @@ client.on('message', msg => {
        	msg.reply('Fubuki as Haachamachama!!!');
     } 
 
-    else if (msg.content.startsWith('HENSHIN BAQUA')) {
+    else if (msg.content.startsWith('HENSHIN AQUA')) {
        	//Change bot name
        	var newNickname = "Minato Aqua";
        	msg.guild.me.setNickname(newNickname).catch(console.error);
@@ -229,6 +226,12 @@ client.on('message', msg => {
     else if (msg.content.startsWith('Fubuki watch?')) {
        	client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
     }
+
+    else if (msg.content.includes("piang")) {
+    	msg.reply('Pong!');
+  	}
+
+  	
 });
 
 client.login(config.token)
