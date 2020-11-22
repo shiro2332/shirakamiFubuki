@@ -39,12 +39,28 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
     	else if (message.content.includes('!!haachama shapeofyou')){
       		playAudio('../../assets/song/haachama/shapeofyou.mp3')
-
     	} 
 
     	else if (message.content.includes('!!haachama natsumatsuri')){
       		playAudio('../../assets/song/haachama/natsumatsuri.mp3')
+    	} 
 
+    	else if (message.content.includes('!!haachama help')){
+      		message.channel.send("Commands available to Haachama:\n!!haachama help         = Show commands available to Haachama\n!!haachama cookpasta    = Haachama Cooking Pasta Guide\n!!haachama senbonzakura = Play Senbonzakura\n!!haachama shapeofyou   = Play Shape of You\n!!haachama natsumatsuri = Play Natsumatsuri")
+    	}
+
+    	else {
+    		message.channel.send("Commands available to Haachama:\n!!haachama help         = Show commands available to Haachama\n!!haachama cookpasta    = Haachama Cooking Pasta Guide\n!!haachama senbonzakura = Play Senbonzakura\n!!haachama shapeofyou   = Play Shape of You\n!!haachama natsumatsuri = Play Natsumatsuri")
     	} 
     }
 }	
+
+//Commands help
+/**
+Commands available to Haachama:
+!!haachama help         = Show commands available to Haachama
+!!haachama cookpasta    = Haachama Cooking Pasta Guide
+!!haachama senbonzakura = Play Senbonzakura
+!!haachama shapeofyou   = Play Shape of You
+!!haachama natsumatsuri = Play Natsumatsuri
+**/

@@ -5,9 +5,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   constructor(client) {
     super(client, {
       name: 'aqua',
-      group: 'audio',
+      group: 'hololive',
       memberName: 'aqua',
-      description: 'aqua music',
+      description: 'Show commands available to Aqua',
     })
   }
 
@@ -37,5 +37,23 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     else if (message.content.includes('!!aqua trackmaker')){
       	playAudio( '../../assets/song/aqua/indoortrackmaker.mp3')
     }
+
+    else if (message.content.includes('!!aqua help')){
+        message.channel.send("Commands available to Aqua:\n!!aqua forthewin  = Play For the Win\n!!aqua iropalette = Play Iro Pallete\n!!aqua trackmaker = Play Indoor Track Maker")
+    }
+
+    else {
+        message.channel.send("Commands available to Aqua:\n!!aqua forthewin  = Play For the Win\n!!aqua iropalette = Play Iro Pallete\n!!aqua trackmaker = Play Indoor Track Maker")
+    }
   }
 }
+
+//Commands help
+/**
+Commands available to Aqua:
+!!aqua help       = Show commands available to Aqua
+!!aqua forthewin  = Play For the Win
+!!aqua iropalette = Play Iro Pallete
+!!aqua trackmaker = Play Indoor Track Maker
+
+**/

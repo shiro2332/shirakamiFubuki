@@ -5,9 +5,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   constructor(client) {
     super(client, {
       name: 'suisei',
-      group: 'audio',
+      group: 'hololive',
       memberName: 'suisei',
-      description: 'music',
+      description: 'Show commands available to Suisei',
     })
   }
 
@@ -32,5 +32,22 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     else if (message.content.includes('!!suisei saga')){
       	playAudio('../../assets/song/suisei/saga.mp3')
     }
+
+    else if (message.content.includes('!!suisei help')){
+        message.channel.send("Commands available to Suisei: \n!!suisei help  = Show commands available to Suisei\n!!suisei alice = Play Alice in N.Y.\n!!suisei saga  = Play Saga Jihen")
+    } 
+
+    else {
+        message.channel.send("Commands available to Suisei: \n!!suisei help  = Show commands available to Suisei\n!!suisei alice = Play Alice in N.Y.\n!!suisei saga  = Play Saga Jihen")
+    }
   }
 }
+
+//Commands help
+/**
+Commands available to Suisei:
+!!suisei help  = Show commands available to Suisei
+!!suisei alice = Play Alice in N.Y.
+!!suisei saga  = Play Saga Jihen
+
+**/
