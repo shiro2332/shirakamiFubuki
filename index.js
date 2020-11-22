@@ -57,7 +57,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply("<:shira:775231808273907712> " + 'Fubuki as Scatman!!!');
+       	msg.reply("<:shira:775231808273907712> " + 'Hololive Gen 1/Gamers Shirakami Fubuki desu!');
     }
 
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
@@ -80,7 +80,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply('Fubuki as Suichopath!!!');
+       	msg.reply('<:suisei:779987500927811604>' + 'Hololive 2D Talent Hoshimachi Suisei!');
     }
 
     else if (msg.content.startsWith('HENSHIN PEKORA')) {
@@ -103,7 +103,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply('Fubuki as Natural Comedian!!!');
+       	msg.reply('<:peko:779985756390162472>' + 'Hololive Gen 3 Usada Pekora peko!');
     }
 
     else if (msg.content.startsWith('HENSHIN RUSHIA')) {
@@ -126,7 +126,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply('Fubuki as Pettan!!!');
+       	msg.reply('<:rushia:779987468622495754>' + 'Hololive Gen 3 Uruha Rushia desu!');
     }
 
     else if (msg.content.startsWith('HENSHIN MARINE')) {
@@ -149,7 +149,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply('Fubuki as Senchou!!!');
+       	msg.reply('<:marine:779987488574930955>' + 'Hololive Gen 3 Houshou Marine sanjo!');
     }
 
     else if (msg.content.startsWith('HENSHIN HAACHAMA')) {
@@ -172,7 +172,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply('Fubuki as Haachamachama!!!');
+       	msg.reply('<:haachama:779986363683569695>' + 'Hololive Gen 1 Haachama chama!');
     } 
 
     else if (msg.content.startsWith('HENSHIN AQUA')) {
@@ -195,7 +195,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply("<:aqua:779982662298632224> " + 'Fubuki as Akukin Kensetsu!!!');
+       	msg.reply("<:aqua:779982662298632224> " + 'Hololive Gen 2 Minato Aqua desu!	');
     }
 
     else if (msg.content.startsWith('You are FBK')) {
