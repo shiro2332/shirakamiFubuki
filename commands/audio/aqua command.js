@@ -26,7 +26,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
     }
 
-    else if (message.content.includes('!!aqua iropallete')){
+    else if (message.content.includes('!!aqua iropalette')){
       	const { voice } = message.member
 
       	if (!voice.channelID) {
