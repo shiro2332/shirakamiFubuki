@@ -195,7 +195,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply("<:aqua:779982737158963201> " + 'Fubuki as Akukin Kensetsu!!!');
+       	msg.reply("<:aqua:779982662298632224> " + 'Fubuki as Akukin Kensetsu!!!');
     }
 
     else if (msg.content.startsWith('You are FBK')) {
