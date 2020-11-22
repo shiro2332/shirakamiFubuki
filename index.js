@@ -19,13 +19,15 @@ client.on('ready', async () => {
 		['fbk_song', 'Fubuki Song command'],
 		['command', 'Basic command'],
 		['commander', 'Commander command'],
+		['admin_command', 'Admin command'],
 		])
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
 
-
+	//Random a status
 	setInterval(function() {
 		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね", "Aqua Ch. 湊あくあ", "Nakiri Ayame Ch. 百鬼あやめ", "Okayu Ch. 猫又おかゆ", "Mio Channel 大神ミオ", "Pekora Ch. 兎田ぺこら", "Marine Ch. 宝鐘マリン")
+		var livelist = Array()
 		var live = livelist[Math.floor(Math.random() * livelist.length)]
         
         client.user.setActivity(live,{ type: 'WATCHING'})
@@ -45,7 +47,7 @@ client.on('message', msg => {
 
        	const { guild } = msg
        	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama"]
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
@@ -68,7 +70,7 @@ client.on('message', msg => {
 
        	const { guild } = msg
        	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet"]
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
@@ -91,7 +93,7 @@ client.on('message', msg => {
 
        	const { guild } = msg
        	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama"]
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
@@ -114,7 +116,7 @@ client.on('message', msg => {
 
        	const { guild } = msg
        	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama"]
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
@@ -137,7 +139,7 @@ client.on('message', msg => {
 
        	const { guild } = msg
        	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama"]
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
@@ -160,7 +162,7 @@ client.on('message', msg => {
 
        	const { guild } = msg
        	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama"]
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
@@ -174,6 +176,29 @@ client.on('message', msg => {
 
     	//Complete
        	msg.reply('Fubuki as Haachamachama!!!');
+    } 
+
+    else if (msg.content.startsWith('HENSHIN BAQUA')) {
+       	//Change bot name
+       	var newNickname = "Minato Aqua";
+       	msg.guild.me.setNickname(newNickname).catch(console.error);
+
+       	const { guild } = msg
+       	//Change bot role (Remove)
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
+       	for (i = 0; i < allrole.length; i++){
+       		const member = guild.members.cache.get("774870728285356083")
+    		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+       	}
+
+       	//Change bot role (Add)
+       	const rolename = "Akukin"
+
+    	const member = guild.members.cache.get("774870728285356083")
+    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
+
+    	//Complete
+       	msg.reply('Fubuki as Akukin Kensetsu!!!');
     }
 
     else if (msg.content.startsWith('You are FBK')) {
@@ -183,7 +208,7 @@ client.on('message', msg => {
 
        	const { guild } = msg
        	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama"]
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
        	for (i = 0; i < allrole.length; i++){
        		const member = guild.members.cache.get("774870728285356083")
     		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))

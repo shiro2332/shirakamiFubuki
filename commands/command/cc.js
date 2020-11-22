@@ -4,9 +4,9 @@ module.exports = class BasicCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'cc',
-			group: 'command',
+			group: 'admin_command',
 			memberName: 'cc',
-			description: 'Clear Channel',
+			description: 'Clear channel',
 		});
 	}
 
