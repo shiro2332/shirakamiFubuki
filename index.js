@@ -57,7 +57,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply('Fubuki as Scatman!!!');
+       	msg.reply("<:shira:775231808273907712> " + 'Fubuki as Scatman!!!');
     }
 
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
@@ -218,7 +218,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply('Kon Kon Kitsune!!!');
+       	msg.reply("<:shira:775231808273907712> " + 'Kon Kon Kitsune!!!');
     }
 
     //END OF HENSHIN COMMANDS ==============================================================================================================
