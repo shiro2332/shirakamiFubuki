@@ -1,7 +1,6 @@
-const { Command } = require('discord.js-commando');
-const Discord = require('discord.js');
+const { Command } = require('discord.js-commando')
 
-module.exports = class EmbedCommand extends Command {
+module.exports = class BasicCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'dowat',
@@ -12,13 +11,6 @@ module.exports = class EmbedCommand extends Command {
 	}
 
 	async run(message) {
-		const attachment = new Discord.MessageAttachment("./assets/images/chill.jpg", 'chill.png');
-		const embed = new Discord.MessageEmbed()
-			.setColor('#0099ff')
-			.setAuthor('Shirakami Fubuki')
-			.attachFile(attachment)
-			.setImage('attachment://chill.png')
-			.setFooter("Boba Tea!!!");
-		return message.channel.send(embed)
+		return message.channel.send({files: ["./assets/images/chill.jpg"]})
 	}
 };
