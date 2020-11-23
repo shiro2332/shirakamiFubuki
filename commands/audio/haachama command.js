@@ -45,9 +45,17 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       		playAudio('../../assets/song/haachama/natsumatsuri.mp3')
     	} 
 
+    	else if (message.content.includes('polkka')){
+      		playAudio('../../assets/song/haachama/polka.mp3')
+    	} 
+
     	else if (message.content.includes('help')){
       		message.channel.send('<:haachama:779986363683569695> ' + "Commands available to Haachama:\n!!haachama help : Show commands available to Haachama\n!!haachama cookpasta : Haachama Cooking Pasta Guide\n!!haachama senbonzakura : Play Senbonzakura\n!!haachama shapeofyou : Play Shape of You\n!!haachama natsumatsuri : Play Natsumatsuri")
     	}
+
+    	else if (message.content === "!!haachama"){
+            //empty
+        } 
 
     	else {
     		message.channel.send('<:haachama:779986363683569695> ' + "Commands available to Haachama:\n!!haachama help : Show commands available to Haachama\n!!haachama cookpasta : Haachama Cooking Pasta Guide\n!!haachama senbonzakura : Play Senbonzakura\n!!haachama shapeofyou : Play Shape of You\n!!haachama natsumatsuri : Play Natsumatsuri")

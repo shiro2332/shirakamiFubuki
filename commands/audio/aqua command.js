@@ -41,6 +41,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Palette\n!!aqua trackmaker : Play Indoor Track Maker")
         }
 
+        else if (message.content === "!!aqua"){
+            //empty
+        } 
+
         else {
             message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Palette\n!!aqua trackmaker : Play Indoor Track Maker")
         }

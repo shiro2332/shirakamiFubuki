@@ -61,6 +61,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/yoruSong.mp3')
         }
 
+        else if (message.content === "!!fubuki"){
+            //empty
+        } 
+
         else if (message.content.includes('help')){
             message.channel.send("<:shira:775231808273907712> "
                 + "Commands available to Fubuki:\n" 
