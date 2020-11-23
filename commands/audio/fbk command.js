@@ -14,9 +14,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     async run(message) {
         //Change bot name
         var newNickname = "Shirakami Fubuki";
-        msg.guild.me.setNickname(newNickname).catch(console.error);
+        message.guild.me.setNickname(newNickname).catch(console.error);
 
-        const { guild } = msg
+        const { guild } = message
         //Change bot role (Remove)
         var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
         for (i = 0; i < allrole.length; i++){
