@@ -11,6 +11,11 @@ module.exports = class BasicCommand extends Command {
 	}
 
 	async run(message) {
-		return message.channel.send({files: ["./assets/images/chill.jpg"]})
+		const embed = new Command.MessageEmbed()
+		.setColor('#0099ff')
+		.setAuthor('Shirakami Fubuki')
+		.setImage("./assets/images/chill.jpg")
+		.setFooter("Boba Tea!!!")
+		return message.channel.send(embed)
 	}
 };
