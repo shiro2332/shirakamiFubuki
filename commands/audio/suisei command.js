@@ -42,7 +42,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         } 
 
         else {
-            message.channel.send('<:suisei:779987500927811604> ' + "Commands available to Suisei: \n!!suisei help : Show commands available to Suisei\n!!suisei alice : Play Alice in N.Y.\n!!suisei saga : Play Saga Jihen")
+            message.channel.send('<:suisei:779987500927811604> ' + "Sui-chan wa kyou mo kawaii~~~~")
         }
     }
 }
