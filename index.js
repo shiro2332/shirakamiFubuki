@@ -11,7 +11,10 @@ const client = new Commando.CommandoClient({
 
 //Run this when the bot is startup
 client.on('ready', async () => {
-	console.log("Client is ready!")
+	console.log("==================================")
+	console.log("|Client is ready!                |")
+	console.log("|Logged in as Shirakami Fubuki!  |")
+	console.log("==================================")
 
 	client.registry
 	.registerGroups([
