@@ -42,50 +42,52 @@ client.on('ready', async () => {
 //Commands that does not works with discord commando or commands that does not use prefix
 client.on('message', message => {
 	function henshin(nickname, rolename, emojiId, intro){
-		//Change bot name
-		var newNickname = nickname;
-		message.guild.me.setNickname(newNickname).catch(console.error);
+		if (message.guild.me.displayName != nickname){
+			//Change bot name
+			var newNickname = nickname;
+			message.guild.me.setNickname(newNickname).catch(console.error);
 
-		const { guild } = message
-		//Change bot role (Remove)
-		var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
-		for (var i = 0; i < allrole.length; i++){
+			const { guild } = message
+			//Change bot role (Remove)
+			var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
+			for (var i = 0; i < allrole.length; i++){
+				const member = guild.members.cache.get("774870728285356083")
+			 	member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+			}
+
+			//Change bot role (Add)
+			const newRolename = rolename
+
 			const member = guild.members.cache.get("774870728285356083")
-		 	member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
-		}
+			member.roles.add(guild.roles.cache.find((role) => {return role.name === newRolename}))
 
-		//Change bot role (Add)
-		const newRolename = rolename
-
-		const member = guild.members.cache.get("774870728285356083")
-		member.roles.add(guild.roles.cache.find((role) => {return role.name === newRolename}))
-
-		//Complete
-		const emoji = client.emojis.cache.get(emojiId)
+			//Complete
+			const emoji = client.emojis.cache.get(emojiId)
 			message.reply(`${ emoji }` + intro);
-	}
+		}
+	}	
 
-	if (message.content.includes('!!fubuki')){
+	if (message.content.startsWith('!!fubuki')){
         henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
     }
 
-    else if (message.content.includes('!!suisei')){
+    else if (message.content.startsWith('!!suisei')){
   		henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
     }
 
-    else if (message.content.includes('!!aqua')){
+    else if (message.content.startsWith('!!aqua')){
   		henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
     }  	
 
-    else if (message.content.includes('!!pekora')){
+    else if (message.content.startsWith('!!pekora')){
   		henshin("Usada Pekora", "Peko Peko", "779985756390162472", 'Hololive Gen 3 Usada Pekora peko!')
     }
 
-    else if (message.content.includes('!!rushia')){
+    else if (message.content.startsWith('!!rushia')){
   		henshin("Uruha Rushia", "Necromancer", "779987468622495754", 'Hololive Gen 3 Uruha Rushia desu!')
     }
 
-    else if (message.content.includes('!!haachama')){
+    else if (message.content.startsWith('!!haachama')){
   		henshin("Akai Haato", "Haachamachama", "779986363683569695", 'Hololive Gen 1 Haachama chama!')
     }
 
