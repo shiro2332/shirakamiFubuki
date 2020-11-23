@@ -13,56 +13,17 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   }
 
   	async run(message) {
-	    // function playAudio(filepath){
-	    //     const { voice } = message.member
-
-	    //     if (!voice.channelID) {
-	    //         message.reply('You must be in a voice channel')
-	    //         return
-	    //     }
-
-	    //     voice.channel.join().then((connection) => {
-	    //         connection.play(path.join(__dirname, filepath))
-	    //     })
-		// }
-		
-		/*
-	  	function henshin(nickname, rolename, emojiId, intro){
-			//Change bot name
-			var newNickname = nickname;
-			message.guild.me.setNickname(newNickname).catch(console.error);
-
-			const { guild } = message
-			//Change bot role (Remove)
-			var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
-			for (var i = 0; i < allrole.length; i++){
-	  			const member = guild.members.cache.get("774870728285356083")
-	  		 	member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
-			}
-
-			//Change bot role (Add)
-			const newRolename = rolename
-
-			const member = guild.members.cache.get("774870728285356083")
-			member.roles.add(guild.roles.cache.find((role) => {return role.name === newRolename}))
-
-			//Complete
-			const emoji = client.emojis.cache.get(emojiId)
-				  message.reply(`${ emoji }` + intro);
-	  	}
-		*/
-
-
+	    
       	if (message.content.includes('fubuki')){
-        	index.henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
+        	message.reply("Akutan")
       	}
 
       	else if (message.content.includes('suisei')){
-  			index.henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
+  			message.reply("Akutan")
       	}
 
       	else if (message.content.includes('aqua')){
-  			index.henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
+  			message.reply("Akutan")
       	}
 
       	else if (message.content.includes('help')){
