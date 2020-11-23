@@ -72,11 +72,11 @@ client.on('message', message => {
     }
 
     else if (message.content.startsWith('!!suisei')){
-  		henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
+  		henshin("Hoshimachi Suisei", "Comet", "780475515370864670", 'Hololive 2D Talent Hoshimachi Suisei!')
     }
 
     else if (message.content.startsWith('!!aqua')){
-  		henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
+  		henshin("Minato Aqua", "Akukin", "780473856199884800", 'Hololive Gen 2 Minato Aqua desu!')
     }  	
 
     else if (message.content.startsWith('!!pekora')){
