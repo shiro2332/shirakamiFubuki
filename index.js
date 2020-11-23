@@ -79,6 +79,10 @@ client.on('message', message => {
   		henshin("Minato Aqua", "Akukin", "780473856199884800", 'Hololive Gen 2 Minato Aqua desu!')
     }  	
 
+    else if (message.content.startsWith('!!marine')){
+  		henshin("Houshou Marine", "Houshou Pirates", "779987488574930955", 'Hololive Gen 3 Houshou Marine sanjo!')
+    } 
+
     else if (message.content.startsWith('!!pekora')){
   		henshin("Usada Pekora", "Peko Peko", "779985756390162472", 'Hololive Gen 3 Usada Pekora peko!')
     }
