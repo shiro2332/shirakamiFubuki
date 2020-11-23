@@ -77,8 +77,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         )}
 
         else {
-            const emoji = client.emojis.cache.get("775231808273907712")
-            message.reply(`${ emoji }` + 'Ya Be');
+            message.reply("<:shira:775231808273907712> " + 'Ya Be');
         }
     }
 }
