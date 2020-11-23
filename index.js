@@ -42,7 +42,7 @@ client.on('ready', async () => {
 //Commands that does not works with discord commando or commands that does not use prefix
 client.on('message', message => {
 	function henshin(nickname, rolename, emojiId, intro){
-		if (message.guild.me.displayName != nickname){
+		if (message.me.displayName != nickname){
 			//Change bot name
 			var newNickname = nickname;
 			message.guild.me.setNickname(newNickname).catch(console.error);
