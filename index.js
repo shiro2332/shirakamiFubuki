@@ -40,7 +40,7 @@ client.on('ready', async () => {
 })
 
 //Commands that does not works with discord commando or commands that does not use prefix
-client.on('message', msg => {
+client.on('message', message => {
 	function henshin(nickname, rolename, emojiId, intro){
 	//Change bot name
 	var newNickname = nickname;
@@ -76,6 +76,7 @@ client.on('message', msg => {
   		henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
     }  	
   	
+  	/*
   	else if (msg.content.startsWith('HENSHIN PEKORA')) {
        	//Change bot name
        	var newNickname = "Usada Pekora";
@@ -121,13 +122,14 @@ client.on('message', msg => {
     	//Complete
        	msg.reply('<:rushia:779987468622495754> ' + 'Hololive Gen 3 Uruha Rushia desu!');
     }
+    */
 
-    else if (msg.content.startsWith('You are FBK')) {
+    else if (message.content.startsWith('You are FBK')) {
        	//Change bot name
        	var newNickname = "Shirakami Fubuki";
-       	msg.guild.me.setNickname(newNickname).catch(console.error);
+       	message.guild.me.setNickname(newNickname).catch(console.error);
 
-       	const { guild } = msg
+       	const { guild } = message
        	//Change bot role (Remove)
        	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
        	for (i = 0; i < allrole.length; i++){
@@ -142,17 +144,17 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply("<:shira:775231808273907712> " + 'Kon Kon Kitsune!!!');
+       	message.reply("<:shira:775231808273907712> " + 'Kon Kon Kitsune!!!');
     }
 
     //END OF HENSHIN COMMANDS ==============================================================================================================
 
-    else if (msg.content.startsWith('Fubuki watch?')) {
+    else if (message.content.startsWith('Fubuki watch?')) {
        	client.user.setActivity("フブキCh。白上フブキ",{ type: 'WATCHING'})
     }
 
-    else if (msg.content.includes("piang")) {
-    	msg.reply('Pong!');
+    else if (message.content.includes("piang")) {
+    	message.reply('Pong!');
   	}
 
   	
