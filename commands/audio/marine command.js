@@ -29,11 +29,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         playAudio('../../assets/song/marine/ahoy.mp3')  	
     }
 
-    else if (message.content.includes('!!marine horny')){
+    else if (message.content.includes('horny')){
         playAudio('../../assets/song/marine/imhorny.mp3')  	
     }
 
-    else if (message.content.includes('!!marine help')){
+    else if (message.content.includes('help')){
         message.channel.send("<:marine:779987488574930955>" + "Commands available to Marine:\n!!marine help : Show commands available to Marine\n!!marine horny: Im Horny\n!!marine ahoy : Play Ahoy!")
     }
 

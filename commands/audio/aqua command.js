@@ -25,20 +25,20 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         })
     }
 
-    if (message.content.includes('!!aqua forthewin')){
+    if (message.content.includes('forthewin')){
       	playAudio('../../assets/song/aqua/forthewin.mp3')
 
     }
 
-    else if (message.content.includes('!!aqua iropalette')){
+    else if (message.content.includes('iropalette')){
       	playAudio('../../assets/song/aqua/iropallete.mp3')
     }
 
-    else if (message.content.includes('!!aqua trackmaker')){
+    else if (message.content.includes('trackmaker')){
       	playAudio( '../../assets/song/aqua/indoortrackmaker.mp3')
     }
 
-    else if (message.content.includes('!!aqua help')){
+    else if (message.content.includes('help')){
         message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Palette\n!!aqua trackmaker : Play Indoor Track Maker")
     }
 

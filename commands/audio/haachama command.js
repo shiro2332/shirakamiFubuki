@@ -4,10 +4,10 @@ const path = require('path')
 module.exports = class PlayAudioCommand extends Commando.Command {
   	constructor(client) {
     	super(client, {
-      	name: 'haachama',
-      	group: 'hololive',
-      	memberName: 'haachama',
-      	description: 'haachama music & audio',
+	      	name: 'haachama',
+	      	group: 'hololive',
+	      	memberName: 'haachama',
+	      	description: 'haachama music & audio',
     	})
   	}
 
@@ -25,7 +25,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	        })
     	}
 
-    	if (message.content.includes('!!haachama cookpasta')){
+    	if (message.content.includes('cookpasta')){
     		message.channel.send("Haachama cooking in 60s.")
     		playAudio('../../assets/audio/hpasta1.mp3')
 
@@ -33,19 +33,19 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
     	} 
 
-    	else if (message.content.includes('!!haachama senbonzakura')){
+    	else if (message.content.includes('senbonzakura')){
       		playAudio('../../assets/song/haachama/senbonzakura.mp3')
     	} 
 
-    	else if (message.content.includes('!!haachama shapeofyou')){
+    	else if (message.content.includes('shapeofyou')){
       		playAudio('../../assets/song/haachama/shapeofyou.mp3')
     	} 
 
-    	else if (message.content.includes('!!haachama natsumatsuri')){
+    	else if (message.content.includes('natsumatsuri')){
       		playAudio('../../assets/song/haachama/natsumatsuri.mp3')
     	} 
 
-    	else if (message.content.includes('!!haachama help')){
+    	else if (message.content.includes('help')){
       		message.channel.send('<:haachama:779986363683569695> ' + "Commands available to Haachama:\n!!haachama help : Show commands available to Haachama\n!!haachama cookpasta : Haachama Cooking Pasta Guide\n!!haachama senbonzakura : Play Senbonzakura\n!!haachama shapeofyou : Play Shape of You\n!!haachama natsumatsuri : Play Natsumatsuri")
     	}
 
