@@ -1,5 +1,5 @@
 const { Command } = require('discord.js-commando');
-const { Discord } = require('discord.js');
+const { RichEmbed } = require('discord.js');
 
 module.exports = class EmbedCommand extends Command {
 	constructor(client) {
@@ -12,7 +12,7 @@ module.exports = class EmbedCommand extends Command {
 	}
 
 	async run(message) {
-		const embed = new Discord.RichEmbed()
+		const embed = new RichEmbed()
 			.setColor('#0099ff')
 			.setAuthor('Shirakami Fubuki')
 			.setImage("./assets/images/chill.jpg")
