@@ -20,6 +20,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         voice.channel.join().then((connection) => {
+        	const dispatcher = connection.playStream(stream, streamOptions);
             dispatcher.on('end', () => { 
                 play(connection);
             });
