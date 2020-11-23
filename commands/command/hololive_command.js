@@ -3,12 +3,12 @@ const path = require('path')
 
 module.exports = class PlayAudioCommand extends Commando.Command {
   constructor(client) {
-    super(client, {
-      name: 'henshin',
-      group: 'hololive',
-      memberName: 'henshin',
-      description: 'Show commands available to hololive',
-    })
+    	super(client, {
+      		name: 'henshin',
+      		group: 'hololive',
+      		memberName: 'henshin',
+      		description: 'Show commands available to hololive',
+    	})
   }
 
   	async run(message) {
@@ -25,6 +25,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	    //     })
 		// }
 		
+		/*
 	  	function henshin(nickname, rolename, emojiId, intro){
 			//Change bot name
 			var newNickname = nickname;
@@ -33,7 +34,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 			const { guild } = message
 			//Change bot role (Remove)
 			var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
-			for (i = 0; i < allrole.length; i++){
+			for (var i = 0; i < allrole.length; i++){
 	  			const member = guild.members.cache.get("774870728285356083")
 	  		 	member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
 			}
@@ -48,17 +49,19 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 			const emoji = client.emojis.cache.get(emojiId)
 				  message.reply(`${ emoji }` + intro);
 	  	}
+		*/
+
 
       	if (message.content.includes('fubuki')){
-        	henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
+        	super.henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
       	}
 
       	else if (message.content.includes('suisei')){
-  			henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
+  			super.henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
       	}
 
       	else if (message.content.includes('aqua')){
-  			henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
+  			super.henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
       	}
 
       	else if (message.content.includes('help')){
