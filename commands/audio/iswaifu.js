@@ -20,7 +20,14 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     voice.channel.join().then((connection) => {
-        var voicelineList = Array('../../assets/audio/hifrens1.mp3', '../../assets/audio/hifrens2.mp3')
+        var voicelineList = Array('../../assets/audio/hifrens1.mp3'
+            , '../../assets/audio/hifrens2.mp3'
+            , '../../assets/audio/hifrens3.mp3'
+            , '../../assets/audio/hifrens4.mp3'
+            , '../../assets/audio/hifrens5.mp3'
+            , '../../assets/audio/hifrens6.mp3'
+            )
+        
         var voiceline = voicelineList[Math.floor(Math.random() * voicelineList.length)]
 
         connection.play(path.join(__dirname, voiceline))
