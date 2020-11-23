@@ -100,7 +100,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
         else {
             const emoji = client.emojis.cache.get("780332952151130113")
-            msg.reply(`${ emoji }` + 'Ya Be');
+            message.reply(`${ emoji }` + 'Ya Be');
         }
     }
 }

@@ -1,5 +1,6 @@
 const Commando = require('discord.js-commando')
 const path = require('path')
+const index = require('../../index.js')
 
 module.exports = class PlayAudioCommand extends Commando.Command {
   constructor(client) {
@@ -53,15 +54,15 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
 
       	if (message.content.includes('fubuki')){
-        	super.henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
+        	index.henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
       	}
 
       	else if (message.content.includes('suisei')){
-  			super.henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
+  			index.henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
       	}
 
       	else if (message.content.includes('aqua')){
-  			super.henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
+  			index.henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
       	}
 
       	else if (message.content.includes('help')){
