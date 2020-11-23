@@ -64,15 +64,15 @@ client.on('message', msg => {
 	const emoji = client.emojis.cache.get(emojiId)
 		  message.reply(`${ emoji }` + intro);
 	}
-	if (message.content.includes('!!fubuki')){
+	if (message.content.includes('!!henshin fubuki')){
         henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
     }
 
-    else if (message.content.includes('!!suisei')){
+    else if (message.content.includes('!!henshin suisei')){
   		henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
     }
 
-    else if (message.content.includes('!!aqua')){
+    else if (message.content.includes('!!henshin aqua')){
   		henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
     }  	
   	
