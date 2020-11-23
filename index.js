@@ -42,28 +42,29 @@ client.on('ready', async () => {
 //Commands that does not works with discord commando or commands that does not use prefix
 client.on('message', message => {
 	function henshin(nickname, rolename, emojiId, intro){
-	//Change bot name
-	var newNickname = nickname;
-	message.guild.me.setNickname(newNickname).catch(console.error);
+		//Change bot name
+		var newNickname = nickname;
+		message.guild.me.setNickname(newNickname).catch(console.error);
 
-	const { guild } = message
-	//Change bot role (Remove)
-	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
-	for (var i = 0; i < allrole.length; i++){
+		const { guild } = message
+		//Change bot role (Remove)
+		var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
+		for (var i = 0; i < allrole.length; i++){
 			const member = guild.members.cache.get("774870728285356083")
 		 	member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+		}
+
+		//Change bot role (Add)
+		const newRolename = rolename
+
+		const member = guild.members.cache.get("774870728285356083")
+		member.roles.add(guild.roles.cache.find((role) => {return role.name === newRolename}))
+
+		//Complete
+		const emoji = client.emojis.cache.get(emojiId)
+			message.reply(`${ emoji }` + intro);
 	}
 
-	//Change bot role (Add)
-	const newRolename = rolename
-
-	const member = guild.members.cache.get("774870728285356083")
-	member.roles.add(guild.roles.cache.find((role) => {return role.name === newRolename}))
-
-	//Complete
-	const emoji = client.emojis.cache.get(emojiId)
-		  message.reply(`${ emoji }` + intro);
-	}
 	if (message.content.includes('!!henshin fubuki')){
         henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
     }
@@ -75,76 +76,22 @@ client.on('message', message => {
     else if (message.content.includes('!!henshin aqua')){
   		henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
     }  	
+
+    else if (message.content.includes('!!henshin pekora')){
+  		henshin("Usada Pekora", "Peko Peko", "779985756390162472", 'Hololive Gen 3 Usada Pekora peko!')
+    }
+
+    else if (message.content.includes('!!henshin rushia')){
+  		henshin("Uruha Rushia", "Necromancer", "779987468622495754", 'Hololive Gen 3 Uruha Rushia desu!')
+    }
+
+    else if (message.content.includes('!!henshin haachama')){
+  		henshin("Akai Haato", "Haachamachama", "779986363683569695", 'Hololive Gen 1 Haachama chama!')
+    }
   	
-  	/*
-  	else if (msg.content.startsWith('HENSHIN PEKORA')) {
-       	//Change bot name
-       	var newNickname = "Usada Pekora";
-       	msg.guild.me.setNickname(newNickname).catch(console.error);
-
-       	const { guild } = msg
-       	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
-       	for (i = 0; i < allrole.length; i++){
-       		const member = guild.members.cache.get("774870728285356083")
-    		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
-       	}
-
-       	//Change bot role (Add)
-       	const rolename = "Peko Peko"
-
-    	const member = guild.members.cache.get("774870728285356083")
-    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
-
-    	//Complete
-       	msg.reply('<:peko:779985756390162472> ' + 'Hololive Gen 3 Usada Pekora peko!');
-    }
-
-    else if (msg.content.startsWith('HENSHIN RUSHIA')) {
-       	//Change bot name
-       	var newNickname = "Usada Rushia";
-       	msg.guild.me.setNickname(newNickname).catch(console.error);
-
-       	const { guild } = msg
-       	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
-       	for (i = 0; i < allrole.length; i++){
-       		const member = guild.members.cache.get("774870728285356083")
-    		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
-       	}
-
-       	//Change bot role (Add)
-       	const rolename = "Necromancer"
-
-    	const member = guild.members.cache.get("774870728285356083")
-    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
-
-    	//Complete
-       	msg.reply('<:rushia:779987468622495754> ' + 'Hololive Gen 3 Uruha Rushia desu!');
-    }
-    */
 
     else if (message.content.startsWith('You are FBK')) {
-       	//Change bot name
-       	var newNickname = "Shirakami Fubuki";
-       	message.guild.me.setNickname(newNickname).catch(console.error);
-
-       	const { guild } = message
-       	//Change bot role (Remove)
-       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
-       	for (i = 0; i < allrole.length; i++){
-       		const member = guild.members.cache.get("774870728285356083")
-    		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
-       	}
-
-       	//Change bot role (Add)
-       	const rolename = "Fox Burger King"
-
-    	const member = guild.members.cache.get("774870728285356083")
-    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
-
-    	//Complete
-       	message.reply("<:shira:775231808273907712> " + 'Kon Kon Kitsune!!!');
+    	henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Kon Kon Kitsune!!!')
     }
 
     //END OF HENSHIN COMMANDS ==============================================================================================================
