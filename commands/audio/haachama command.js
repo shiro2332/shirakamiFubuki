@@ -12,6 +12,27 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   	}
 
   	async run(message) {
+  		//Change bot name
+       	var newNickname = "Akai Haato";
+       	msg.guild.me.setNickname(newNickname).catch(console.error);
+
+       	const { guild } = msg
+       	//Change bot role (Remove)
+       	var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
+       	for (var i = 0; i < allrole.length; i++){
+       		const member = guild.members.cache.get("774870728285356083")
+    		member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+       	}
+
+       	//Change bot role (Add)
+       	const rolename = "Haachamachama"
+
+    	const member = guild.members.cache.get("774870728285356083")
+    	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
+
+    	//Complete
+       	msg.reply('<:haachama:779986363683569695> ' + 'Hololive Gen 1 Haachama chama!');
+
   		function playAudio(filepath){
 	        const { voice } = message.member
 

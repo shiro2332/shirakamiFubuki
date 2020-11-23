@@ -2,50 +2,71 @@ const Commando = require('discord.js-commando')
 const path = require('path')
 
 module.exports = class PlayAudioCommand extends Commando.Command {
-  constructor(client) {
-    super(client, {
-      name: 'aqua',
-      group: 'hololive',
-      memberName: 'aqua',
-      description: 'Show commands available to Aqua',
-    })
-  }
-
-  async run(message) {
-    function playAudio(filepath){
-        const { voice } = message.member
-
-        if (!voice.channelID) {
-            message.reply('You must be in a voice channel')
-            return
-        }
-
-        voice.channel.join().then((connection) => {
-            connection.play(path.join(__dirname, filepath))
+    constructor(client) {
+        super(client, {
+            name: 'aqua',
+            group: 'hololive',
+            memberName: 'aqua',
+            description: 'Show commands available to Aqua',
         })
     }
 
-    if (message.content.includes('forthewin')){
-      	playAudio('../../assets/song/aqua/forthewin.mp3')
+    async run(message) {
+        //Change bot name
+        var newNickname = "Minato Aqua";
+        msg.guild.me.setNickname(newNickname).catch(console.error);
 
-    }
+        const { guild } = msg
+        //Change bot role (Remove)
+        var allrole = ["Fox Burger King", "Comet", "Houshou Pirates", "Necromancer", "Peko Peko", "Haachamachama", "Akukin"]
+        for (var i = 0; i < allrole.length; i++){
+            const member = guild.members.cache.get("774870728285356083")
+            member.roles.remove(guild.roles.cache.find((role) => {return role.name === allrole[i]}))
+        }
 
-    else if (message.content.includes('iropalette')){
-      	playAudio('../../assets/song/aqua/iropallete.mp3')
-    }
+        //Change bot role (Add)
+        const rolename = "Akukin"
 
-    else if (message.content.includes('trackmaker')){
-      	playAudio( '../../assets/song/aqua/indoortrackmaker.mp3')
-    }
+        const member = guild.members.cache.get("774870728285356083")
+        member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
-    else if (message.content.includes('help')){
-        message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Palette\n!!aqua trackmaker : Play Indoor Track Maker")
-    }
+        //Complete
+        msg.reply("<:aqua:779982662298632224> " + 'Hololive Gen 2 Minato Aqua desu! ');
 
-    else {
-        message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Palette\n!!aqua trackmaker : Play Indoor Track Maker")
+        function playAudio(filepath){
+            const { voice } = message.member
+
+            if (!voice.channelID) {
+                message.reply('You must be in a voice channel')
+                return
+            }
+
+            voice.channel.join().then((connection) => {
+                connection.play(path.join(__dirname, filepath))
+            })
+        }
+
+        if (message.content.includes('forthewin')){
+          	playAudio('../../assets/song/aqua/forthewin.mp3')
+
+        }
+
+        else if (message.content.includes('iropalette')){
+          	playAudio('../../assets/song/aqua/iropallete.mp3')
+        }
+
+        else if (message.content.includes('trackmaker')){
+          	playAudio( '../../assets/song/aqua/indoortrackmaker.mp3')
+        }
+
+        else if (message.content.includes('help')){
+            message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Palette\n!!aqua trackmaker : Play Indoor Track Maker")
+        }
+
+        else {
+            message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Palette\n!!aqua trackmaker : Play Indoor Track Maker")
+        }
     }
-  }
 }
 
 //Commands help
