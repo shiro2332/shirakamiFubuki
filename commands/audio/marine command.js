@@ -42,7 +42,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     } 
 
     else {
-        message.channel.send("<:marine:779987488574930955>" + "Ahoy Ahoy Ahoy!!!")
+        message.channel.send("<:marine:779987488574930955>" + "Ara~ kore wa nandesu ka?")
+        playAudio('../../assets/song/marine/marineLaugh.mp3') 
     }
   }
 }
