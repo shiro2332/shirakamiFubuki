@@ -25,9 +25,7 @@ client.on('ready', async () => {
 		['commander', 'Commander command'],
 		['admin_command', 'Admin command'],
 		])
-	.registerDefaultCommands({
-		unknownCommand: false
-	})
+	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
 
 	//Random a status
@@ -63,7 +61,7 @@ client.on('message', msg => {
 
     	//Complete
     	const emoji = client.emojis.cache.get("780332952151130113")
-       	msg.reply(`${ emoji }` + ' Hololive Gen 1/Gamers Shirakami Fubuki desu!');
+       	msg.reply(`${ emoji }` + 'Hololive Gen 1/Gamers Shirakami Fubuki desu!');
     }
 
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
