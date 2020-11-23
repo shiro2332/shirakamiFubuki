@@ -12,7 +12,7 @@ module.exports = class EmbedCommand extends Command {
 	}
 
 	async run(message) {
-		const attachment = new Discord.Attachment("./assets/images/chill.jpg", 'chill.png');
+		const attachment = new Discord.MessageAttachment("./assets/images/chill.jpg", 'chill.png');
 		const embed = new Discord.MessageEmbed()
 			.setColor('#0099ff')
 			.setAuthor('Shirakami Fubuki')
