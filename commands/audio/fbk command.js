@@ -62,7 +62,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content === "!!fubuki"){
-            //empty
+            playAudio('../../assets/audio/fbkintro.mp3')
         } 
 
         else if (message.content.includes('help')){
