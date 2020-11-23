@@ -7,6 +7,7 @@ const command = require('./command')
 const client = new Commando.CommandoClient({
 	owner: "299176846132641792",
 	commandPrefix: config.prefix
+	unknownCommandResponse: false
 })
 
 //Run this when the bot is startup
@@ -27,10 +28,6 @@ client.on('ready', async () => {
 		])
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
-
-	client.registry.registerDefaultCommands({
-  		unknownCommand: false
-	});
 
 	//Random a status
 	setInterval(function() {
