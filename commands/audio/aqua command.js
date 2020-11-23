@@ -37,8 +37,18 @@ module.exports = class PlayAudioCommand extends Commando.Command {
           	playAudio( '../../assets/song/aqua/indoortrackmaker.mp3')
         }
 
+        else if (message.content.includes('ubi')){
+            playAudio( '../../assets/song/aqua/sao_ubi.mp3')
+        }
+
         else if (message.content.includes('help')){
-            message.channel.send("<:aqua:779982662298632224> " + "Commands available to Aqua:\n!!aqua help : Show commands available to Aqua\n!!aqua forthewin : Play For the Win\n!!aqua iropalette : Play Iro Palette\n!!aqua trackmaker : Play Indoor Track Maker")
+            message.channel.send("<:aqua:779982662298632224> " 
+                + "Commands available to Aqua:\n"
+                + "!!aqua help : Show commands available to Aqua\n" 
+                + "!!aqua forthewin : Play For the Win\n" 
+                + "!!aqua iropalette : Play Iro Palette\n" 
+                + "!!aqua trackmaker : Play Indoor Track Maker"
+                )
         }
 
         else if (message.content === "!!aqua"){
