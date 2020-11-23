@@ -12,9 +12,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     async run(message) {
-        function playAudio(filepath){
-            const { voice } = message.member
+        const { voice } = message.member
 
+        function playAudio(filepath){
             if (!voice.channelID) {
                 message.reply('You must be in a voice channel')
                 return
