@@ -29,12 +29,16 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         playAudio('../../assets/song/marine/ahoy.mp3')  	
     }
 
+    else if (message.content.includes('!!marine horny')){
+        playAudio('../../assets/song/marine/imhorny.mp3')  	
+    }
+
     else if (message.content.includes('!!marine help')){
-        message.channel.send("<:marine:779987488574930955>" + "Commands available to Marine:\n!!marine help : Show commands available to Marine\n!!marine ahoy : Play Ahoy!")
+        message.channel.send("<:marine:779987488574930955>" + "Commands available to Marine:\n!!marine help : Show commands available to Marine\n!!marine horny: Im Horny\n!!marine ahoy : Play Ahoy!")
     } 
 
     else {
-        message.channel.send("<:marine:779987488574930955>" + "Commands available to Marine:\n!!marine help : Show commands available to Marine\n!!marine ahoy : Play Ahoy!")
+        message.channel.send("<:marine:779987488574930955>" + "Commands available to Marine:\n!!marine help : Show commands available to Marine\n!!marine horny: Im Horny\n!!marine ahoy : Play Ahoy!")
     }
   }
 }
@@ -43,6 +47,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 /**
 Commands available to Marine:
 !!marine help : Show commands available to Marine
+!!marine horny: Im Horny
 !!marine ahoy : Play Ahoy!
 
 **/
