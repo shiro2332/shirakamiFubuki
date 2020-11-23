@@ -82,6 +82,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
         else {
             message.reply("<:shira:775231808273907712> " + 'Ya Be');
+            if (!voice.channelID) {
+                return
+            }
+            playAudio('../../assets/song/fubuki/error.mp3')
         }
     }
 }
