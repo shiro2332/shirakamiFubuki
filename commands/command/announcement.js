@@ -15,8 +15,8 @@ module.exports = class BasicCommand extends Command {
 			if(message.member.hasPermission("Immortal")){
 			message.delete();
 			message.channel.send("__**ANNOUNCEMENT**__ \n \n ```apache\nTesting 1 2 3\n```")
-			
-			} else {
+			} 
+			else {
 				message.channel.send("You do not have permission!!!")
 			}
 		}
