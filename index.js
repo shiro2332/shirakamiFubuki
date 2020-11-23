@@ -65,30 +65,29 @@ client.on('message', message => {
 			message.reply(`${ emoji }` + intro);
 	}
 
-	if (message.content.includes('!!henshin fubuki')){
+	if (message.content.includes('!!fubuki')){
         henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
     }
 
-    else if (message.content.includes('!!henshin suisei')){
+    else if (message.content.includes('!!suisei')){
   		henshin("Hoshimachi Suisei", "Comet", "779987500927811604", 'Hololive 2D Talent Hoshimachi Suisei!')
     }
 
-    else if (message.content.includes('!!henshin aqua')){
+    else if (message.content.includes('!!aqua')){
   		henshin("Minato Aqua", "Akukin", "779987500927811604", 'Hololive Gen 2 Minato Aqua desu!')
     }  	
 
-    else if (message.content.includes('!!henshin pekora')){
+    else if (message.content.includes('!!pekora')){
   		henshin("Usada Pekora", "Peko Peko", "779985756390162472", 'Hololive Gen 3 Usada Pekora peko!')
     }
 
-    else if (message.content.includes('!!henshin rushia')){
+    else if (message.content.includes('!!rushia')){
   		henshin("Uruha Rushia", "Necromancer", "779987468622495754", 'Hololive Gen 3 Uruha Rushia desu!')
     }
 
-    else if (message.content.includes('!!henshin haachama')){
+    else if (message.content.includes('!!haachama')){
   		henshin("Akai Haato", "Haachamachama", "779986363683569695", 'Hololive Gen 1 Haachama chama!')
     }
-  	
 
     else if (message.content.startsWith('You are FBK')) {
     	henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Kon Kon Kitsune!!!')
