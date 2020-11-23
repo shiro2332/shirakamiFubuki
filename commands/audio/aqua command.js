@@ -25,9 +25,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             })
         }
 
-        if (message.content.includes('forthewin')){
+        if (message.content.includes('forthewin') || message.content.includes('ftw')){
           	playAudio('../../assets/song/aqua/forthewin.mp3')
-
         }
 
         else if (message.content.includes('iropalette')){
