@@ -6,7 +6,7 @@ const command = require('./command')
 
 const client = new Commando.CommandoClient({
 	owner: "299176846132641792",
-	commandPrefix: config.prefix
+	commandPrefix: config.prefix,
 	unknownCommandResponse: false
 })
 
