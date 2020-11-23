@@ -60,7 +60,7 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-    	const emoji = bot.emojis.cache.get("780332952151130113")
+    	const emoji = client.emojis.cache.get("780332952151130113")
        	msg.reply(`${ emoji }` + 'Hololive Gen 1/Gamers Shirakami Fubuki desu!');
     }
 
