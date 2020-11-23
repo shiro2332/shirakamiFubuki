@@ -12,7 +12,7 @@ module.exports = class EmbedCommand extends Command {
 	}
 
 	async run(message) {
-		const embed = new Discord.MessageEmbed()
+		const embed = new Discord.RichEmbed()
 			.setColor('#0099ff')
 			.setAuthor('Shirakami Fubuki')
 			.setImage("./assets/images/chill.jpg")
