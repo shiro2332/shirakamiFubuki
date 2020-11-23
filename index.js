@@ -60,7 +60,8 @@ client.on('message', msg => {
     	member.roles.add(guild.roles.cache.find((role) => {return role.name === rolename}))
 
     	//Complete
-       	msg.reply("<:fbkmove:780332952151130113> " + 'Hololive Gen 1/Gamers Shirakami Fubuki desu!');
+    	const emoji = bot.emojis.cache.get("780332952151130113")
+       	msg.reply(`${ emoji }` + 'Hololive Gen 1/Gamers Shirakami Fubuki desu!');
     }
 
   	else if (msg.content.startsWith('HENSHIN SUISEI')) {
