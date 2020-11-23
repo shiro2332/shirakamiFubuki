@@ -1,7 +1,7 @@
 const { Command } = require('discord.js-commando');
 const { Discord } = require('discord.js');
 
-module.exports = class BasicCommand extends Command {
+module.exports = class EmbedCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'dowat',
@@ -13,10 +13,10 @@ module.exports = class BasicCommand extends Command {
 
 	async run(message) {
 		const embed = new Discord.MessageEmbed()
-		.setColor('#0099ff')
-		.setAuthor('Shirakami Fubuki')
-		.setImage("./assets/images/chill.jpg")
-		.setFooter("Boba Tea!!!")
+			.setColor('#0099ff')
+			.setAuthor('Shirakami Fubuki')
+			.setImage("./assets/images/chill.jpg")
+			.setFooter("Boba Tea!!!");
 		return message.channel.send(embed)
 	}
 };
