@@ -68,14 +68,17 @@ client.on('message', message => {
 	}	
 
 	if (message.content.startsWith('!!fubuki')){
+		//have gif
         henshin("Shirakami Fubuki", "Fox Burger King", "780765353173057566", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
     }
 
     else if (message.content.startsWith('!!suisei')){
+  		//have gif
   		henshin("Hoshimachi Suisei", "Comet", "780475515370864670", 'Hololive 2D Talent Hoshimachi Suisei!')
     }
 
     else if (message.content.startsWith('!!aqua')){
+  		//have gif
   		henshin("Minato Aqua", "Akukin", "780473856199884800", 'Hololive Gen 2 Minato Aqua desu!')
     }  	
 
