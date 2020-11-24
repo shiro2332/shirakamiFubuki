@@ -68,7 +68,7 @@ client.on('message', message => {
 	}	
 
 	if (message.content.startsWith('!!fubuki')){
-        henshin("Shirakami Fubuki", "Fox Burger King", "780332952151130113", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
+        henshin("Shirakami Fubuki", "Fox Burger King", "780765353173057566", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!')
     }
 
     else if (message.content.startsWith('!!suisei')){
