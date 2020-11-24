@@ -66,7 +66,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content.includes('dissapearance')){
-            playAudio('../../assets/song/fubuki/dissapearance.mp3')
+            playAudio('../../assets/song/fubuki/dissappearance.mp3')
         }
 
         else if (message.content === "!!fubuki"){
