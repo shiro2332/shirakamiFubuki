@@ -61,6 +61,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/yoruSong.mp3')
         }
 
+        else if (message.content.includes('polkka')){
+            playAudio('../../assets/song/fubuki/polkka.mp3')
+        }
+
         else if (message.content === "!!fubuki"){
             playAudio('../../assets/audio/fbkintro.mp3')
         } 
@@ -77,7 +81,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki scatman : Play Scatman\n" 
                 + "!!fubuki yoruduet : Play 夜に駆ける 黑白贴贴\n" 
                 + "!!fubuki sugarsong : Play Sugar Song to Bitter Step\n" 
-                + "!!fubuki Yoru : Play 夜に駆ける" 
+                + "!!fubuki yoru : Play 夜に駆ける" 
+                + "!!fubuki polkka : Play levan polkka"
         )}
 
         else {
