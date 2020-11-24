@@ -41,6 +41,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio( '../../assets/song/aqua/sao_ubi.mp3')
         }
 
+        else if (message.content.includes('noise')){
+            playAudio( '../../assets/song/aqua/aquanoise.mp3')
+        }
+
         else if (message.content.includes('help')){
             message.channel.send("<:aqua:779982662298632224> " 
                 + "Commands available to Aqua:\n"
@@ -48,6 +52,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!aqua forthewin : Play For the Win\n" 
                 + "!!aqua iropalette : Play Iro Palette\n" 
                 + "!!aqua trackmaker : Play Indoor Track Maker"
+                + "!!aqua ubi : Play Ubiquitous dB"
+                + "!!aqua noise : Aqua noise"
                 )
         }
 
