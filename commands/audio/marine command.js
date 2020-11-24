@@ -33,7 +33,12 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     else if (message.content.includes('help')){
-        message.channel.send("<:marine:779987488574930955>" + "Commands available to Marine:\n!!marine help : Show commands available to Marine\n!!marine horny: Im Horny\n!!marine ahoy : Play Ahoy!")
+        message.channel.send("<:marine:779987488574930955>" 
+        	+ "Commands available to Marine:\n" 
+        	+ "!!marine help : Show commands available to Marine\n" 
+        	+ "!!marine horny: Im Horny\n" 
+        	+ "!!marine ahoy : Play Ahoy!"
+        	)
     }
 
     else if (message.content === "!!marine"){

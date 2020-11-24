@@ -7,7 +7,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             name: 'repeat',
             group: 'audio',
             memberName: 'repeat',
-            description: 'loop',
+            description: 'loop(bug)',
         })
     }
 
