@@ -69,6 +69,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/dissappearance.mp3')
         }
 
+        else if (message.content.includes('countryroad')){
+            playAudio('../../assets/song/fubuki/countryroad.mp3')
+        }
+
         else if (message.content === "!!fubuki"){
             if (!voice.channelID) {
                 return
@@ -91,6 +95,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki yoru : Play 夜に駆ける\n" 
                 + "!!fubuki polkka : Play Levan Polkka\n"
                 + "!!fubuki dissapearance : Play Dissapearance of Shirakami Fubuki\n"
+                + "!!fubuki countryroad : Play Country Road\n"
         )}
 
         else {
