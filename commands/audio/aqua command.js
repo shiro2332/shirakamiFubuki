@@ -61,7 +61,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             if (!voice.channelID) {
                 return
             }
-            playAudio( '../../assets/song/aqua/intro.mp3')
+            //playAudio( '../../assets/song/aqua/intro.mp3')
         } 
 
         else {
