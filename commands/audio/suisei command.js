@@ -25,10 +25,20 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             })
         }
 
-        if (message.content.includes('help')){
+        if (message.content.includes('tenkyuu')){
+            playAudio('../../assets/song/suisei/tenkyuu.mp3')   
+        }
+
+        else if (message.content.includes('nextcolor')){
+            playAudio('../../assets/song/suisei/nextcolor.mp3')   
+        }
+
+        else if (message.content.includes('help')){
             message.channel.send('<:suisei:779987500927811604> ' 
                 + "Commands available to Suisei: \n" 
                 + "!!suisei help : Show commands available to Suisei\n" 
+                + "!!suisei tenkyuu : Play 天球、彗星は夜を跨いで \n"
+                + "!!suisei nextcolor : Play NEXT COLOR PLANET\n"
                 )
         }
 
