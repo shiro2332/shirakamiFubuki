@@ -34,11 +34,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content.includes('alice')){
-            playAudio('../../assets/song/suisei/alice.mp3')  	
+            playAudio('../../assets/song/alice.mp3')  	
         }
 
         else if (message.content.includes('saga')){
-          	playAudio('../../assets/song/suisei/saga.mp3')
+          	playAudio('../../assets/song/saga.mp3')
         }
 
         else if (message.content.includes('help')){
