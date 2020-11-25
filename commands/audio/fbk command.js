@@ -70,7 +70,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content === "!!fubuki"){
-            if (voice.channelID) {
+            if (!voice.channelID) {
                 return
             }
             playAudio('../../assets/audio/fbkintro.mp3')
@@ -95,7 +95,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
         else {
             message.channel.send({files: ["./assets/images/confused.gif"]});
-            if (voice.channelID) {
+            if (!voice.channelID) {
                 return
             }
             playAudio('../../assets/song/fubuki/error.mp3')
