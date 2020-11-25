@@ -44,6 +44,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio( '../../assets/song/aqua/aquanoise.mp3')
         }
 
+        else if (message.content.includes('dadada')){
+            playAudio( '../../assets/song/aqua/dadada.mp3')
+        }
+
         else if (message.content.includes('help')){
             message.channel.send("<:aqua:779982662298632224> " 
                 + "Commands available to Aqua:\n"
