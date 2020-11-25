@@ -33,12 +33,22 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/suisei/nextcolor.mp3')   
         }
 
+        else if (message.content.includes('kakusei')){
+            playAudio('../../assets/song/suisei/superfly.mp3')   
+        }
+
+        else if (message.content.includes('comet')){
+            playAudio('../../assets/song/suisei/comet.mp3')   
+        }
+
         else if (message.content.includes('help')){
             message.channel.send('<:suisei:779987500927811604> ' 
                 + "Commands available to Suisei: \n" 
                 + "!!suisei help : Show commands available to Suisei\n" 
                 + "!!suisei tenkyuu : Play 天球、彗星は夜を跨いで \n"
                 + "!!suisei nextcolor : Play NEXT COLOR PLANET\n"
+                + "!!suisei kakusei : Play 觉醒\n"
+                + "!!suisei comet : Play comet\n"
                 )
         }
 
