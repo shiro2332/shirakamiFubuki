@@ -26,7 +26,6 @@ client.on('ready', async () => {
 		['commander', 'Commander command'],
 		['admin_command', 'Admin command'],
 		//['util', 'Utilities command'],
-		//hi
 		])
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, "commands"))
