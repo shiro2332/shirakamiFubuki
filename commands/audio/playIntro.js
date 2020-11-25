@@ -24,3 +24,4 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     })
   }
 }
+
