@@ -4,10 +4,10 @@ const path = require('path')
 module.exports = class PlayAudioCommand extends Commando.Command {
     constructor(client) {
         super(client, {
-            name: 'chorus',
+            name: 'hololive',
             group: 'hololive',
-            memberName: 'chorus',
-            description: 'Chorus Command',
+            memberName: 'hololive',
+            description: 'Hololive Command',
         })
     }
 
@@ -33,11 +33,21 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/smiley.mp3')   
         }
 
+        if (message.content.includes('alice')){
+            playAudio('../../assets/song/suisei/alice.mp3')  	
+        }
+
+        else if (message.content.includes('saga')){
+          	playAudio('../../assets/song/suisei/saga.mp3')
+        }
+
         else if (message.content.includes('help')){
             message.channel.send("Commands available \n" 
                 + "!!chorus help : Show available commands \n" 
                 + "!!chorus chorus : Play Fukkireta Chorus\n" 
                 + "!!chorus smiley : Play Shiny Smiley Story"
+                + "!!chorus alice : Play Alice in N.Y.\n" 
+                + "!!chorus saga : Play Saga Jihen"
                 )
         }
 

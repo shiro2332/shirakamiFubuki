@@ -25,20 +25,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             })
         }
 
-        if (message.content.includes('alice')){
-            playAudio('../../assets/song/suisei/alice.mp3')  	
-        }
-
-        else if (message.content.includes('saga')){
-          	playAudio('../../assets/song/suisei/saga.mp3')
-        }
-
-        else if (message.content.includes('help')){
+        if (message.content.includes('help')){
             message.channel.send('<:suisei:779987500927811604> ' 
                 + "Commands available to Suisei: \n" 
                 + "!!suisei help : Show commands available to Suisei\n" 
-                + "!!suisei alice : Play Alice in N.Y.\n" 
-                + "!!suisei saga : Play Saga Jihen"
                 )
         }
 
