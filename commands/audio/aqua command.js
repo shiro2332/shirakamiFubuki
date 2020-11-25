@@ -50,9 +50,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!aqua help : Show commands available to Aqua\n" 
                 + "!!aqua forthewin : Play For the Win\n" 
                 + "!!aqua iropalette : Play Iro Palette\n" 
-                + "!!aqua trackmaker : Play Indoor Track Maker"
-                + "!!aqua ubi : Play Ubiquitous dB"
-                + "!!aqua noise : Aqua noise"
+                + "!!aqua trackmaker : Play Indoor Track Maker\n"
+                + "!!aqua ubi : Play Ubiquitous dB\n"
+                + "!!aqua dadada : Play DaDaDa Tenshi\n"
+                + "!!aqua noise : Aqua noise\n"
                 )
         }
 
