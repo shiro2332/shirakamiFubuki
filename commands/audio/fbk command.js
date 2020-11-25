@@ -91,7 +91,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         )}
 
         else {
-            message.reply("<:shira:775231808273907712> " + 'Ya Be');
+            message.channel.send({files: ["./assets/images/confused.gif"]});
             if (!voice.channelID) {
                 return
             }
