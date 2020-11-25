@@ -85,9 +85,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki scatman : Play Scatman\n" 
                 + "!!fubuki yoruduet : Play 夜に駆ける 黑白贴贴\n" 
                 + "!!fubuki sugarsong : Play Sugar Song to Bitter Step\n" 
-                + "!!fubuki yoru : Play 夜に駆ける" 
-                + "!!fubuki polkka : Play Levan Polkka"
-                + "!!fubuki dissapearance : Play Dissapearance of Shirakami Fubuki"
+                + "!!fubuki yoru : Play 夜に駆ける\n" 
+                + "!!fubuki polkka : Play Levan Polkka\n"
+                + "!!fubuki dissapearance : Play Dissapearance of Shirakami Fubuki\n"
         )}
 
         else {
