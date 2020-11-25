@@ -58,7 +58,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!aqua ubi : Play Ubiquitous dB\n"
                 + "!!aqua dadada : Play DaDaDa Tenshi\n"
                 + "!!aqua noise : Aqua noise\n"
-                )
+            )
         }
 
         else if (message.content === "!!aqua"){
