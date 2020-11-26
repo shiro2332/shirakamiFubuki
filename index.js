@@ -96,7 +96,10 @@ client.on('message', message => {
 
     else if (message.content.startsWith('!!haachama')){
   		henshin("Akai Haato", "Haachamachama", "779986363683569695", 'Hololive Gen 1 Haachama chama!')
-    }
+	}
+	else if (message.content.startsWith('!!aloe')){
+		henshin("Akai Haato", "Haachamachama", "779986363683569695", 'Hololive Gen 1 Haachama chama!')
+  	}
 
     else if (message.content.startsWith('You are FBK')) {
     	henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Kon Kon Kitsune!!!')
@@ -112,7 +115,7 @@ client.on('message', message => {
     	message.reply('Pong!');
   	}
 
-  	
+  	//rh was here :D
 });
 
 client.login(config.token)
