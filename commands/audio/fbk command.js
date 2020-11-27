@@ -75,7 +75,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
         else if (message.content === "!!fubuki"){
             var date = new Date();
-            var currentMonth = d.getMonth();
+            var currentMonth = date.getMonth();
 
             if(currentMonth >= 0 && currentMonth <= 2){
                 //Spring
