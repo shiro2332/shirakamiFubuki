@@ -142,7 +142,7 @@ client.on('message', message => {
     	if(!voice.channelID){
     		return
     	}
-    	playAudio('../../assets/song/fubuki/melody.mp3')
+    	playAudio('./assets/song/fubuki/melody.mp3')
   	}
 
   	 else if (message.content.startsWith('Love you Fubuki')) {
