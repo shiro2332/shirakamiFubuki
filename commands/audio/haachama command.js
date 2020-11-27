@@ -12,6 +12,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   	}
 
   	async run(message) {
+		const emoji = '<:haachama:779986363683569695> '
   		function playAudio(filepath){
 	        const { voice } = message.member
 
@@ -59,7 +60,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     	} 
 
     	else if (message.content.includes('help')){
-      		message.channel.send('<:haachama:779986363683569695> ' 
+      		message.channel.send(emoji 
       			+ "Commands available to Haachama:\n" 
       			+ "!!haachama help : Show commands available to Haachama\n" 
       			+ "!!haachama cookpasta : Haachama Cooking Pasta Guide\n"
@@ -76,7 +77,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         } 
 
     	else {
-    		message.channel.send('<:haachama:779986363683569695> ' + "HAACHAMACHAMA~~~!!!")
+    		message.channel.send(emoji + "HAACHAMACHAMA~~~!!!")
     	} 
     }
 }	

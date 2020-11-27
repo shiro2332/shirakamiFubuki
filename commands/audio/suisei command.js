@@ -12,6 +12,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     async run(message) {
+        const emoji = '<:suisei:779987500927811604> '
         function playAudio(filepath){
             const { voice } = message.member
 
@@ -46,7 +47,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content.includes('help')){
-            message.channel.send('<:suisei:779987500927811604> ' 
+            message.channel.send(emoji 
                 + "Commands available to Suisei: \n" 
                 + "!!suisei help : Show commands available to Suisei\n" 
                 + "!!suisei tenkyuu : Play 天球、彗星は夜を跨いで \n"
@@ -62,7 +63,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         } 
 
         else {
-            message.channel.send('<:suisei:779987500927811604> ' + "Sui-chan wa kyou mo kawaii~~~~")
+            message.channel.send(emoji + "Sui-chan wa kyou mo kawaii~~~~")
         }
     }
 }
