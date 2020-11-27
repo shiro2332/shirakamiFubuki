@@ -124,6 +124,10 @@ client.on('message', message => {
     	message.reply('Pong!');
   	}
 
+  	 else if (message.content.startsWith('Love you Fubuki')) {
+       	cmessage.channel.send({files: ["./assets/images/loveyou.gif"]});
+    }
+
   	//rh was here :D
 });
 
