@@ -125,7 +125,7 @@ client.on('message', message => {
   	}
 
   	 else if (message.content.startsWith('Love you Fubuki')) {
-       	cmessage.channel.send({files: ["./assets/images/loveyou.gif"]});
+       	message.channel.send({files: ["./assets/images/loveyou.gif"]});
     }
 
   	//rh was here :D
