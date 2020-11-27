@@ -12,7 +12,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   }
 
   async run(message) {
-  	const { voice } = message.member
+    const { voice } = message.member
+    const emoji = "<:aloe:781917433023168574> "
+
     function playAudio(filepath){
         if (!voice.channelID) {
             message.reply('You must be in a voice channel')
@@ -29,7 +31,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     else if (message.content.includes('help')){
-        message.channel.send("<:aloe:781917433023168574>" 
+        message.channel.send(emoji 
         	+ "Commands available to Aloe:\n" 
         	+ "!!aloe help : Show commands available to Aloe\n" 
         	+ "!!aloe happy: Play Happy Synthesizer" 
@@ -41,7 +43,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     } 
 
     else {
-        message.channel.send("<:aloe:781917433023168574>" + "Sumimasen Wakaranai~~")
+        message.channel.send(emoji + "Sumimasen Wakaranai~~")
     }
   }
 }
