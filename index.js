@@ -42,6 +42,17 @@ client.on('ready', async () => {
 //Commands that does not works with discord commando or commands that does not use prefix
 client.on('message', message => {
 	const { voice } = message.member
+	function playAudio(filepath){
+            if (!voice.channelID) {
+                message.reply('You must be in a voice channel')
+                return
+            }
+
+            voice.channel.join().then((connection) => {
+                connection.play(path.join(__dirname, filepath))
+            })
+        }
+        
 	function henshin(nickname, rolename, emojiId, intro){
 		if (message.guild.me.displayName != nickname){
 			//Change bot name
@@ -127,6 +138,7 @@ client.on('message', message => {
 
   	else if (message.content.includes("goodnight")) {
     	message.channel.send({files: ["./assets/images/goodnight.jpg"]});
+    	message.channel.send("Otsukon~")
     	if(!voice.channelID){
     		return
     	}
