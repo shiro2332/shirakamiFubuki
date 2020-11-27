@@ -77,13 +77,13 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             var date = new Date();
             var currentMonth = d.getMonth();
 
-            if(currentMonth >= 0 and currentMonth <= 2){
+            if(currentMonth >= 0 && currentMonth <= 2){
                 //Spring
                 message.channel.send({files: ["./assets/images/spring.jpg"]});
                 message.channel.send("Happy New Year~~~")
             }
 
-            else if(currentMonth >= 3 and currentMonth <= 5){
+            else if(currentMonth >= 3 && currentMonth <= 5){
                 //Summer
                 message.channel.send({files: ["./assets/images/summer.png"]});
                 message.channel.send("<:cha:775231692398788618>" 
@@ -93,7 +93,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                     )
             }
             
-            else if(currentMonth >= 6 and currentMonth <= 8){
+            else if(currentMonth >= 6 && currentMonth <= 8){
                 //Autumn
                 message.channel.send({files: ["./assets/images/autumn.jpg"]});
                 message.channel.send(
@@ -103,7 +103,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 )
             }
             
-            else if(currentMonth >= 9 and currentMonth <= 11){
+            else if(currentMonth >= 9 && currentMonth <= 11){
                 //Winter
                 message.channel.send({files: ["./assets/images/winter.jpg"]});
                 message.channel.send(
