@@ -74,6 +74,45 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content === "!!fubuki"){
+            var date = new Date();
+            var currentMonth = d.getMonth();
+
+            if(currentMonth >= 0 and currentMonth <= 2){
+                //Spring
+                message.channel.send({files: ["./assets/images/spring.jpg"]});
+                message.channel.send("Happy New Year~~~")
+            }
+
+            else if(currentMonth >= 3 and currentMonth <= 5){
+                //Summer
+                message.channel.send({files: ["./assets/images/summer.png"]});
+                message.channel.send("<:cha:775231692398788618>" 
+                    + "<:ye:775231830689447976> ! " 
+                    + "<:cha:775231692398788618>" 
+                    + "<:ye:775231830689447976> ! " 
+                    )
+            }
+            
+            else if(currentMonth >= 6 and currentMonth <= 8){
+                //Autumn
+                message.channel.send({files: ["./assets/images/autumn.jpg"]});
+                message.channel.send(
+                    "<:burgerfox:775231692352258068>" 
+                    + " BURGER " 
+                    + "<:burgerfox:775231692352258068>"
+)
+            }
+            
+            else if(currentMonth >= 9 and currentMonth <= 11){
+                //Winter
+                message.channel.send({files: ["./assets/images/winter.jpg"]});
+                message.channel.send(
+                    "<:kon1:775231769758269441>" 
+                    + " Warm tea and corn~ " 
+                    + "<:tea1:775231830390996994>"
+                    )
+            }
+
             if (!voice.channelID) {
                 return
             }

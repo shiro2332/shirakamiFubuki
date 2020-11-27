@@ -3,12 +3,12 @@ const path = require('path')
 
 module.exports = class PlayAudioCommand extends Commando.Command {
   constructor(client) {
-    super(client, {
-      name: 'aloe',
-      group: 'hololive',
-      memberName: 'aloe',
-      description: 'Commands available to Aloe',
-    })
+      super(client, {
+          name: 'aloe',
+          group: 'hololive',
+          memberName: 'aloe',
+          description: 'Commands available to Aloe',
+      })
   }
 
   async run(message) {
@@ -32,10 +32,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
     else if (message.content.includes('help')){
         message.channel.send(emoji 
-        	+ "Commands available to Aloe:\n" 
-        	+ "!!aloe help : Show commands available to Aloe\n" 
-        	+ "!!aloe happy: Play Happy Synthesizer" 
-        	)
+          	+ "Commands available to Aloe:\n" 
+          	+ "!!aloe help : Show commands available to Aloe\n" 
+          	+ "!!aloe happy: Play Happy Synthesizer" 
+          	)
     }
 
     else if (message.content === "!!aloe"){
