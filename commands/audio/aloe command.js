@@ -25,7 +25,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     if (message.content.includes('happy')){
-        playAudio('../../assets/song/aloe/Happy Synthesizer - Mano Aloe.mp3')  	
+        playAudio('../../assets/song/aloe/HappySynthesizer.mp3')  	
     }
 
     else if (message.content.includes('help')){
