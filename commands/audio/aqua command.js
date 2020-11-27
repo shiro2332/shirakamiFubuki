@@ -13,7 +13,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
     async run(message) {
         const { voice } = message.member
-        function playAudio(filepath){
+        const emoji = "<:aqua:779982662298632224> "
+
+        function playAudio(filepath) {
             if (!voice.channelID) {
                 message.reply('You must be in a voice channel')
                 return
@@ -24,36 +26,36 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             })
         }
 
-        if (message.content.includes('forthewin') || message.content.includes('ftw')){
-          	playAudio('../../assets/song/aqua/forthewin.mp3')
+        if (message.content.includes('forthewin') || message.content.includes('ftw')) {
+            playAudio('../../assets/song/aqua/forthewin.mp3')
         }
 
-        else if (message.content.includes('iropalette')){
-          	playAudio('../../assets/song/aqua/iropallete.mp3')
+        else if (message.content.includes('iropalette')) {
+            playAudio('../../assets/song/aqua/iropallete.mp3')
         }
 
-        else if (message.content.includes('trackmaker')){
-          	playAudio( '../../assets/song/aqua/indoortrackmaker.mp3')
+        else if (message.content.includes('trackmaker')) {
+            playAudio('../../assets/song/aqua/indoortrackmaker.mp3')
         }
 
-        else if (message.content.includes('ubi')){
-            playAudio( '../../assets/song/aqua/sao_ubi.mp3')
+        else if (message.content.includes('ubi')) {
+            playAudio('../../assets/song/aqua/sao_ubi.mp3')
         }
 
-        else if (message.content.includes('noise')){
-            playAudio( '../../assets/song/aqua/aquanoise.mp3')
+        else if (message.content.includes('noise')) {
+            playAudio('../../assets/song/aqua/aquanoise.mp3')
         }
 
-        else if (message.content.includes('dadada')){
-            playAudio( '../../assets/song/aqua/dadada.mp3')
+        else if (message.content.includes('dadada')) {
+            playAudio('../../assets/song/aqua/dadada.mp3')
         }
 
-        else if (message.content.includes('help')){
-            message.channel.send("<:aqua:779982662298632224> " 
+        else if (message.content.includes('help')) {
+            message.channel.send(emoji
                 + "Commands available to Aqua:\n"
-                + "!!aqua help : Show commands available to Aqua\n" 
-                + "!!aqua forthewin : Play For the Win\n" 
-                + "!!aqua iropalette : Play Iro Palette\n" 
+                + "!!aqua help : Show commands available to Aqua\n"
+                + "!!aqua forthewin : Play For the Win\n"
+                + "!!aqua iropalette : Play Iro Palette\n"
                 + "!!aqua trackmaker : Play Indoor Track Maker\n"
                 + "!!aqua ubi : Play Ubiquitous dB\n"
                 + "!!aqua dadada : Play DaDaDa Tenshi\n"
@@ -61,15 +63,15 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             )
         }
 
-        else if (message.content === "!!aqua"){
+        else if (message.content === "!!aqua") {
             if (!voice.channelID) {
                 return
             }
-            playAudio( '../../assets/song/aqua/intro.mp3')
-        } 
+            playAudio('../../assets/song/aqua/intro.mp3')
+        }
 
         else {
-            message.channel.send("<:aqua:779982662298632224> " + "NEEEEEEEEEEEEEEEE")
+            message.channel.send(emoji + "NEEEEEEEEEEEEEEEE")
         }
     }
 }
