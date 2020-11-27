@@ -52,7 +52,7 @@ client.on('message', message => {
                 connection.play(path.join(__dirname, filepath))
             })
         }
-        
+
 	function henshin(nickname, rolename, emojiId, intro){
 		if (message.guild.me.displayName != nickname){
 			//Change bot name
@@ -137,8 +137,8 @@ client.on('message', message => {
   	}
 
   	else if (message.content.includes("goodnight")) {
+  		henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Otsu-kōn deshita!')
     	message.channel.send({files: ["./assets/images/goodnight.jpg"]});
-    	message.channel.send("Otsukon~")
     	if(!voice.channelID){
     		return
     	}
