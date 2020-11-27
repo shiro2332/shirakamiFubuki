@@ -41,7 +41,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     } 
 
     else {
-        message.channel.send("<:aloe:781917433023168574>" + "Sumimasen Wakaranai~~"
+        message.channel.send("<:aloe:781917433023168574>" + "Sumimasen Wakaranai~~")
     }
   }
 }
