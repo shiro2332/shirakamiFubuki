@@ -157,7 +157,7 @@ client.on('message', message => {
 		var now = new Date();
 		var hour = now.getHours();
 
-		if (hour == 23 || hour <= 4){
+		if (hour == 3 || hour <= 10){
 			henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Otsu-kōn deshita!')
 			message.channel.send({ files: ["./assets/images/goodnight.jpg"] });
 			if (!voice.channelID) {
