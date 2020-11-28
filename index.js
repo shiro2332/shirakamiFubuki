@@ -143,12 +143,17 @@ client.on('message', message => {
 	}
 
 	else if (message.content.includes("goodnight")) {
-		henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Otsu-kōn deshita!')
-		message.channel.send({ files: ["./assets/images/goodnight.jpg"] });
-		if (!voice.channelID) {
-			return
-		}
-		playAudio('./assets/song/fubuki/melody.mp3')
+		var now = new Date();
+		var hour = now.getHours();
+
+		if (hour == 23 or hour <= 4){
+			henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Otsu-kōn deshita!')
+			message.channel.send({ files: ["./assets/images/goodnight.jpg"] });
+			if (!voice.channelID) {
+				return
+			}
+			playAudio('./assets/song/fubuki/melody.mp3')
+		}		
 	}
 
 	else if (message.content.startsWith('Love you Fubuki')) {
