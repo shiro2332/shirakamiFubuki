@@ -13,7 +13,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
   	async run(message) {
 		  const { voice } = message.member
-		  const emoji = "<:watame:782135944492482560> "
+		  const emoji = "<:watame_smile:782136270045970432> "
 	    function playAudio(filepath){
 	        if (!voice.channelID) {
 	            message.reply('You must be in a voice channel')
@@ -79,7 +79,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	    } 
 
 	    else {
-			message.channel.send("<:watame_smile:782136270045970432> " + "Warukunai yo ne~~?")
+			message.channel.send(emoji + "Warukunai yo ne~~?")
 			if (!voice.channelID) {
 	            return
 	        }
