@@ -87,7 +87,7 @@ client.on('message', message => {
 			member.roles.add(guild.roles.cache.find((role) => { return role.name === newRolename }))
 			**/
 
-			const role = message.guild.roles.cache.find('777540708264968202')
+			const role = message.guild.roles.find("Fox Burger King", "name");
     		role.setColor(color);
 
 			//Complete
