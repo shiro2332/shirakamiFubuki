@@ -60,7 +60,6 @@ client.on('message', message => {
 			var newNickname = nickname;
 			message.guild.me.setNickname(newNickname).catch(console.error);
 
-			/**
 			const { guild } = message
 			//Change bot role (Remove)
 			var allrole = Array(
@@ -85,12 +84,6 @@ client.on('message', message => {
 
 			const member = guild.members.cache.get(information.Client.BotID)
 			member.roles.add(guild.roles.cache.find((role) => { return role.name === newRolename }))
-			**/
-
-			const role = message.guild.roles.cache.find("Fox Burger King", "name");
-    		role.edit({
-            	color: colors
-        	})
 
 			//Complete
 			const emoji = client.emojis.cache.get(emojiId)
