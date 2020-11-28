@@ -3,7 +3,7 @@ const config = require('./config.json')
 
 const path = require('path')
 const command = require('./command')
-const information = require('./information.json')
+const information = require('./Information.json')
 
 const client = new Commando.CommandoClient({
 	owner: information.Ownership.ID,
