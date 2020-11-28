@@ -165,7 +165,11 @@ client.on('message', message => {
 			}
 			playAudio('./assets/song/fubuki/melody.mp3')
 		} else {
-			message.channel.send("Too early to sleep! Now is " + hour)
+			hour += 8
+			if(hour >= 24){
+				hour = hour - 24
+			}
+			message.channel.send("Too early to sleep! Now is " + hour )
 		}
 	}
 
