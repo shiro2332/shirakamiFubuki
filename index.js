@@ -62,17 +62,18 @@ client.on('message', message => {
 
 			const { guild } = message
 			//Change bot role (Remove)
-			var allrole = Array("フブキCh。白上フブキ", 
-			"Botan Ch.獅白ぼたん", 
-			"Suisei Channel", 
-			"Korone Ch. 戌神ころね", 
-			"Aqua Ch. 湊あくあ", 
-			"Nakiri Ayame Ch. 百鬼あやめ", 
-			"Okayu Ch. 猫又おかゆ", 
-			"Mio Channel 大神ミオ", 
-			"Pekora Ch. 兎田ぺこら", 
-			"Marine Ch. 宝鐘マリン"
-			)
+			var allrole = Array(
+				"Comet",
+				"Fox Burger King", 
+				"Haachamachama",
+				"Akukin",
+				"Houshou Pirates", 
+				"Necromancer", 
+				"Peko Peko",
+				"Eyjafjalla", 
+				"PPTenshi",
+				"Training Succubus"
+				)			
 			for (var i = 0; i < allrole.length; i++) {
 				const member = guild.members.cache.get(information.Client.BotID)
 				member.roles.remove(guild.roles.cache.find((role) => { return role.name === allrole[i] }))
