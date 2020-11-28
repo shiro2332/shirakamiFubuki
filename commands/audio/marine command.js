@@ -12,7 +12,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	  }
 
   	async run(message) {
-	  	const { voice } = message.member
+		  const { voice } = message.member
+		  const emoji = "<:marine:779987488574930955> "
 	    function playAudio(filepath){
 	        if (!voice.channelID) {
 	            message.reply('You must be in a voice channel')
@@ -33,7 +34,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	    }
 
 	    else if (message.content.includes('help')){
-	        message.channel.send("<:marine:779987488574930955>" 
+	        message.channel.send(emoji 
 		        	+ "Commands available to Marine:\n" 
 		        	+ "!!marine help : Show commands available to Marine\n" 
 		        	+ "!!marine horny: Im Horny\n" 
@@ -46,7 +47,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	    } 
 
 	    else {
-	        message.channel.send("<:marine:779987488574930955>" + "Ara~ kore wa nandesu ka?")
+	        message.channel.send(emoji + "Ara~ kore wa nandesu ka?")
 	        if (!voice.channelID) {
 	            return
 	        }
