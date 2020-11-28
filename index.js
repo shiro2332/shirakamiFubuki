@@ -54,7 +54,7 @@ client.on('message', message => {
 		})
 	}
 
-	function henshin(nickname, rolename, emojiId, intro, color) {
+	function henshin(nickname, rolename, emojiId, intro, colors) {
 		if (message.guild.me.displayName != nickname) {
 			//Change bot name
 			var newNickname = nickname;
@@ -87,8 +87,10 @@ client.on('message', message => {
 			member.roles.add(guild.roles.cache.find((role) => { return role.name === newRolename }))
 			**/
 
-			const role = message.guild.roles.cache.find("Fox Burger King", "name");
-    		role.setColor(color);
+			const role = guild.roles.cache.find("Fox Burger King", "name");
+    		role.edit({
+            	color: colors
+        	})
 
 			//Complete
 			const emoji = client.emojis.cache.get(emojiId)
