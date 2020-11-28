@@ -1,0 +1,48 @@
+{
+	"Client" : {
+		"BotID" : "774870728285356083",
+		"Token": "Nzc0ODcwNzI4Mjg1MzU2MDgz.X6eEmg.Hwi8Jj7Jw9Q7iIElZMzB3buad1U",
+		"Prefix": "!!"
+	},
+
+	"Ownership" : {
+		"DisplayName" : "Fhunbuki",
+		"ID" : "299176846132641792"
+	},
+
+	"Status" : {
+		"ChannelList" : [
+			"フブキCh。白上フブキ", 
+			"Botan Ch.獅白ぼたん", 
+			"Suisei Channel", 
+			"Korone Ch. 戌神ころね", 
+			"Aqua Ch. 湊あくあ", 
+			"Nakiri Ayame Ch. 百鬼あやめ", 
+			"Okayu Ch. 猫又おかゆ", 
+			"Mio Channel 大神ミオ", 
+			"Pekora Ch. 兎田ぺこら", 
+			"Marine Ch. 宝鐘マリン"
+		],
+		"Action" : [
+			"WATCHING",
+			"PLAYING",
+			"STREAMING",
+			"LISTENING"
+		]
+	},
+
+	"Guild" : {
+		"Role" : [
+			"Comet",
+			"Fox Burger King", 
+			"Haachamachama",
+			"Akukin",
+			"Houshou Pirates", 
+			"Necromancer", 
+			"Peko Peko",
+			"Eyjafjalla", 
+			"PPTenshi",
+			"Training Succubus"
+		],	
+	}
+}

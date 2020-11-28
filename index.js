@@ -3,9 +3,10 @@ const config = require('./config.json')
 
 const path = require('path')
 const command = require('./command')
+const information = require('information.json')
 
 const client = new Commando.CommandoClient({
-	owner: "299176846132641792",
+	owner: information.Ownership.ID,
 	commandPrefix: config.prefix,
 	unknownCommandResponse: false
 })
@@ -32,10 +33,10 @@ client.on('ready', async () => {
 
 	//Random a status
 	setInterval(function () {
-		var livelist = Array("フブキCh。白上フブキ", "Botan Ch.獅白ぼたん", "Suisei Channel", "Korone Ch. 戌神ころね", "Aqua Ch. 湊あくあ", "Nakiri Ayame Ch. 百鬼あやめ", "Okayu Ch. 猫又おかゆ", "Mio Channel 大神ミオ", "Pekora Ch. 兎田ぺこら", "Marine Ch. 宝鐘マリン")
+		var livelist = information.Status.ChannelList
 		var live = livelist[Math.floor(Math.random() * livelist.length)]
 
-		client.user.setActivity(live, { type: 'WATCHING' })
+		client.user.setActivity(live, { type: information.Status.Action[0] })
 	}, 100000)
 })
 
@@ -61,21 +62,16 @@ client.on('message', message => {
 
 			const { guild } = message
 			//Change bot role (Remove)
-			var allrole = ["Comet",
-				"Fox Burger King", "Haachamachama",
-				"Akukin",
-				"Houshou Pirates", "Necromancer", "Peko Peko",
-				"Eyjafjalla", "PPTenshi",
-				"Training Succubus"]
+			var allrole = information.Guild.Role
 			for (var i = 0; i < allrole.length; i++) {
-				const member = guild.members.cache.get("774870728285356083")
+				const member = guild.members.cache.get(information.Client.BotID)
 				member.roles.remove(guild.roles.cache.find((role) => { return role.name === allrole[i] }))
 			}
 
 			//Change bot role (Add)
 			const newRolename = rolename
 
-			const member = guild.members.cache.get("774870728285356083")
+			const member = guild.members.cache.get(information.Client.BotID)
 			member.roles.add(guild.roles.cache.find((role) => { return role.name === newRolename }))
 
 			//Complete
