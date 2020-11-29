@@ -156,6 +156,8 @@ client.on('message', message => {
 	else if (message.content.includes("goodnight")) {
 		var now = new Date();
 		var hour = now.getHours();
+		var min = now.getMinutes();
+		var time = hour + min
 
 		if (hour >= 15 && hour <= 20){
 			henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Otsu-kōn deshita!')
@@ -169,7 +171,7 @@ client.on('message', message => {
 			if(hour >= 24){
 				hour = hour - 24
 			}
-			message.channel.send("Too early to sleep! Now is " + hour )
+			message.channel.send("Too early to sleep! Now is " + time )
 		}
 	}
 
