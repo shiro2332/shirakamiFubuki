@@ -34,7 +34,17 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content.includes('alice')){
-            playAudio('../../assets/song/alice.mp3')  	
+            //playAudio('../../assets/song/alice.mp3')
+            const { voice } = message.member
+
+            if (!voice.channelID) {
+                message.reply('You must be in a voice channel')
+                return
+            }
+
+            voice.channel.join().then((connection) => {
+                connection.play("https://github.com/shiro2332/MusicFile/blob/master/alice.mp3")
+            })  	
         }
 
         else if (message.content.includes('saga')){
