@@ -1,14 +1,10 @@
 const Commando = require('discord.js-commando')
-const config = require('./config.json')
-
 const path = require('path')
-const command = require('./command')
 const information = require('./Information.json')
 
 const client = new Commando.CommandoClient({
 	owner: information.Ownership.ID,
-	commandPrefix: config.prefix,
-	unknownCommandResponse: false
+	commandPrefix: information.Client.Prefix,
 })
 
 //Run this when the bot is startup
