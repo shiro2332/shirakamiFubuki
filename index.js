@@ -77,17 +77,13 @@ client.on('message', message => {
 			for (var i = 0; i < allrole.length; i++) {
 				const member = guild.members.cache.get(information.Client.BotID)
 				member.roles.remove(guild.roles.cache.find((role) => { return role.name === allrole[i] }))
-				
 			}
 
-			if (rolename == "Fox Burger King"){
-				//Change bot role (Add)
-				const newRolename = rolename
+			//Change bot role (Add)
+			const newRolename = rolename
 
-				const member = guild.members.cache.get(information.Client.BotID)
-				member.roles.add(guild.roles.cache.find((role) => { return role.name === newRolename }))
-			}
-			
+			const member = guild.members.cache.get(information.Client.BotID)
+			member.roles.add(guild.roles.cache.find((role) => { return role.name === newRolename }))
 
 			//Complete
 			const emoji = client.emojis.cache.get(emojiId)
@@ -98,7 +94,7 @@ client.on('message', message => {
 	//Gen 0 ------------------------------------------------------------------------------------------------------------------
 	if (message.content.startsWith('!!suisei')) {
 		//have gif
-		henshin("Hoshimachi Suisei", null, "780475515370864670", 'Hololive 2D Talent Hoshimachi Suisei!', '#1b599e')
+		henshin("Hoshimachi Suisei", "Comet", "780475515370864670", 'Hololive 2D Talent Hoshimachi Suisei!', '#1b599e')
 	}
 
 	//Gen 1 ------------------------------------------------------------------------------------------------------------------
@@ -107,37 +103,37 @@ client.on('message', message => {
 		henshin("Shirakami Fubuki", "Fox Burger King", "780765353173057566", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!', '#ffffff')
 	}
 	else if (message.content.startsWith('!!haachama')) {
-		henshin("Akai Haato", null, "779986363683569695", 'Hololive Gen 1 Haachama chama!', '#db7c28')
+		henshin("Akai Haato", "Haachamachama", "779986363683569695", 'Hololive Gen 1 Haachama chama!', '#db7c28')
 	}
 
 	//Gen 2 ------------------------------------------------------------------------------------------------------------------
 	else if (message.content.startsWith('!!aqua')) {
 		//have gif
-		henshin("Minato Aqua", null, "780473856199884800", 'Hololive Gen 2 Minato Aqua desu!', '#8b4ee4')
+		henshin("Minato Aqua", "Akukin", "780473856199884800", 'Hololive Gen 2 Minato Aqua desu!', '#8b4ee4')
 	}
 
 	//Gen 3 ------------------------------------------------------------------------------------------------------------------
 	else if (message.content.startsWith('!!marine')) {
-		henshin("Houshou Marine", null, "779987488574930955", 'Hololive Gen 3 Houshou Marine sanjo!', '#8f1515')
+		henshin("Houshou Marine", "Houshou Pirates", "779987488574930955", 'Hololive Gen 3 Houshou Marine sanjo!', '#8f1515')
 	}
 	else if (message.content.startsWith('!!pekora')) {
-		henshin("Usada Pekora", null, "779985756390162472", 'Hololive Gen 3 Usada Pekora peko!', '#5f98d8')
+		henshin("Usada Pekora", "Peko Peko", "779985756390162472", 'Hololive Gen 3 Usada Pekora peko!', '#5f98d8')
 	}
 	else if (message.content.startsWith('!!rushia')) {
-		henshin("Uruha Rushia", null, "779987468622495754", 'Hololive Gen 3 Uruha Rushia desu!', '#3dce91')
+		henshin("Uruha Rushia", "Necromancer", "779987468622495754", 'Hololive Gen 3 Uruha Rushia desu!', '#3dce91')
 	}
 
 	//Gen 4 ------------------------------------------------------------------------------------------------------------------
 	else if (message.content.startsWith('!!kanata')) {
-		henshin("Amane Kanata", null, "782140207649521664", 'Hololive Gen 4 Amane Kanata yo!', '#399dd3')
+		henshin("Amane Kanata", "PPTenshi", "782140207649521664", 'Hololive Gen 4 Amane Kanata yo!', '#399dd3')
 	}
 	else if (message.content.startsWith('!!watame')) {
-		henshin("Tsunomaki Watame", null, "782135944492482560", 'Hololive Gen 4 Tsunomaki Watame!', '#ebe573')
+		henshin("Tsunomaki Watame", "Eyjafjalla", "782135944492482560", 'Hololive Gen 4 Tsunomaki Watame!', '#ebe573')
 	}
 
 	//Gen 5 ------------------------------------------------------------------------------------------------------------------
 	else if (message.content.startsWith('!!aloe')) {
-		henshin("Mano Aloe", null, "781917433023168574", 'Hololive Gen 5 Mano Aloe desu!', '#ce11ec')
+		henshin("Mano Aloe", "Training Succubus", "781917433023168574", 'Hololive Gen 5 Mano Aloe desu!', '#ce11ec')
 	}
 
 	else if (message.content.startsWith('You are FBK')) {
