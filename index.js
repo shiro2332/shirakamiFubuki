@@ -157,7 +157,7 @@ client.on('message', message => {
 		var now = new Date();
 		var hour = now.getHours();
 		var min = now.getMinutes();
-		var time = now.getHours() + now.getMinutes()
+		var time = now.getHours() + "" + now.getMinutes()
 
 		if (hour >= 15 && hour <= 20){
 			henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Otsu-kōn deshita!')
