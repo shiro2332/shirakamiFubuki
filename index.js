@@ -79,11 +79,14 @@ client.on('message', message => {
 				member.roles.remove(guild.roles.cache.find((role) => { return role.name === allrole[i] }))
 			}
 
-			//Change bot role (Add)
-			const newRolename = rolename
+			if (rolename == "Fox Burger King"){
+				//Change bot role (Add)
+				const newRolename = rolename
 
-			const member = guild.members.cache.get(information.Client.BotID)
-			member.roles.add(guild.roles.cache.find((role) => { return role.name === newRolename }))
+				const member = guild.members.cache.get(information.Client.BotID)
+				member.roles.add(guild.roles.cache.find((role) => { return role.name === newRolename }))
+			}
+			
 
 			//Complete
 			const emoji = client.emojis.cache.get(emojiId)
@@ -103,7 +106,7 @@ client.on('message', message => {
 		henshin("Shirakami Fubuki", "Fox Burger King", "780765353173057566", 'Hololive Gen 1/Gamers Shirakami Fubuki desu!', '#ffffff')
 	}
 	else if (message.content.startsWith('!!haachama')) {
-		henshin("Akai Haato", "Haachamachama", "779986363683569695", 'Hololive Gen 1 Haachama chama!', '#db7c28')
+		henshin("Akai Haato", null, "779986363683569695", 'Hololive Gen 1 Haachama chama!', '#db7c28')
 	}
 
 	//Gen 2 ------------------------------------------------------------------------------------------------------------------
