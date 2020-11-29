@@ -76,7 +76,8 @@ client.on('message', message => {
 				)			
 			for (var i = 0; i < allrole.length; i++) {
 				const member = guild.members.cache.get(information.Client.BotID)
-				member.roles.remove(guild.roles.cache.find((role) => { return role.name === allrole[i] }))
+				//member.roles.remove(guild.roles.cache.find((role) => { return role.name === allrole[i] }))
+				member.roles.remove(777540708264968202)
 			}
 
 			if (rolename == "Fox Burger King"){
