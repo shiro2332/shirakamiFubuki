@@ -53,7 +53,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/shira_kuro_yoru.mp3')
         }
 
-        else if (message.content.includes('sugarsong')){
+        else if (message.content.includes('sugar')){
             playAudio('../../assets/song/fubuki/sugarsong.mp3')
         }
 
@@ -65,7 +65,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/polkka.mp3')
         }
 
-        else if (message.content.includes('dissapearance')){
+        else if (message.content.includes('disapearance')){
             playAudio('../../assets/song/fubuki/dissappearance.mp3')
         }
 
@@ -130,10 +130,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki platinum : Play Platinum Disco\n" 
                 + "!!fubuki scatman : Play Scatman\n" 
                 + "!!fubuki yoruduet : Play 夜に駆ける 黑白贴贴\n" 
-                + "!!fubuki sugarsong : Play Sugar Song to Bitter Step\n" 
+                + "!!fubuki sugar : Play Sugar Song to Bitter Step\n" 
                 + "!!fubuki yoru : Play 夜に駆ける\n" 
                 + "!!fubuki polkka : Play Levan Polkka\n"
-                + "!!fubuki dissapearance : Play Dissapearance of Shirakami Fubuki\n"
+                + "!!fubuki disapearance : Play Disapearance of Shirakami Fubuki\n"
                 + "!!fubuki countryroad : Play Country Road\n"
         )}
 
