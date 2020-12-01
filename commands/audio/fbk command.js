@@ -77,6 +77,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/rokuchounen.mp3')
         }
 
+        else if (message.content.includes('otn')){
+            playAudio('../../assets/song/fubuki/giganticotn.mp3')
+        }
+
         else if (message.content === "!!fubuki"){
             var date = new Date();
             var currentMonth = date.getMonth();
@@ -140,6 +144,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki disappearance : Play Disappearance of Shirakami Fubuki\n"
                 + "!!fubuki countryroad : Play Country Road\n"
                 + "!!fubuki roku : Play Roku Chounen to Ichiya Monogatari\n"
+                + "!!fubuki otn : Play Gitantic O.T.N\n"
+
         )}
 
         else {
