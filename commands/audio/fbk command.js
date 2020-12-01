@@ -73,6 +73,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/countryroad.mp3')
         }
 
+        else if (message.content.includes('roku')){
+            playAudio('../../assets/song/fubuki/rokuchounen.mp3')
+        }
+
         else if (message.content === "!!fubuki"){
             var date = new Date();
             var currentMonth = date.getMonth();
@@ -135,6 +139,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki polkka : Play Levan Polkka\n"
                 + "!!fubuki dissapearance : Play Dissapearance of Shirakami Fubuki\n"
                 + "!!fubuki countryroad : Play Country Road\n"
+                + "!!fubuki roku : Play Roku Chounen to Ichiya Monogatari\n"
         )}
 
         else {
