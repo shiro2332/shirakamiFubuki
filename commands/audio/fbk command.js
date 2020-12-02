@@ -85,6 +85,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/fallguys.mp3')
         }
 
+        else if (message.content.includes('butterfly')){
+            playAudio('../../assets/song/fubuki/butterfly.mp3')
+        }
+
         else if (message.content === "!!fubuki"){
             var date = new Date();
             var currentMonth = date.getMonth();
