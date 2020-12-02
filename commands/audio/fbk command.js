@@ -89,6 +89,22 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/butterfly.mp3')
         }
 
+        else if (message.content.includes('kuro cruelangel')){
+            playAudio('../../assets/song/fubuki/cruelangel.mp3')
+        }
+
+        else if (message.content.includes('kuro gurenge')){
+            playAudio('../../assets/song/fubuki/gurenge.mp3')
+        }
+
+        else if (message.content.includes('kuro sugar')){
+            playAudio('../../assets/song/fubuki/sugarkuro.mp3')
+        }
+
+        else if (message.content.includes('kuro yoru')){
+            playAudio('../../assets/song/fubuki/yorukuro.mp3')
+        }
+
         else if (message.content === "!!fubuki"){
             var date = new Date();
             var currentMonth = date.getMonth();
@@ -145,7 +161,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki pizza : Play Pizza Pasta \n" 
                 + "!!fubuki platinum : Play Platinum Disco\n" 
                 + "!!fubuki scatman : Play Scatman\n" 
-                + "!!fubuki yoruduet : Play 夜に駆ける 黑白贴贴\n" 
+                + "!!fubuki yoruduet : Play 夜に駆ける duet\n" 
                 + "!!fubuki sugar : Play Sugar Song to Bitter Step\n" 
                 + "!!fubuki yoru : Play 夜に駆ける\n" 
                 + "!!fubuki polkka : Play Levan Polkka\n"
@@ -154,6 +170,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki roku : Play Roku Chounen to Ichiya Monogatari\n"
                 + "!!fubuki otn : Play Gitantic O.T.N\n"
                 + "!!fubuki fallguys : Play Fallguys\n"
+                + "!!fubuki kuro cruelangel : Play Kurokami Cruel Angel Thesis\n"
+                + "!!fubuki kuro gurenge : Play Kurokami Gurenge\n"
+                + "!!fubuki kuro sugar : Play Kurokami Sugar Song to Bitter Step\n"
+                + "!!fubuki kuro yoru : Play Kurokami 夜に駆ける\n"
 
         )}
 
