@@ -51,7 +51,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	        playAudio('../../assets/song/rushia/RenaiCirculation.mp3')  	
 		}
 		else if (message.content.includes('magnet')){
-	        playAudio('../../assets/song/marine/magnet.mp3')  	
+	        playAudio('../../assets/song/marine/Magnet.mp3')  	
 	    }
 
 		//Shitposts
@@ -72,7 +72,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 					+ "!!rushia nanodesu song : Play weird song\n" 
 					+ "!!rushia pon : Play Pon Pon Pon\n"
 					+ "!!rushia renai : Play Renai Circulation\n"
-					+ "!!rushia magnet : Play Magnet"
+					+ "!!rushia magnet : Play Magnet\n"
 					+ "\nWeird Stuff:\n"
 					+ "!!rushia angery : Angery Rushia\n" 
 		        	)
