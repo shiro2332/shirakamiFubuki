@@ -53,11 +53,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/fubuki/shira_kuro_yoru.mp3')
         }
 
-        else if (message.content.includes('sugar')){
+        else if (message.content.includes('shirakami sugar')){
             playAudio('../../assets/song/fubuki/sugarsong.mp3')
         }
 
-        else if (message.content.includes('yoru')){
+        else if (message.content.includes('shirakami yoru')){
             playAudio('../../assets/song/fubuki/yoruSong.mp3')
         }
 
