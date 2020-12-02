@@ -149,6 +149,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!fubuki countryroad : Play Country Road\n"
                 + "!!fubuki roku : Play Roku Chounen to Ichiya Monogatari\n"
                 + "!!fubuki otn : Play Gitantic O.T.N\n"
+                + "!!fubuki fallguys : Play Fallguys\n"
 
         )}
 
