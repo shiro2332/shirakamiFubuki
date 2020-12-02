@@ -27,6 +27,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
 	    if (message.content.includes('ahoy')){
 	        playAudio('../../assets/song/marine/ahoy.mp3')  	
+		}
+		else if (message.content.includes('magnet')){
+	        playAudio('../../assets/song/marine/magnet.mp3')  	
 	    }
 
 	    else if (message.content.includes('horny')){
@@ -36,9 +39,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	    else if (message.content.includes('help')){
 	        message.channel.send(emoji 
 		        	+ "Commands available to Marine:\n" 
-		        	+ "!!marine help : Show commands available to Marine\n" 
+					+ "!!marine help : Show commands available to Marine\n"
 		        	+ "!!marine horny: Im Horny\n" 
-		        	+ "!!marine ahoy : Play Ahoy!"
+		        	+ "!!marine ahoy : Play Ahoy!\n"
+					+ "!!marine magnet : Play Magnet"
 		        	)
 	    }
 
