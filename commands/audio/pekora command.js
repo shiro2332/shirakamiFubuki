@@ -34,7 +34,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content.includes('help')){
-            message.channel.send(emoji 
+            message.channel.send( 
                 + "Commands available to Pekora: \n" 
                 + "!!pekora help : Show commands available to Pekora\n" 
                 + "!!pekora ecchi : Ecchi\n" 
