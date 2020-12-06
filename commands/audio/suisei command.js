@@ -46,6 +46,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio('../../assets/song/suisei/idolm.mp3')   
         }
 
+        else if (message.content.includes('sugarsong')){
+            playAudio('../../assets/song/suisei/sugarsong.mp3')   
+        }
+
         else if (message.content.includes('help')){
             message.channel.send(emoji 
                 + "Commands available to Suisei: \n" 
@@ -55,6 +59,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 + "!!suisei kakusei : Play 觉醒\n"
                 + "!!suisei comet : Play comet\n"
                 + "!!suisei idolm : Play idolm\n"
+                + "!!suisei sugarsong : Play Sugar Song to Bitter Step\n"
                 )
         }
 
