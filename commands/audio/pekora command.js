@@ -28,5 +28,26 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         if (message.content.includes('ecchi')){
             playAudio('../../assets/song/pekora/ecchi.mp3')
         }
+
+        else if (message.content.includes('very ecchi')){
+            playAudio('../../assets/song/pekora/vryEcchi.mp3')
+        }
+
+        else if (message.content.includes('help')){
+            message.channel.send(emoji 
+                + "Commands available to Pekora: \n" 
+                + "!!pekora help : Show commands available to Pekora\n" 
+                + "!!pekora ecchi : Ecchi\n" 
+                + "!!pekora very ecchi : 10 MIN ECCHIIIIII\n" 
+                )
+        }
+
+        else if (message.content === "!!pekora"){
+            //empty
+        } 
+
+        else {
+            message.channel.send("wip")
+        }
     }
 }
