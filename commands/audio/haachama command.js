@@ -57,7 +57,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
     	else if (message.content.includes('polkka')){
       		playAudio('../../assets/song/haachama/polka.mp3')
-    	} 
+    	}
+
+      else if (message.content.includes('takemehome')){
+          playAudio('../../assets/song/haachama/takemehome.mp3')
+      } 
 
     	else if (message.content.includes('help')){
       		message.channel.send(emoji 
@@ -68,7 +72,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       			+ "!!haachama cookcurry : Haachama Cooking Curry Guide\n"  
       			+ "!!haachama senbonzakura : Play Senbonzakura\n" 
       			+ "!!haachama shapeofyou : Play Shape of You\n" 
-      			+ "!!haachama natsumatsuri : Play Natsumatsuri"
+      			+ "!!haachama natsumatsuri : Play Natsumatsuri\n"
+            + "!!haachama takemehome : Play Take me Home\n"
       			)
     	}
 
