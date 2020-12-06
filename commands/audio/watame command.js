@@ -50,6 +50,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 		else if (message.content.includes('rap')){
 	        playAudio('../../assets/song/watame/WatameRap.mp3')  	
 		}
+		else if (message.content.includes('watamame')){
+	        playAudio('../../assets/song/watame/WataAme.mp3')  	
+		}
 
 		//Shitposts
 		else if (message.content.includes('internet')){
@@ -58,20 +61,20 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
 	    else if (message.content.includes('help')){
 	        message.channel.send(emoji
-		        	+ "Commands available to Watame:\n" 
-					+ "!!watame help : Show commands available to Watame\n"
-					+ "\nSongs:\n"
-					+ "!!watame introsong : Play Watame's Introduction Song\n" 
-					+ "!!watame aimai : Play Ai-mai Chocolate\n" 
-					+ "!!watame bubble : Play Bubble Love\n" 
-					+ "!!watame sayholo : Play \'Can You Say Hololive?\'\n" 
-					+ "!!watame chocolate : Play Chocolate Box\n"
-					+ "!!watame count : Play Sheep Counting Song\n" 
-					+ "!!watame kojo : Play Watame Kojo\n"
-					+ "!!watame rap : Play Watame Rap\n"
-					+ "\nShitposts:\n"
-					+ "!!watame internet : Watame tries to prove that her internet is ok\n" 
-		        	)
+	        	+ "Commands available to Watame:\n" 
+				+ "!!watame help : Show commands available to Watame\n"
+				+ "\nSongs:\n"
+				+ "!!watame introsong : Play Watame's Introduction Song\n" 
+				+ "!!watame aimai : Play Ai-mai Chocolate\n" 
+				+ "!!watame bubble : Play Bubble Love\n" 
+				+ "!!watame sayholo : Play \'Can You Say Hololive?\'\n" 
+				+ "!!watame chocolate : Play Chocolate Box\n"
+				+ "!!watame count : Play Sheep Counting Song\n" 
+				+ "!!watame kojo : Play Watame Kojo\n"
+				+ "!!watame rap : Play Watame Rap\n"
+				+ "\nShitposts:\n"
+				+ "!!watame internet : Watame tries to prove that her internet is ok\n" 
+	        	)
 	    }
 
 	    else if (message.content === "!!watame"){
