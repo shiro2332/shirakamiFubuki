@@ -50,7 +50,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 		else if (message.content.includes('rap')){
 	        playAudio('../../assets/song/watame/WatameRap.mp3')  	
 		}
-		else if (message.content.includes('watamame')){
+		else if (message.content.includes('wataame')){
 	        playAudio('../../assets/song/watame/WataAme.mp3')  	
 		}
 
