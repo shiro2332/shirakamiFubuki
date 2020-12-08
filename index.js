@@ -183,7 +183,7 @@ client.on('message', message => {
 
 		setInterval(function () {
 			playAudio(information.Song.SongLocation[randomNum]);
-			randomNum = Math.floor(Math.random() * songlist.length);
+			var randomNum = Math.floor(Math.random() * songlist.length);
 		}, information.Song.SongLength[randomNum]);
 			
 	}
