@@ -175,19 +175,6 @@ client.on('message', message => {
 		message.channel.send({ files: ["./assets/images/loveyou.gif"] });
 	}
 
-	else if (message.content == ('!!Radio')) {
-		
-		var songlist = information.Song.SongName;
-		var randomNum = Math.floor(Math.random() * songlist.length);
-		var selectedSong = songlist[randomNum];
-
-		setInterval(function () {
-			playAudio(information.Song.SongLocation[randomNum]);
-			var randomNum = Math.floor(Math.random() * songlist.length);
-		}, information.Song.SongLength[randomNum]);
-			
-	}
-
 });
 
 client.login(information.Client.Token)
