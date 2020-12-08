@@ -44,5 +44,20 @@
 			"PPTenshi",
 			"Training Succubus"
 		]
+	},
+
+	"Song" : {
+		"SongName" : [
+			"Asa Ga Kite",
+			"First of the Year"
+		],
+		"SongLocation" : [
+			"assets/song/fubuki/asa.mp3",
+			"assets/song/fubuki/fbkskrillex.mp3"
+		],
+		"SongLength" : [
+			"2300",
+			"3200"
+		]
 	}
 }

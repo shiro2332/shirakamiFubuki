@@ -174,6 +174,16 @@ client.on('message', message => {
 	else if (message.content.startsWith('Love you Fubuki')) {
 		message.channel.send({ files: ["./assets/images/loveyou.gif"] });
 	}
+
+	else if (message.content == ('!!Radio')) {
+		var songList = Information.Song.SongName;
+		var randomNum = Math.floor(Math.random() * songlist.length);
+		var selectedSong = songlist[randomNum];
+
+		setInterval(function () {
+			playAudio(Information.Song.SongLocation[randomNum];
+		}, Information.Song.SongLength[randomNum]);
+	}
 });
 
 client.login(information.Client.Token)
