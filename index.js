@@ -177,7 +177,7 @@ client.on('message', message => {
 
 	else if (message.content == ('!!Radio')) {
 		while (true){
-			var songList = information.Song.SongName;
+			var songlist = information.Song.SongName;
 			var randomNum = Math.floor(Math.random() * songlist.length);
 			var selectedSong = songlist[randomNum];
 
