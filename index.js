@@ -176,7 +176,7 @@ client.on('message', message => {
 	}
 
 	else if (message.content == ('!!Radio')) {
-		while true{
+		while (true){
 			var songList = information.Song.SongName;
 			var randomNum = Math.floor(Math.random() * songlist.length);
 			var selectedSong = songlist[randomNum];
@@ -186,7 +186,7 @@ client.on('message', message => {
 			}, information.Song.SongLength[randomNum]);
 		}	
 	}
-	
+
 });
 
 client.login(information.Client.Token)
