@@ -176,15 +176,17 @@ client.on('message', message => {
 	}
 
 	else if (message.content == ('!!Radio')) {
+		while true{
+			var songList = information.Song.SongName;
+			var randomNum = Math.floor(Math.random() * songlist.length);
+			var selectedSong = songlist[randomNum];
 
-		var songList = Information.Song.SongName;
-		var randomNum = Math.floor(Math.random() * songlist.length);
-		var selectedSong = songlist[randomNum];
-
-		setInterval(function () {
-			playAudio(Information.Song.SongLocation[randomNum]);
-		}, Information.Song.SongLength[randomNum]);
+			setInterval(function () {
+				playAudio(information.Song.SongLocation[randomNum]);
+			}, information.Song.SongLength[randomNum]);
+		}	
 	}
+	
 });
 
 client.login(information.Client.Token)
