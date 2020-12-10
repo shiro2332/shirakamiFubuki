@@ -30,7 +30,16 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         else if (message.content.includes('skr')){
-            playAudio('../../assets/song/fubuki/fbkskrillex.mp3')
+            //playAudio('../../assets/song/fubuki/fbkskrillex.mp3')
+            if (!voice.channelID) {
+                message.reply('You must be in a voice channel')
+                return
+            }
+
+            voice.channel.join().then((connection) => {
+                connection.play("http://download1484.mediafire.com/6mn73oawqs7g/muza1gg3b2e80n7/fbkskrillex.mp3")
+            })
+            
         }
 
         else if (message.content.includes('gogo')){
