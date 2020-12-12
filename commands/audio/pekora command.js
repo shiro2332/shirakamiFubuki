@@ -12,9 +12,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     async run(message) {
-        const { voice } = message.member
-
+        const folderPath = '../../assets/song/pekora/'
+        
         function playAudio(filepath){
+            const { voice } = message.member
             if (!voice.channelID) {
                 message.reply('You must be in a voice channel')
                 return
@@ -25,18 +26,17 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             })
         }
 
-        if (message.content.includes('very ecchi')){
-            playAudio('../../assets/song/pekora/vryEcchi.mp3')
-        }
-
-        else if (message.content.includes('ecchi')){
-            playAudio('../../assets/song/pekora/ecchi.mp3')
-        }
+        if (message.content.includes('ecchi'))
+            playAudio(folderPath + 'ecchi.mp3')
+        
+        else if (message.content.includes('very ecchi'))
+            playAudio(folderPath + 'vryEcchi.mp3')
 
         else if (message.content.includes('help')){
             message.channel.send( 
                 "Commands available to Pekora: \n" 
                 + "!!pekora help : Show commands available to Pekora\n" 
+                + "\nWeird Stuff:\n"
                 + "!!pekora ecchi : Ecchi\n" 
                 + "!!pekora very ecchi : 10 MIN ECCHIIIIII\n" 
                 )

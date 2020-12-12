@@ -12,11 +12,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	}
 
 	async run(message) {
-		const { voice } = message.member
 		const emoji = "<:marine:779987488574930955> "
 		const folderPath = '../../assets/song/marine/'
 
 		function playAudio(filepath) {
+			const { voice } = message.member
 			if (!voice.channelID) {
 				message.reply('You must be in a voice channel')
 				return
@@ -28,17 +28,18 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 		}
 
 		//Songs
-		if (message.content.includes('ahoy')) {
+		if (message.content.includes('ahoy'))
 			playAudio(folderPath + 'ahoy.mp3')
-		}
-		else if (message.content.includes('magnet')) {
+
+		else if (message.content.includes('magnet'))
 			playAudio(folderPath + 'Magnet.mp3')
-		}
+
+		else if (message.content.includes('hoihoi'))
+			playAudio(folderPath + 'HoihoiGensouHoloism.mp3')
 
 		//Weird Stuff
-		else if (message.content.includes('horny')) {
+		else if (message.content.includes('horny'))
 			playAudio(folderPath + 'imhorny.mp3')
-		}
 
 		else if (message.content.includes('help')) {
 			message.channel.send(emoji
@@ -46,7 +47,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 				+ "!!marine help : Show commands available to Marine\n"
 				+ "\nSongs:\n"
 				+ "!!marine ahoy : Play Ahoy!\n"
-				+ "!!marine magnet : Play Magnet"
+				+ "!!marine magnet : Play Magnet\n"
+				+ "!!marine hoihoi : Play Hoi Hoi Gensou Holoism\n"
 				+ "\nWeird Stuff:\n"
 				+ "!!marine horny: Im Horny\n"
 			)

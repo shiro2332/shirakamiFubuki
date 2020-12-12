@@ -13,7 +13,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
     async run(message) {
         const emoji = '<:suisei:779987500927811604> '
-        function playAudio(filepath){
+        const folderPath = '../../assets/song/suisei/'
+
+        function playAudio(filepath) {
             const { voice } = message.member
 
             if (!voice.channelID) {
@@ -26,58 +28,44 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             })
         }
 
-        if (message.content.includes('tenkyuu')){
-            playAudio('../../assets/song/suisei/tenkyuu.mp3')   
-        }
+        if (message.content.includes('tenkyuu'))
+            playAudio(folderPath + 'tenkyuu.mp3')
 
-        else if (message.content.includes('nextcolor')){
-            playAudio('../../assets/song/suisei/nextcolor.mp3')   
-        }
+        else if (message.content.includes('nextcolor'))
+            playAudio(folderPath + 'nextcolor.mp3')
 
-        else if (message.content.includes('kakusei')){
-            playAudio('../../assets/song/suisei/superfly.mp3')   
-        }
+        else if (message.content.includes('kakusei'))
+            playAudio(folderPath + 'superfly.mp3')
 
-        else if (message.content.includes('comet')){
-            playAudio('../../assets/song/suisei/comet.mp3')   
-        }
+        else if (message.content.includes('comet'))
+            playAudio(folderPath + 'comet.mp3')
 
-        else if (message.content.includes('idolm')){
-            playAudio('../../assets/song/suisei/idolm.mp3')   
-        }
+        else if (message.content.includes('idolm'))
+            playAudio(folderPath + 'idolm.mp3')
 
-        else if (message.content.includes('sugarsong')){
-            playAudio('../../assets/song/suisei/sugarsong.mp3')   
-        }
+        else if (message.content.includes('sugarsong'))
+            playAudio(folderPath + 'sugarsong.mp3')
 
-        else if (message.content.includes('help')){
-            message.channel.send(emoji 
-                + "Commands available to Suisei: \n" 
-                + "!!suisei help : Show commands available to Suisei\n" 
+        else if (message.content.includes('help')) {
+            message.channel.send(emoji
+                + "Commands available to Suisei: \n"
+                + "!!suisei help : Show commands available to Suisei\n"
+                + "\nSongs:\n"
                 + "!!suisei tenkyuu : Play 天球、彗星は夜を跨いで \n"
                 + "!!suisei nextcolor : Play NEXT COLOR PLANET\n"
                 + "!!suisei kakusei : Play 觉醒\n"
                 + "!!suisei comet : Play comet\n"
                 + "!!suisei idolm : Play idolm\n"
                 + "!!suisei sugarsong : Play Sugar Song to Bitter Step\n"
-                )
+            )
         }
 
-        else if (message.content === "!!suisei"){
+        else if (message.content === "!!suisei") {
             //empty
-        } 
+        }
 
         else {
             message.channel.send(emoji + "Sui-chan wa kyou mo kawaii~~~~")
         }
     }
 }
-
-//Commands help
-/**
-Commands available to Suisei:
-!!suisei help : Show commands available to Suisei
-!!suisei alice : Play Alice in N.Y.
-!!suisei saga : Play Saga Jihen
-
-**/
