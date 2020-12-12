@@ -51,7 +51,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	        playAudio('../../assets/song/watame/WatameRap.mp3')  	
 		}
 		else if (message.content.includes('melancholic')){
-	        playAudio('../../assets/song/watame/WataAme.mp3')  	
+	        playAudio('../../assets/song/watame/Melancholic.mp3')  	
 		}
 
 		//Shitposts
@@ -72,6 +72,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 				+ "!!watame count : Play Sheep Counting Song\n" 
 				+ "!!watame kojo : Play Watame Kojo\n"
 				+ "!!watame rap : Play Watame Rap\n"
+				+ "!!watame melancholic : Play Melancholic\n"
 				+ "\nShitposts:\n"
 				+ "!!watame internet : Watame tries to prove that her internet is ok\n" 
 	        	)
@@ -90,23 +91,3 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	    }
 	}
 }
-
-//Commands help
-/**
-Commands available to Watame:
-!!watame help : Show commands available to Watame
-
-Songs:
-!!watame introsong : Play Watame's Introduction Song
-!!watame aimai : Play Ai-mai Chocolate
-!!watame bubble : Play Bubble Love
-!!watame sayholo : Play 'Can You Say Hololive?'
-!!watame chocolate : Play Chocolate Box
-!!watame count : Play Sheep Counting Song 
-!!watame kojo : Play Watame Kojo
-!!watame rap : Play Watame Rap
-
-Shitposts:
-!!watame internet : Watame tries to prove that her internet is ok
-
-**/

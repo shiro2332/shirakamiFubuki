@@ -38,12 +38,6 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 		else if (message.content.includes('nandemonaiya')){
 	        playAudio('../../assets/song/rushia/Nandemonaiya.mp3')  	
 		}
-		else if (message.content.includes('nanodesu remix')){
-	        playAudio('../../assets/song/rushia/NanodesuRemix.mp3')  	
-		}
-		else if (message.content.includes('nanodesu song')){
-	        playAudio('../../assets/song/rushia/NanodesuSong.mp3')  	
-		}
 		else if (message.content.includes('pon')){
 			playAudio('../../assets/song/rushia/PonPonPon.mp3')  	
 		}
@@ -52,11 +46,17 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 		}
 		else if (message.content.includes('magnet')){
 	        playAudio('../../assets/song/marine/Magnet.mp3')  	
-	    }
+		}
 
-		//Shitposts
+		//Weird Stuff
 		else if (message.content.includes('angery')){
 	        playAudio('../../assets/song/rushia/RushiaAngery.mp3')  	
+		}
+		else if (message.content.includes('nanodesu remix')){
+	        playAudio('../../assets/song/rushia/NanodesuRemix.mp3')  	
+		}
+		else if (message.content.includes('nanodesu song')){
+			playAudio('../../assets/song/rushia/NanodesuSong.mp3') 
 		}
 
 	    else if (message.content.includes('help')){
@@ -68,13 +68,13 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 					+ "!!rushia ghost : Play Ghost in a Flower\n" 
 					+ "!!rushia hello : Play Hello, How are you?\n" 
 					+ "!!rushia nandemonaiya : Play Nandemonaiya\n" 
-					+ "!!rushia nanodesu remix : Play cute noises\n"
-					+ "!!rushia nanodesu song : Play weird song\n" 
 					+ "!!rushia pon : Play Pon Pon Pon\n"
 					+ "!!rushia renai : Play Renai Circulation\n"
 					+ "!!rushia magnet : Play Magnet\n"
 					+ "\nWeird Stuff:\n"
-					+ "!!rushia angery : Angery Rushia\n" 
+					+ "!!rushia angery : Angery Rushia\n"
+					+ "!!rushia nanodesu remix : Play cute noises\n"
+					+ "!!rushia nanodesu song : Play weird song\n" 
 		        	)
 	    }
 
