@@ -12,11 +12,11 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	}
 
 	async run(message) {
+		const { voice } = message.member
 		const emoji = "<:kanata:782140207649521664> "
 		const folderPath = '../../assets/song/kanata/'
 
 		function playAudio(filepath) {
-			const { voice } = message.member
 			if (!voice.channelID) {
 				message.reply('You must be in a voice channel')
 				return

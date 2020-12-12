@@ -12,10 +12,10 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     async run(message) {
+        const { voice } = message.member
         const folderPath = '../../assets/song/fubuki/'
 
         function playAudio(filepath) {
-            const { voice } = message.member
             if (!voice.channelID) {
                 message.reply('You must be in a voice channel')
                 return
