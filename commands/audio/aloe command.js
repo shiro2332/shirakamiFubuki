@@ -12,7 +12,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     async run(message) {
-        const voice = message.member
+        const { voice } = message.member
         const emoji = "<:aloe:781917433023168574> "
         const folderPath = '../../assets/song/aloe/'
 
