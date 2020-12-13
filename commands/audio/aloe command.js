@@ -12,23 +12,22 @@ module.exports = class PlayAudioCommand extends Commando.Command {
     }
 
     async run(message) {
-        const { voice } = message.member
         const emoji = "<:aloe:781917433023168574> "
         const folderPath = '../../assets/song/aloe/'
-        
+
         function playAudio(filepath) {
-            if (!voice.channelID) {
+            if (!message.member.channelID) {
                 message.reply('You must be in a voice channel')
                 return
             }
 
-            voice.channel.join().then((connection) => {
+            message.member.channel.join().then((connection) => {
                 connection.play(path.join(__dirname, filepath))
             })
         }
 
         //Songs
-        if (message.content.includes('happy')) 
+        if (message.content.includes('happy'))
             playAudio(folderPath + 'HappySynthesizer.mp3')
 
         else if (message.content.includes('help')) {
