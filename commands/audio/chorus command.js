@@ -41,17 +41,6 @@ module.exports = class PlayAudioCommand extends Commando.Command {
           	playAudio('../../assets/song/saga.mp3')
         }
 
-        else if (message.content.includes('hanafubuki')){
-            if (!voice.channelID) {
-                message.reply('You must be in a voice channel')
-                return
-            }
-
-            voice.channel.join().then((connection) => {
-                connection.play("https://download1327.mediafire.com/7a0tfmfis2dg/lijyikzlpbzud7r/%E7%99%BE%E8%8A%B1%E7%B9%9A%E4%B9%B1%E8%8A%B1%E5%90%B9%E9%9B%AA.mp3")
-            })
-        }
-
         else if (message.content.includes('help')){
             message.channel.send("Commands available \n" 
                 + "!!chorus help : Show available commands \n" 
