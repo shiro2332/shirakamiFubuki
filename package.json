@@ -13,5 +13,13 @@
     "@discordjs/opus": "github:discordjs/opus",
     "discord.js": "^12.4.1",
     "discord.js-commando": "git+https://github.com/discordjs/commando.git"
+  },
+  "engines": {
+  "node": "12.14.1",
+  "npm": "6.13.4"
+  },
+  "repository": {
+  "type": "git",
+  "url": "git+link"
   }
 }
