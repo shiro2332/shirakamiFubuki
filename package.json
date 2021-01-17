@@ -1,5 +1,5 @@
 {
-  "name": "Shirakami Fubuki",
+  "name": "shirakamiFubuki",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "github:discordjs/opus",
-    "discord.js": "^12.4.1",
-    "discord.js-commando": "git+https://github.com/discordjs/commando.git"
+    
   }
 }
