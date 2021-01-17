@@ -14,5 +14,5 @@
     "discord.js": "^12.4.1",
     "discord.js-commando": "git+https://github.com/discordjs/commando.git",
     "@discordjs/opus": "github:discordjs/opus"
-  },
+  }
 }
