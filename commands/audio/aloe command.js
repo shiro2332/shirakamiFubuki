@@ -18,6 +18,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 
         function playAudio(filepath) {
             if (!voice.channelID) {
+                message.reply(voice.channelID)
                 message.reply('You must be in a voice channel')
                 return
             }
