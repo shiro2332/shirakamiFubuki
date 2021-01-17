@@ -1,4 +1,4 @@
-const { Commando } = require('discord.js-commando')
+const Commando = require('discord.js-commando')
 const path = require('path')
 const information = require('./Information.json')
 
@@ -21,8 +21,7 @@ client.on('ready', async () => {
 			['hololive', 'Hololive command'],
 			['command', 'Basic command'],
 			['commander', 'Commander command'],
-			['admin_command', 'Admin command'],
-			//['util', 'Utilities command'],
+			['admin_command', 'Admin command']
 		])
 		.registerDefaults()
 		.registerCommandsIn(path.join(__dirname, "commands"))
