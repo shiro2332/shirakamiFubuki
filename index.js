@@ -131,10 +131,6 @@ client.on('message', message => {
 		henshin("Mano Aloe", "Training Succubus", "781917433023168574", 'Hololive Gen 5 Mano Aloe desu!')
 	}
 
-	else if (message.content.startsWith('You are FBK')) {
-		henshin("Shirakami Fubuki", "Fox Burger King", "775231808273907712", 'Kon Kon Kitsune!!!')
-	}
-
 	//Gamers  ----------------------------------------------------------------------------------------------------------------
 	//else if ...
 
