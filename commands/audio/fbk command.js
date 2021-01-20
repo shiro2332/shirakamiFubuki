@@ -104,7 +104,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         else if (message.content.includes('kuro yoru'))
             playAudio(folderPath + 'yorukuro.mp3')
 
-        else if (message.content.includes('test'))
+        else if (message.content.includes('test')){
             //playAudio('../../assets/song/fubuki/fbkskrillex.mp3')
             if (!voice.channelID) {
                 message.reply('You must be in a voice channel')
