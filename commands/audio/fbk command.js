@@ -105,27 +105,15 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             playAudio(folderPath + 'yorukuro.mp3')
 
         else if (message.content.includes('test'))
-            if (message.member.voiceChannel) {
-              drive.files.get(
-                {
-                  fileId: '1J75HF2audHhFGcy5KyUmTCWv5FQfj-VM',
-                  alt: "media"
-                },
-                { responseType: "stream" },
-                (err, { data }) => {
-                  message.member.voiceChannel
-                    .join()
-                    .then(connection => {
-                      const dispatcher = connection.playStream(data);
-                      dispatcher.on("end", end => {
-                        message.member.voiceChannel.leave();
-                        process.exit();
-                      });
-                    })
-                    .catch(err => console.log(err));
-                }
-              );
+            //playAudio('../../assets/song/fubuki/fbkskrillex.mp3')
+            if (!voice.channelID) {
+                message.reply('You must be in a voice channel')
+                return
             }
+
+            voice.channel.join().then((connection) => {
+                connection.play("https://drive.google.com/file/d/1gYEzYPxVTVBv7tyrXEqdzFdtBDAxYk7O/view?usp=sharing")
+            })
 
         else if (message.content === "!!fubuki") {
             var date = new Date();
