@@ -114,6 +114,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
             voice.channel.join().then((connection) => {
                 connection.play("https://drive.google.com/file/d/1gYEzYPxVTVBv7tyrXEqdzFdtBDAxYk7O/view?usp=sharing")
             })
+        }
 
         else if (message.content === "!!fubuki") {
             var date = new Date();
