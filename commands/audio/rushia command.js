@@ -59,6 +59,9 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 		else if (message.content.includes('nanodesu song')) {
 			playAudio(folderPath + 'NanodesuSong.mp3')
 		}
+		else if (message.content.includes('yo yo')) {
+			playAudio(folderPath + 'RushiaYo.mp3')
+		}
 
 		else if (message.content.includes('help')) {
 			message.channel.send(emoji
