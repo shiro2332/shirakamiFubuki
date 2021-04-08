@@ -144,6 +144,14 @@ client.on('message', message => {
 		message.reply('Pong!');
 	}
 
+	else if (message.content.includes("test123")){
+		if(message.channel.name === 'testchannel'){
+			message.reply('Correct Channel');
+		} else {
+			message.reply("Wrong channel");
+		}
+	}
+
 	else if (message.content.includes("goodnight")) {
 		var now = new Date();
 		var hour = now.getHours();
