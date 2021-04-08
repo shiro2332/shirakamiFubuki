@@ -6,7 +6,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         super(client, {
             name: 'test',
             group: 'hololive',
-            memberName: 'test',
+            memberName: 'aqua',
             description: 'Commands available to Aqua',
         })
     }
