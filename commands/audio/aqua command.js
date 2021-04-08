@@ -4,9 +4,9 @@ const path = require('path')
 module.exports = class PlayAudioCommand extends Commando.Command {
     constructor(client) {
         super(client, {
-            name: 'aqua',
+            name: 'test',
             group: 'hololive',
-            memberName: 'aqua',
+            memberName: 'test',
             description: 'Commands available to Aqua',
         })
     }
