@@ -148,6 +148,12 @@ client.on('message', message => {
 		playAudio('./assets/audio/TestSpeaker.mp3')
 	}
 
+	else if (message.content.includes("liyue1")) {
+		while (true){
+			playAudio('./assets/song/music/liyue1.mp3')
+		}	
+	}
+
 	else if (message.content.includes("test123")){
 		if(message.channel.name === 'testchannel'){
 			message.reply('Correct Channel');
