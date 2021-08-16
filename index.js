@@ -9,6 +9,10 @@ const client = new Commando.CommandoClient({
 
 //Run this when the bot is startup
 client.on('ready', async () => {
+	let guild = client.guilds.get(587240994408235010);
+	let channel = guild.ChannelList.get(876851270336528404);
+	var time = new Date();
+
 	console.log("==================================")
 	console.log("|Client is ready!                |")
 	console.log("|Logged in as Shirakami Fubuki!  |")
@@ -33,6 +37,14 @@ client.on('ready', async () => {
 
 		client.user.setActivity(live, { type: information.Status.Action[0] })
 	}, 100000)
+
+	setInterval(function () {
+		var minute = time.getMinutes();
+		var hour = time.getHours();
+		channel.setNickname(minute + hour);
+	}, 60000)
+
+	
 })
 
 //Commands that does not works with discord commando or commands that does not use prefix
