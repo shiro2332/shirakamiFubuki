@@ -9,8 +9,8 @@ const client = new Commando.CommandoClient({
 
 //Run this when the bot is startup
 client.on('ready', async () => {
-	let guild = client.guilds.get(587240994408235010);
-	let channel = guild.ChannelList.get(876851270336528404);
+	let guild = client.guilds.get("587240994408235010");
+	let channel = guild.ChannelList.get("876851270336528404");
 	var time = new Date();
 
 	console.log("==================================")
