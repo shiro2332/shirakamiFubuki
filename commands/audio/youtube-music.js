@@ -1,10 +1,18 @@
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
+const Commando = require('discord.js-commando')
+const path = require('path')
  
-module.exports = {
-    name: 'play',
-    description: 'Joins and plays a video from youtube',
-    async execute(message, args) {
+module.exports = class PlayAudioCommand extends Commando.Command {
+    constructor(client) {
+		super(client, {
+			name: 'youtube',
+			group: 'audio',
+			memberName: 'youtube',
+			description: 'Commands available to youtube',
+		})
+	}
+    async run(message, args) {
         const voiceChannel = message.member.voice.channel;
  
         if (!voiceChannel) return message.channel.send('You need to be in a channel to execute this command!');
@@ -64,18 +72,3 @@ module.exports = {
     }
 }
  
- 
-//------------- Leave Command ------------
- 
-module.exports = {
-    name: 'leave',
-    description: 'stop the bot and leave the channel',
-    async execute(message, args) {
-        const voiceChannel = message.member.voice.channel;
- 
-        if(!voiceChannel) return message.channel.send("You need to be in a voice channel to stop the music!");
-        await voiceChannel.leave();
-        await message.channel.send('Leaving channel :smiling_face_with_tear:')
- 
-    }
-}
