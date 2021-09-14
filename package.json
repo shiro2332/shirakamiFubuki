@@ -15,7 +15,6 @@
     "discord.js-commando": "git+https://github.com/discordjs/commando.git",
     "@discordjs/opus": "github:discordjs/opus",
     "ytdl-core": "^4.2.1",
-    "yt-search": "git+https://github.com/talmobi/yt-search.git",
     "discord-ytdl-core": "^5.0.0"
   }
 }
