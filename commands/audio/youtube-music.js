@@ -15,16 +15,13 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         const { voice } = message.member
     
         if (!voice.channelID) {
-            message.reply(`you must join a voice channel first.`);
-            return;
+            message.reply('You must be in a voice channel')
+            return
         }
-            
-        voice.channel.join().then(connection => {
-            const dispatcher = connection.play(ytdl(args[0]));
-            dispatcher.on('end', end => {
-                voice.channel.leave();
-            });
-        });
+
+        voice.channel.join().then((connection) => {
+            connection.play(ytdl("https://www.youtube.com/watch?v=LYFciXBcXIQ"))
+        })
 
     }
 }
