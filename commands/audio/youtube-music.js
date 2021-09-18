@@ -13,7 +13,6 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	}
     async run(message, args) {
         const { voice } = message.member
-        console.log(args)
     
         if (!voice.channelID) {
             message.reply('You must be in a voice channel')
@@ -21,7 +20,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         voice.channel.join().then((connection) => {
-            connection.play(ytdl(args[1]))
+            connection.play(ytdl(args)
         })
 
     }
