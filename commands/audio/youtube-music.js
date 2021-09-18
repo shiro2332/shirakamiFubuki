@@ -13,6 +13,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
 	}
     async run(message, args) {
         const { voice } = message.member
+        console.log(args)
     
         if (!voice.channelID) {
             message.reply('You must be in a voice channel')
