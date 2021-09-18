@@ -20,7 +20,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
         }
 
         voice.channel.join().then((connection) => {
-            connection.play(ytdl(args)
+            connection.play(ytdl(args))
         })
 
     }
