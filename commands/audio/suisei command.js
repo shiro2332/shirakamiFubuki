@@ -27,7 +27,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
                 connection.play(path.join(__dirname, filepath))
             })
         }
-
+        
         if (message.content.includes('tenkyuu'))
             playAudio(folderPath + 'tenkyuu.mp3')
 

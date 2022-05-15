@@ -5,6 +5,10 @@
 		"Prefix": "!!"
 	},
 
+	"APIKey" : {
+		"Youtube" : "AIzaSyABBqN7nWsOdBWDFyBm1Vl5Z3WdmkjQA0M"
+	},
+
 	"Ownership" : {
 		"DisplayName" : "Fhunbuki",
 		"ID" : "299176846132641792"

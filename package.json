@@ -11,10 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "github:discordjs/opus",
+    "discord-youtube-api": "^0.1.0",
+    "discord-ytdl-core": "^5.0.0",
     "discord.js": "^12.4.1",
     "discord.js-commando": "git+https://github.com/discordjs/commando.git",
-    "@discordjs/opus": "github:discordjs/opus",
-    "ytdl-core": "^4.2.1",
-    "discord-ytdl-core": "^5.0.0"
+    "ytdl-core": "^4.2.1"
   }
 }
